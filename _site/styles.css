@@ -568,3 +568,10 @@ hr {
   border: 0;
   opacity: .1;
 }
+
+.date {
+  color: #996600;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-style: italic;
+}
