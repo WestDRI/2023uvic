@@ -1,0 +1,9 @@
+---
+title: About UVic Summer School 2023
+toc: false
+reference-location: margin
+format:
+  html:
+    anchor-sections: false
+---
+<br>
