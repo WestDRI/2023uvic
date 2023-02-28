@@ -7,8 +7,6 @@ title-block-banner: true
 
 :::{.topdef}
 
-
-
 **Date:** \
 Thursday May 4, 2023
 

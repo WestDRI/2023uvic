@@ -1,13 +1,11 @@
 ---
 title: HPC
 description: |
-  Introduction to high-performance research computing
+  Introduction to high-performance research computing on the Alliance clusters
 title-block-banner: true
 ---
 
 :::{.topdef}
-
-This workshop is an introduction to High-Performance Computing on the Alliance clusters.
 
 **Date:** \
 Monday May 1, 2023

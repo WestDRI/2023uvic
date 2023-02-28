@@ -1,13 +1,11 @@
 ---
 title: Intro R
 description: |
-  Introduction to R
+  Hands-on introduction to R
 title-block-banner: true
 ---
 
 :::{.topdef}
-
-This workshop is a hands-on introduction to the computing language R.
 
 **Date:** \
 Tuesday May 2, 2023

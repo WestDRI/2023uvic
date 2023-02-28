@@ -1,13 +1,11 @@
 ---
 title: Bash
 description: |
-  Introduction to Bash & the Unix shell
+  Hands-on introduction to the Linux command line and the interaction with a remote server
 title-block-banner: true
 ---
 
 :::{.topdef}
-
-This workshop is a hands-on introduction to the Linux command line and the interaction with a remote server.
 
 **Date:** \
 Monday May 1, 2023
