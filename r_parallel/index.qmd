@@ -1,0 +1,6 @@
+---
+title: Parallel R
+description: |
+  Introduction to parallel programming in R
+title-block-banner: true
+---

@@ -1,0 +1,6 @@
+---
+title: Deep learning with PyTorch
+description: |
+  Introduction to deep learning with the PyTorch framework
+title-block-banner: true
+---

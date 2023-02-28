@@ -1,0 +1,6 @@
+---
+title: Scientific visualization
+description: |
+  Introduction to scientific visualization with ParaView
+title-block-banner: true
+---

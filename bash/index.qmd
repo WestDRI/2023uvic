@@ -1,0 +1,6 @@
+---
+title: Bash
+description: |
+  Introduction to Bash & the Unix shell
+title-block-banner: true
+---

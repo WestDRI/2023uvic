@@ -1,0 +1,6 @@
+---
+title: Parallel Julia
+description: |
+  Introduction to parallel programming in Julia
+title-block-banner: true
+---
