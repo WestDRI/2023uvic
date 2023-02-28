@@ -4,3 +4,21 @@ description: |
   Introduction to parallel programming in R
 title-block-banner: true
 ---
+
+:::{.topdef}
+
+This workshop is an introduction to high-performance research computing and parallel R.
+
+**Date:** \
+Tuesday May 2, 2023
+
+**Time:** \
+
+**Instructor:** \
+Marie-Helene Burle (Simon Fraser University)
+
+**Prerequisites:** \
+
+**Software:** \
+
+:::

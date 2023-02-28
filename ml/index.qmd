@@ -4,3 +4,19 @@ description: |
   Introduction to deep learning with the PyTorch framework
 title-block-banner: true
 ---
+
+:::{.topdef}
+
+
+
+**Date:** \
+Thursday May 4, 2023
+
+**Instructor:** \
+Marie-Helene Burle (Simon Fraser University)
+
+**Prerequisites:** \
+
+**Software:** \
+
+:::
