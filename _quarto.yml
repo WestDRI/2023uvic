@@ -63,19 +63,7 @@ website:
             - bash/index.qmd
         - text: <b><em>Bash & the Unix shell</em></b>
           href: bash/index.qmd
-          contents: 
-            - text: Transferring files
-              href: bash/transfer.qmd
-            - text: Pipes and redirections
-              href: bash/molecules/redirections.qmd
-            - text: Writing scripts
-              href: bash/molecules/script.qmd
-            - text: Control flow
-              href: bash/molecules/control_flow.qmd
-            - text: Functions
-              href: bash/functions.qmd
-            - text: Searching for files
-              href: bash/molecules/search.qmd
+          contents:
     - id: hpc
       collapse-level: 2
       contents:
@@ -186,7 +174,7 @@ website:
 format:
   html:
     toc: true
-    toc-title: "<em>In this page:</em>"
+    toc-title: "<em>On this page:</em>"
     toc-depth: 5
     theme:
       light: [cosmo, theme.scss]
