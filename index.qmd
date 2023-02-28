@@ -1,0 +1,128 @@
+---
+title: UVic Summer School 2023
+description: |
+  <br>This summer school is offered by [Simon Fraser University](https://www.sfu.ca/) on behalf of Western Universities and the [Digital Research Alliance of Canada](https://alliancecan.ca/). It is hosted by the [University of Victoria](https://www.uvic.ca/) and is open to xxx.
+
+  For registration, xxx
+toc: false
+title-block-banner: true
+format:
+  html:
+    anchor-sections: false
+---
+
+:::{layout="[[5, 5, 5, 5], [5, 5, 5, -5]]"}
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Bash](/bash/index.qmd){.card-title .stretched-link}
+
+[Half-day introduction to Bash & the Unix shell]{.text-muted}
+
+Monday <br>May 1, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[HPC](/hpc/index.qmd){.card-title .stretched-link}
+
+[Half-day introduction to high-performance research computing]{.text-muted}
+
+Monday <br>May 1, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Intro R](/r_intro/index.qmd){.card-title .stretched-link}
+
+[Half-day introduction to R]{.text-muted}
+
+Tuesday <br>May 2, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Parallel R](/r_parallel/index.qmd){.card-title .stretched-link}
+
+[Half-day introduction to parallel programming in R]{.text-muted}
+
+Tuesday <br>May 2, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Parallel Julia](/julia/index.qmd){.card-title .stretched-link}
+
+[Full-day introduction to parallel programming in Julia]{.text-muted}
+
+Wednesday <br>May 3, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Deep learning with PyTorch](/ml/index.qmd){.card-title .stretched-link}
+
+[Full-day introduction to deep learning with the PyTorch framework]{.text-muted}
+
+Thursday <br>May 4, 2023
+
+:::
+
+:::
+
+:::{.card .mb-3}
+
+:::{.card-body}
+
+[Scientific visualization](/scivis/index.qmd){.card-title .stretched-link}
+
+[Full-day introduction to scientific visualization with ParaView]{.text-muted}
+
+Friday <br>May 5, 2023
+
+:::
+
+:::
+
+:::
+
+<br>
+
+:::{.small}
+
+:::
+<br>
+![](/img/sfudrac.png){fig-alt="frontlogo"}
+
+<br>
+<center>Hosted by:</center>
+<br>
+
+<center>![](/img/uvic_logo.png){fig-alt="frontlogo" width="35%"}</center>
