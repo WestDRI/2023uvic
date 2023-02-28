@@ -21,7 +21,7 @@ format:
 
 [Half-day introduction to Bash & the Unix shell]{.text-muted}
 
-Monday <br>May 1, 2023
+[Monday <br>May 1, 2023]{.date}
 
 :::
 
@@ -35,7 +35,11 @@ Monday <br>May 1, 2023
 
 [Half-day introduction to high-performance research computing]{.text-muted}
 
+:::{.date}
+
 Monday <br>May 1, 2023
+
+:::
 
 :::
 
@@ -49,7 +53,11 @@ Monday <br>May 1, 2023
 
 [Half-day introduction to R]{.text-muted}
 
+:::{.date}
+
 Tuesday <br>May 2, 2023
+
+:::
 
 :::
 
@@ -63,7 +71,11 @@ Tuesday <br>May 2, 2023
 
 [Half-day introduction to parallel programming in R]{.text-muted}
 
+:::{.date}
+
 Tuesday <br>May 2, 2023
+
+:::
 
 :::
 
@@ -77,7 +89,11 @@ Tuesday <br>May 2, 2023
 
 [Full-day introduction to parallel programming in Julia]{.text-muted}
 
+:::{.date}
+
 Wednesday <br>May 3, 2023
+
+:::
 
 :::
 
@@ -91,7 +107,11 @@ Wednesday <br>May 3, 2023
 
 [Full-day introduction to deep learning with the PyTorch framework]{.text-muted}
 
+:::{.date}
+
 Thursday <br>May 4, 2023
+
+:::
 
 :::
 
@@ -105,7 +125,11 @@ Thursday <br>May 4, 2023
 
 [Full-day introduction to scientific visualization with ParaView]{.text-muted}
 
+:::{.date}
+
 Friday <br>May 5, 2023
+
+:::
 
 :::
 
