@@ -1,8 +1,7 @@
 ---
-title: Scientific visualization
+title: Scientific visualization with ParaView
 description: |
   Introduction to 3D scientific visualization with ParaView, an open source, multi-platform data analysis and visualization tool designed to run on a variety of hardware from an individual laptop to large supercomputers. With ParaView users can interactively visualize 2D and 3D data sets defined on structured, adaptive and unstructured meshes or particles, animate these datasets in time, and manipulate them with a variety of filters. ParaView supports both interactive (GUI) and scripted (including offscreen) visualization, and is an easy and fun tool to learn.
-
 title-block-banner: true
 ---
 

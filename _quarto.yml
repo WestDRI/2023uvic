@@ -52,7 +52,7 @@ website:
         href: julia/index.qmd
       - text: PyTorch
         href: ml/index.qmd
-      - text: SciVis
+      - text: ParaView
         href: scivis/index.qmd
   sidebar:
     - id: bash
