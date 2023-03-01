@@ -1,9 +1,9 @@
 ---
-title: UVic Summer School 2023
+title: UVic Spring School 2023
 description: |
-  <br>This summer school is offered by [Simon Fraser University](https://www.sfu.ca/) on behalf of Western Universities and the [Digital Research Alliance of Canada](https://alliancecan.ca/). It is hosted by the [University of Victoria](https://www.uvic.ca/) and is open to xxx.
+  <br>This spring school is offered by [Simon Fraser University](https://www.sfu.ca) on behalf of Western Universities and the [Digital Research Alliance of Canada](https://alliancecan.ca). It is hosted by the [University of Victoria](https://www.uvic.ca) and is open to all researchers at UVic and other Canadian post-secondary institutions.
 
-  For registration, xxx
+  The registration will open up in April.
 toc: false
 title-block-banner: true
 format:
