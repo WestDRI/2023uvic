@@ -1,203 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mint.westdri.ca/about.html</loc>
-    <lastmod>2023-03-01T18:06:23.850Z</lastmod>
+    <loc>https://2023uvic.netlify.app/about.html</loc>
+    <lastmod>2023-03-01T18:15:55.187Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/bash/index.html</loc>
-    <lastmod>2023-03-01T18:06:24.127Z</lastmod>
+    <loc>https://2023uvic.netlify.app/bash/index.html</loc>
+    <lastmod>2023-03-01T18:15:55.460Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/calendar.html</loc>
-    <lastmod>2023-03-01T18:06:24.407Z</lastmod>
+    <loc>https://2023uvic.netlify.app/calendar.html</loc>
+    <lastmod>2023-03-01T18:15:55.730Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/contact.html</loc>
-    <lastmod>2023-03-01T18:06:24.667Z</lastmod>
+    <loc>https://2023uvic.netlify.app/contact.html</loc>
+    <lastmod>2023-03-01T18:15:55.997Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/hpc/index.html</loc>
-    <lastmod>2023-03-01T18:06:24.904Z</lastmod>
+    <loc>https://2023uvic.netlify.app/hpc/index.html</loc>
+    <lastmod>2023-03-01T18:15:56.260Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/index.html</loc>
-    <lastmod>2023-03-01T18:06:25.184Z</lastmod>
+    <loc>https://2023uvic.netlify.app/index.html</loc>
+    <lastmod>2023-03-01T18:15:56.530Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/asm.html</loc>
-    <lastmod>2023-03-01T18:06:25.987Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/asm.html</loc>
+    <lastmod>2023-03-01T18:15:57.317Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/distributed-arrays.html</loc>
-    <lastmod>2023-03-01T18:06:26.727Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/distributed-arrays.html</loc>
+    <lastmod>2023-03-01T18:15:58.043Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/distributed-julia-set.html</loc>
-    <lastmod>2023-03-01T18:06:27.147Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/distributed-julia-set.html</loc>
+    <lastmod>2023-03-01T18:15:58.480Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/distributed1.html</loc>
-    <lastmod>2023-03-01T18:06:27.714Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/distributed1.html</loc>
+    <lastmod>2023-03-01T18:15:59.030Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/distributed2.html</loc>
-    <lastmod>2023-03-01T18:06:28.240Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/distributed2.html</loc>
+    <lastmod>2023-03-01T18:15:59.530Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/index.html</loc>
-    <lastmod>2023-03-01T18:06:28.484Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/index.html</loc>
+    <lastmod>2023-03-01T18:15:59.793Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/intro-language.html</loc>
-    <lastmod>2023-03-01T18:06:29.027Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/intro-language.html</loc>
+    <lastmod>2023-03-01T18:16:00.310Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/intro-parallel.html</loc>
-    <lastmod>2023-03-01T18:06:29.297Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/intro-parallel.html</loc>
+    <lastmod>2023-03-01T18:16:00.557Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/nbody.html</loc>
-    <lastmod>2023-03-01T18:06:29.660Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/nbody.html</loc>
+    <lastmod>2023-03-01T18:16:00.903Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/shared-arrays.html</loc>
-    <lastmod>2023-03-01T18:06:30.387Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/shared-arrays.html</loc>
+    <lastmod>2023-03-01T18:16:01.607Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/threads-julia-set.html</loc>
-    <lastmod>2023-03-01T18:06:30.874Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/threads-julia-set.html</loc>
+    <lastmod>2023-03-01T18:16:02.110Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/threads-slow-series.html</loc>
-    <lastmod>2023-03-01T18:06:31.624Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/threads-slow-series.html</loc>
+    <lastmod>2023-03-01T18:16:02.820Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/threadsx-julia-set.html</loc>
-    <lastmod>2023-03-01T18:06:32.077Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/threadsx-julia-set.html</loc>
+    <lastmod>2023-03-01T18:16:03.253Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/julia/threadsx-slow-series.html</loc>
-    <lastmod>2023-03-01T18:06:32.590Z</lastmod>
+    <loc>https://2023uvic.netlify.app/julia/threadsx-slow-series.html</loc>
+    <lastmod>2023-03-01T18:16:03.753Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/audio_dataloader.html</loc>
-    <lastmod>2023-03-01T18:06:33.070Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/audio_dataloader.html</loc>
+    <lastmod>2023-03-01T18:16:04.200Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/autograd.html</loc>
-    <lastmod>2023-03-01T18:06:33.544Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/autograd.html</loc>
+    <lastmod>2023-03-01T18:16:04.630Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/checkpoints.html</loc>
-    <lastmod>2023-03-01T18:06:33.984Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/checkpoints.html</loc>
+    <lastmod>2023-03-01T18:16:05.010Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/choosing_frameworks.html</loc>
-    <lastmod>2023-03-01T18:06:34.324Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/choosing_frameworks.html</loc>
+    <lastmod>2023-03-01T18:16:05.317Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/concept.html</loc>
-    <lastmod>2023-03-01T18:06:34.787Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/concept.html</loc>
+    <lastmod>2023-03-01T18:16:05.730Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/high_level_frameworks.html</loc>
-    <lastmod>2023-03-01T18:06:35.070Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/high_level_frameworks.html</loc>
+    <lastmod>2023-03-01T18:16:06.027Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/hpc.html</loc>
-    <lastmod>2023-03-01T18:06:35.474Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/hpc.html</loc>
+    <lastmod>2023-03-01T18:16:06.430Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/index.html</loc>
-    <lastmod>2023-03-01T18:06:35.720Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/index.html</loc>
+    <lastmod>2023-03-01T18:16:06.697Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/mnist.html</loc>
-    <lastmod>2023-03-01T18:06:36.467Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/mnist.html</loc>
+    <lastmod>2023-03-01T18:16:07.353Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/nn.html</loc>
-    <lastmod>2023-03-01T18:06:36.874Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/nn.html</loc>
+    <lastmod>2023-03-01T18:16:07.743Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/nn_building.html</loc>
-    <lastmod>2023-03-01T18:06:37.317Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/nn_building.html</loc>
+    <lastmod>2023-03-01T18:16:08.143Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/nn_training.html</loc>
-    <lastmod>2023-03-01T18:06:37.770Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/nn_training.html</loc>
+    <lastmod>2023-03-01T18:16:08.570Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/pretrained_models.html</loc>
-    <lastmod>2023-03-01T18:06:38.037Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/pretrained_models.html</loc>
+    <lastmod>2023-03-01T18:16:08.830Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/ml/resources.html</loc>
-    <lastmod>2023-03-01T18:06:38.380Z</lastmod>
+    <loc>https://2023uvic.netlify.app/ml/resources.html</loc>
+    <lastmod>2023-03-01T18:16:09.187Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/newsletter.html</loc>
-    <lastmod>2023-03-01T18:06:38.660Z</lastmod>
+    <loc>https://2023uvic.netlify.app/newsletter.html</loc>
+    <lastmod>2023-03-01T18:16:09.450Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/basics.html</loc>
-    <lastmod>2023-03-01T18:06:39.400Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/basics.html</loc>
+    <lastmod>2023-03-01T18:16:10.147Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/index.html</loc>
-    <lastmod>2023-03-01T18:06:39.677Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/index.html</loc>
+    <lastmod>2023-03-01T18:16:10.393Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/packages.html</loc>
-    <lastmod>2023-03-01T18:06:40.074Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/packages.html</loc>
+    <lastmod>2023-03-01T18:16:10.793Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/resources.html</loc>
-    <lastmod>2023-03-01T18:06:40.340Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/resources.html</loc>
+    <lastmod>2023-03-01T18:16:11.057Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/tidyverse.html</loc>
-    <lastmod>2023-03-01T18:06:40.640Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/tidyverse.html</loc>
+    <lastmod>2023-03-01T18:16:11.437Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_intro/why.html</loc>
-    <lastmod>2023-03-01T18:06:40.897Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_intro/why.html</loc>
+    <lastmod>2023-03-01T18:16:11.717Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/clusters.html</loc>
-    <lastmod>2023-03-01T18:06:41.354Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/clusters.html</loc>
+    <lastmod>2023-03-01T18:16:12.130Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/index.html</loc>
-    <lastmod>2023-03-01T18:06:41.630Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/index.html</loc>
+    <lastmod>2023-03-01T18:16:12.363Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/parallel_loops.html</loc>
-    <lastmod>2023-03-01T18:06:42.124Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/parallel_loops.html</loc>
+    <lastmod>2023-03-01T18:16:12.923Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/parallel_r.html</loc>
-    <lastmod>2023-03-01T18:06:42.510Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/parallel_r.html</loc>
+    <lastmod>2023-03-01T18:16:13.277Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/parallel_types.html</loc>
-    <lastmod>2023-03-01T18:06:42.784Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/parallel_types.html</loc>
+    <lastmod>2023-03-01T18:16:13.617Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/partition.html</loc>
-    <lastmod>2023-03-01T18:06:43.044Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/partition.html</loc>
+    <lastmod>2023-03-01T18:16:13.877Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/performance.html</loc>
-    <lastmod>2023-03-01T18:06:43.330Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/performance.html</loc>
+    <lastmod>2023-03-01T18:16:14.160Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/r_parallel/rcpp.html</loc>
-    <lastmod>2023-03-01T18:06:43.604Z</lastmod>
+    <loc>https://2023uvic.netlify.app/r_parallel/rcpp.html</loc>
+    <lastmod>2023-03-01T18:16:14.497Z</lastmod>
   </url>
   <url>
-    <loc>https://mint.westdri.ca/scivis/index.html</loc>
-    <lastmod>2023-03-01T18:06:43.864Z</lastmod>
+    <loc>https://2023uvic.netlify.app/scivis/index.html</loc>
+    <lastmod>2023-03-01T18:16:14.763Z</lastmod>
   </url>
 </urlset>

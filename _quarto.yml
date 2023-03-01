@@ -9,8 +9,8 @@ website:
   title: UVic Spring School 2023
   image: /img/sfudrac_logo.png
   favicon: /img/sfu_favicon.png
-  site-url: https://mint.westdri.ca/
-  repo-url: https://github.com/WestDRI/arc-training
+  site-url: https://2023uvic.netlify.app/
+  repo-url: https://github.com/WestDRI/2023uvic
   reader-mode: true
   page-navigation: true
   page-footer:

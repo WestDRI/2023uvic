@@ -1,1 +1,1 @@
-Sitemap: https://mint.westdri.ca/sitemap.xml
+Sitemap: https://2023uvic.netlify.app/sitemap.xml
