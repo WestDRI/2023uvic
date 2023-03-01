@@ -3,7 +3,7 @@ title: UVic Spring School 2023
 description: |
   <br>This spring school is offered by [Simon Fraser University](https://www.sfu.ca) on behalf of Western Universities and the [Digital Research Alliance of Canada](https://alliancecan.ca). It is hosted by the [University of Victoria](https://www.uvic.ca) and is open to all researchers at UVic and other Canadian post-secondary institutions.
 
-  The registration will open up in April.
+  Registration will open in April.
 toc: false
 title-block-banner: true
 format:
@@ -21,7 +21,11 @@ format:
 
 [Half-day introduction to Bash & the Unix shell]{.text-muted}
 
-[Monday <br>May 1, 2023]{.date}
+:::{.date}
+
+Monday <br>May 1, 2023
+
+:::
 
 :::
 
