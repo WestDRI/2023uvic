@@ -11,18 +11,13 @@ format:
     anchor-sections: false
 ---
 
-<!-- :::{layout="[[5, 5, 5, 5], [5, 5, 5, -5]]"} -->
 :::{layout="[[2, 5, 5], [2, 5, 5], [2, 10], [2, 10], [2, 10]]"}
-
-:::{.card .mb-3}
 
 :::{.card-body}
 
 :::{.date}
 
 Monday<br>May 1, 2023
-
-:::
 
 :::
 
@@ -52,15 +47,11 @@ Monday<br>May 1, 2023
 
 :::
 
-:::{.card .mb-3}
-
 :::{.card-body}
 
 :::{.date}
 
 Tuesday<br>May 2, 2023
-
-:::
 
 :::
 
@@ -90,15 +81,11 @@ Tuesday<br>May 2, 2023
 
 :::
 
-:::{.card .mb-3}
-
 :::{.card-body}
 
 :::{.date}
 
 Wednesday<br>May 3, 2023
-
-:::
 
 :::
 
@@ -116,15 +103,11 @@ Wednesday<br>May 3, 2023
 
 :::
 
-:::{.card .mb-3}
-
 :::{.card-body}
 
 :::{.date}
 
 Thursday<br>May 4, 2023
-
-:::
 
 :::
 
@@ -142,15 +125,11 @@ Thursday<br>May 4, 2023
 
 :::
 
-:::{.card .mb-3}
-
 :::{.card-body}
 
 :::{.date}
 
 Friday<br>May 5, 2023
-
-:::
 
 :::
 
@@ -170,12 +149,7 @@ Friday<br>May 5, 2023
 
 :::
 
-<br>
-
-:::{.small}
-
-:::
-<br>
+<br><br>
 ![](/img/sfudrac.png){fig-alt="frontlogo"}
 
 <br>
