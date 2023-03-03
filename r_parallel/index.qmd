@@ -20,3 +20,6 @@ Marie-Helene Burle (Simon Fraser University)
 **Software:** \
 
 :::
+
+<!-- <br> -->
+<!-- [[Start course ➤](performance.qmd)]{.topinline} -->

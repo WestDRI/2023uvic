@@ -56,120 +56,113 @@ website:
         href: scivis/index.qmd
   sidebar:
     - id: bash
-      collapse-level: 2
       contents:
         - section:
           contents:
             - bash/index.qmd
-        - text: <b><em>Bash & the Unix shell</em></b>
-          href: bash/index.qmd
-          contents:
+        # - text: <b><em>Bash & the Unix shell</em></b>
+        #   href: bash/index.qmd
+        #   contents:
     - id: hpc
-      collapse-level: 2
       contents:
         - section:
           contents:
             - hpc/index.qmd
-        - text: <b><em>Introduction to HPC</em></b>
-          href: hpc/index.qmd
-          contents:
+        # - text: <b><em>Introduction to HPC</em></b>
+        #   href: hpc/index.qmd
+        #   contents:
     - id: r_intro
-      collapse-level: 2
       contents:
         - section:
           contents:
             - r_intro/index.qmd
-        - text: <em><b>Getting started with R</b></em>
-          href: r_intro/index.qmd
-          contents: 
-            - text: "R: why and for whom?"
-              href: r_intro/why.qmd
-            - text: "R: the basics"
-              href: r_intro/basics.qmd
-            - text: Packages
-              href: r_intro/packages.qmd
-            - text: Glimpse at the tidyverse
-              href: r_intro/tidyverse.qmd
-            - text: Resources
-              href: r_intro/resources.qmd
+        # - text: <em><b>Getting started with R</b></em>
+        #   href: r_intro/index.qmd
+        #   contents: 
+        #     - text: "R: why and for whom?"
+        #       href: r_intro/why.qmd
+        #     - text: "R: the basics"
+        #       href: r_intro/basics.qmd
+        #     - text: Packages
+        #       href: r_intro/packages.qmd
+        #     - text: Glimpse at the tidyverse
+        #       href: r_intro/tidyverse.qmd
+        #     - text: Resources
+        #       href: r_intro/resources.qmd
     - id: r_parallel
-      collapse-level: 2
       contents:
         - section:
           contents:
             - r_parallel/index.qmd
-        - text: <b><em>Parallel R</em></b>
-          href: r_parallel/index.qmd
-          contents: 
-            - text: Measuring performance
-              href: r_parallel/performance.qmd
-            - text: Running R on HPC clusters
-              href: r_parallel/clusters.qmd
-            - text: Types of parallelism
-              href: r_parallel/parallel_types.qmd
-            - text: Running R code in parallel
-              href: r_parallel/parallel_r.qmd
-            - text: Parallel loops
-              href: r_parallel/parallel_loops.qmd
-            - text: Partitioning data
-              href: r_parallel/partition.qmd
-            - text: Writing C++ in R with Rcpp
-              href: r_parallel/rcpp.qmd
+        # - text: <b><em>Parallel R</em></b>
+        #   href: r_parallel/index.qmd
+        #   contents: 
+        #     - text: Measuring performance
+        #       href: r_parallel/performance.qmd
+        #     - text: Running R on HPC clusters
+        #       href: r_parallel/clusters.qmd
+        #     - text: Types of parallelism
+        #       href: r_parallel/parallel_types.qmd
+        #     - text: Running R code in parallel
+        #       href: r_parallel/parallel_r.qmd
+        #     - text: Parallel loops
+        #       href: r_parallel/parallel_loops.qmd
+        #     - text: Partitioning data
+        #       href: r_parallel/partition.qmd
+        #     - text: Writing C++ in R with Rcpp
+        #       href: r_parallel/rcpp.qmd
     - id: julia
-      collapse-level: 2
       contents:
         - section:
           contents:
             - julia/index.qmd
-        - text: <b><em>Parallel Julia</em></b>
-          href: julia/index.qmd
-          contents: 
-            - text: Introduction to Julia
-              href: julia/intro-language.qmd
+        # - text: <b><em>Parallel Julia</em></b>
+        #   href: julia/index.qmd
+        #   contents: 
+        #     - text: Introduction to Julia
+        #       href: julia/intro-language.qmd
     - id: ml
-      collapse-level: 2
       contents:
         - section:
           contents:
             - ml/index.qmd
-        - text: <b><em>Introduction to PyTorch</em></b>
-          href: ml/index.qmd
-          contents: 
-            - text: Overarching concept of DL
-              href: ml/concept.qmd
-            - text: "Concepts: AI, ML, DL, NN"
-              href: ml/nn.qmd
-            - text: Which framework to choose?
-              href: ml/choosing_frameworks.qmd
-            - text: High-level frameworks
-              href: ml/high_level_frameworks.qmd
-            - text: Automatic differentiation
-              href: ml/autograd.qmd
-            - text: Classifying the MNIST
-              href: ml/mnist.qmd
-            - text: Building a model
-              href: ml/nn_building.qmd
-            - text: Training a model
-              href: ml/nn_training.qmd
-            - text: Audio DataLoader
-              href: ml/audio_dataloader.qmd
-            - text: ML on production clusters
-              href: ml/hpc.qmd
-            - text: Finding pre-trained models
-              href: ml/pretrained_models.qmd
-            - text: Creating checkpoints
-              href: ml/checkpoints.qmd
-            - text: Resources
-              href: ml/resources.qmd
+        # - text: <b><em>Introduction to PyTorch</em></b>
+        #   href: ml/index.qmd
+        #   contents: 
+        #     - text: Overarching concept of DL
+        #       href: ml/concept.qmd
+        #     - text: "Concepts: AI, ML, DL, NN"
+        #       href: ml/nn.qmd
+        #     - text: Which framework to choose?
+        #       href: ml/choosing_frameworks.qmd
+        #     - text: High-level frameworks
+        #       href: ml/high_level_frameworks.qmd
+        #     - text: Automatic differentiation
+        #       href: ml/autograd.qmd
+        #     - text: Classifying the MNIST
+        #       href: ml/mnist.qmd
+        #     - text: Building a model
+        #       href: ml/nn_building.qmd
+        #     - text: Training a model
+        #       href: ml/nn_training.qmd
+        #     - text: Audio DataLoader
+        #       href: ml/audio_dataloader.qmd
+        #     - text: ML on production clusters
+        #       href: ml/hpc.qmd
+        #     - text: Finding pre-trained models
+        #       href: ml/pretrained_models.qmd
+        #     - text: Creating checkpoints
+        #       href: ml/checkpoints.qmd
+        #     - text: Resources
+        #       href: ml/resources.qmd
     - id: scivis
-      collapse-level: 2
       contents:
         - section:
           contents:
             - scivis/index.qmd
-        - text: <b><em>SciVis with ParaView</em></b>
-          href: scivis/index.qmd
-        - contents:
+        # - text: <b><em>SciVis with ParaView</em></b>
+        #   href: scivis/index.qmd
+        # - contents:
 
 format:
   html:
