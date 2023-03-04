@@ -6,9 +6,7 @@ description: |
   To register, please fill in [this form](https://docs.google.com/forms/d/e/1FAIpQLSdopNBUoY1VPkogNxRziXXTZpqHwTcIhunqHFPfR30ST4TKjg/viewform) **using your Canadian post-secondary institution email address**.
 toc: false
 title-block-banner: true
-format:
-  html:
-    anchor-sections: false
+anchor-sections: false
 ---
 
 :::{layout="[[2, 5, 5], [2, 5, 5], [2, 10], [2, 10], [2, 10]]"}
