@@ -4,7 +4,7 @@
     "href": "bash/index.html",
     "title": "Bash",
     "section": "",
-    "text": "Date:\nMonday May 1, 2023\nTime:\n\nInstructor:\nPrerequisites:\nThis is an introductory course, no previous experience is required. We will provide guest accounts to one of our Linux systems.\nSoftware:\nAll attendees will need a remote secure shell (SSH) client installed on their computer in order to participate in the course exercises. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nMonday May 1, 2023\nTime:\n9am–noon\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "contact.html",
@@ -18,7 +18,7 @@
     "href": "hpc/index.html",
     "title": "HPC",
     "section": "",
-    "text": "Date:\nMonday May 1, 2023\nTime:\n\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nWorking knowledge of the Linux Bash shell. We will provide guest accounts to one of our Linux systems.\nSoftware:\nAll attendees will need a remote secure shell (SSH) client installed on their computer in order to participate in the course exercises. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nMonday May 1, 2023\nTime:\n2pm–5pm\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nWorking knowledge of the Bash shell.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "index.html",
@@ -67,7 +67,7 @@
     "href": "julia/index.html",
     "title": "Parallel Julia",
     "section": "",
-    "text": "Date:\nWednesday May 3, 2023\nTime:\n\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\n\nSoftware:"
+    "text": "Date:\nWednesday May 3, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nBasic knowledge of Julia.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "julia/intro-language.html",
@@ -571,7 +571,7 @@
     "href": "ml/index.html",
     "title": "Deep learning with PyTorch",
     "section": "",
-    "text": "Date:\nThursday May 4, 2023\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\n\nSoftware:"
+    "text": "Date:\nThursday May 4, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of Python.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "ml/mnist.html",
@@ -830,7 +830,7 @@
     "href": "r_intro/index.html",
     "title": "Intro R",
     "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\n\nSoftware:"
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
   },
   {
     "objectID": "r_intro/packages.html",
@@ -984,7 +984,7 @@
     "href": "r_parallel/index.html",
     "title": "Parallel R",
     "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\n\nSoftware:"
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "r_parallel/parallel_loops.html",
@@ -1068,6 +1068,6 @@
     "href": "scivis/index.html",
     "title": "Scientific visualization with ParaView",
     "section": "",
-    "text": "Date:\nFriday May 5, 2023\nTime:\n\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course, no prior visualization experience is required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.10.1 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
+    "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.10.1 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
   }
 ]
