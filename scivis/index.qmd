@@ -20,6 +20,6 @@ Alex Razoumov (Simon Fraser University)
 This is an introductory course with no prior visualization experience required.
 
 **Software:** \
-Please install [ParaView](https://www.paraview.org/download) on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.10.1 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView.
+Please install [ParaView](https://www.paraview.org/download) on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView.
 
 :::

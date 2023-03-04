@@ -14,7 +14,7 @@ Thursday May 4, 2023
 9am–5pm (with a two-hour break from noon to 2pm)
 
 **Instructor:** \
-Marie-Helene Burle (Simon Fraser University)
+Marie-Hélène Burle (Simon Fraser University)
 
 **Prerequisites:** \
 Basic knowledge of Python.

@@ -1,7 +1,7 @@
 ---
 title: HPC
 description: |
-  Introduction to high-performance research computing on the Alliance clusters
+  Introduction to high-performance research computing on the Alliance clusters.
 title-block-banner: true
 ---
 
