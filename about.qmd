@@ -1,9 +1,27 @@
 ---
 title: About UVic Spring School 2023
 toc: false
-reference-location: margin
-format:
-  html:
-    anchor-sections: false
+anchor-sections: false
 ---
 <br>
+This spring school is offered by [Simon Fraser University](https://www.sfu.ca) on behalf of Western Universities and the [Digital Research Alliance of Canada](https://alliancecan.ca). It is hosted by the [University of Victoria](https://www.uvic.ca) and is open to all researchers at UVic and other Canadian post-secondary institutions.
+
+## Registration
+
+To register, please fill in [this form](https://docs.google.com/forms/d/e/1FAIpQLSdopNBUoY1VPkogNxRziXXTZpqHwTcIhunqHFPfR30ST4TKjg/viewform) **using your Canadian post-secondary institution email address**.
+
+## Instructors
+
+:::{layout="[[2, 8], [1], [2, 8]]"}
+
+![](img/alex.jpg)
+
+Alex Razoumov earned his PhD in computational astrophysics from the University of British Columbia and held postdoctoral positions in Urbana-Champaign, San Diego, Oak Ridge, and Halifax. He spent five years as HPC Analyst in SHARCNET and in 2014 moved back to Vancouver to focus on scientific visualization and training researchers to use advanced computing tools. Alex is currently at Simon Fraser University.
+
+<br>
+
+![](img/mh.jpg)
+
+Evolutionary and behavioural ecologist by training, [Software/Data Carpentry instructor,](https://carpentries.org/) and open source advocate, [Marie-Hélène Burle](https://www.sfu.ca/~msb2/) develops and delivers training for researchers on high-performance computing tools (R, Python, Julia, Git, Bash scripting, machine learning, parallel scientific programming, and HPC) for [Simon Fraser University](https://www.sfu.ca/) and the [Digital Research Alliance of Canada.](https://alliancecan.ca/)
+
+:::
