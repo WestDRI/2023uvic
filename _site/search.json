@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About UVic Spring School 2023",
+    "section": "",
+    "text": "This spring school is offered by Simon Fraser University on behalf of Western Universities and the Digital Research Alliance of Canada. It is hosted by the University of Victoria and is open to all researchers at UVic and other Canadian post-secondary institutions."
+  },
+  {
+    "objectID": "about.html#registration",
+    "href": "about.html#registration",
+    "title": "About UVic Spring School 2023",
+    "section": "Registration",
+    "text": "Registration\nTo register, please fill in this form using your Canadian post-secondary institution email address."
+  },
+  {
+    "objectID": "about.html#instructors",
+    "href": "about.html#instructors",
+    "title": "About UVic Spring School 2023",
+    "section": "Instructors",
+    "text": "Instructors\n\n\n\n\n\n\nAlex Razoumov earned his PhD in computational astrophysics from the University of British Columbia and held postdoctoral positions in Urbana-Champaign, San Diego, Oak Ridge, and Halifax. He spent five years as HPC Analyst in SHARCNET and in 2014 moved back to Vancouver to focus on scientific visualization and training researchers to use advanced computing tools. Alex is currently at Simon Fraser University.\n\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary and behavioural ecologist by training, Software/Data Carpentry instructor, and open source advocate, Marie-Hélène Burle develops and delivers training for researchers on high-performance computing tools (R, Python, Julia, Git, Bash scripting, machine learning, parallel scientific programming, and HPC) for Simon Fraser University and the Digital Research Alliance of Canada."
+  },
+  {
     "objectID": "bash/index.html",
     "href": "bash/index.html",
     "title": "Bash",
@@ -67,7 +88,7 @@
     "href": "julia/index.html",
     "title": "Parallel Julia",
     "section": "",
-    "text": "Date:\nWednesday May 3, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nBasic knowledge of Julia.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nWednesday May 3, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:  Basic working knowledge of HPC (how to submit Slurm jobs and view their output). Some scientific programming experience (in any language) would be ideal, but we will start slowly explaining basic principles along the way. No previous parallel programming experience needed.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there). You don’t need to install Julia on your computer, unless you want to."
   },
   {
     "objectID": "julia/intro-language.html",
@@ -571,7 +592,7 @@
     "href": "ml/index.html",
     "title": "Deep learning with PyTorch",
     "section": "",
-    "text": "Date:\nThursday May 4, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of Python.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nThursday May 4, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of Python.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "ml/mnist.html",
@@ -830,7 +851,7 @@
     "href": "r_intro/index.html",
     "title": "Intro R",
     "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Helene Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
   },
   {
     "objectID": "r_intro/packages.html",
@@ -984,7 +1005,7 @@
     "href": "r_parallel/index.html",
     "title": "Parallel R",
     "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R and some basic working knowledge of HPC (how to submit Slurm jobs and view their output).\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "r_parallel/parallel_loops.html",
@@ -1068,41 +1089,6 @@
     "href": "scivis/index.html",
     "title": "Scientific visualization with ParaView",
     "section": "",
-    "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.10.1 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About UVic Spring School 2023",
-    "section": "",
-    "text": "This spring school is offered by Simon Fraser University on behalf of Western Universities and the Digital Research Alliance of Canada. It is hosted by the University of Victoria and is open to all researchers at UVic and other Canadian post-secondary institutions."
-  },
-  {
-    "objectID": "about.html#about-the-instructors",
-    "href": "about.html#about-the-instructors",
-    "title": "About UVic Spring School 2023",
-    "section": "About the instructors",
-    "text": "About the instructors\n\n\n\n\n\n\nAlex Razoumov earned his PhD in computational astrophysics from the University of British Columbia and held postdoctoral positions in Urbana-Champaign, San Diego, Oak Ridge, and Halifax. He spent five years as HPC Analyst in SHARCNET and in 2014 moved back to Vancouver to focus on scientific visualization and training researchers to use advanced computing tools. Alex is currently at Simon Fraser University.\n\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary and behavioural ecologist by training, Software/Data Carpentry instructor, and open source advocate, Marie-Hélène Burle develops and delivers training for researchers on high-performance computing tools (R, Python, Julia, Git, Bash scripting, machine learning, parallel scientific programming, and HPC) for Simon Fraser University and the Digital Research Alliance of Canada."
-  },
-  {
-    "objectID": "about.html#the-instructors",
-    "href": "about.html#the-instructors",
-    "title": "About UVic Spring School 2023",
-    "section": "The instructors",
-    "text": "The instructors\n\n\n\n\n\n\nAlex Razoumov earned his PhD in computational astrophysics from the University of British Columbia and held postdoctoral positions in Urbana-Champaign, San Diego, Oak Ridge, and Halifax. He spent five years as HPC Analyst in SHARCNET and in 2014 moved back to Vancouver to focus on scientific visualization and training researchers to use advanced computing tools. Alex is currently at Simon Fraser University.\n\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary and behavioural ecologist by training, Software/Data Carpentry instructor, and open source advocate, Marie-Hélène Burle develops and delivers training for researchers on high-performance computing tools (R, Python, Julia, Git, Bash scripting, machine learning, parallel scientific programming, and HPC) for Simon Fraser University and the Digital Research Alliance of Canada."
-  },
-  {
-    "objectID": "about.html#registration",
-    "href": "about.html#registration",
-    "title": "About UVic Spring School 2023",
-    "section": "Registration",
-    "text": "Registration\nTo register, please fill in this form using your Canadian post-secondary institution email address."
-  },
-  {
-    "objectID": "about.html#instructors",
-    "href": "about.html#instructors",
-    "title": "About UVic Spring School 2023",
-    "section": "Instructors",
-    "text": "Instructors\n\n\n\n\n\n\nAlex Razoumov earned his PhD in computational astrophysics from the University of British Columbia and held postdoctoral positions in Urbana-Champaign, San Diego, Oak Ridge, and Halifax. He spent five years as HPC Analyst in SHARCNET and in 2014 moved back to Vancouver to focus on scientific visualization and training researchers to use advanced computing tools. Alex is currently at Simon Fraser University.\n\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary and behavioural ecologist by training, Software/Data Carpentry instructor, and open source advocate, Marie-Hélène Burle develops and delivers training for researchers on high-performance computing tools (R, Python, Julia, Git, Bash scripting, machine learning, parallel scientific programming, and HPC) for Simon Fraser University and the Digital Research Alliance of Canada."
+    "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
   }
 ]
