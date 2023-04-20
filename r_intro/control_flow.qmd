@@ -1,0 +1,40 @@
+---
+title: Control flow
+author: Marie-Hélène Burle
+---
+
+:::{.def}
+
+
+
+:::
+
+## Conditionals
+
+```{r}
+test_sign <- function(x) {
+  if (x > 0) {
+    "x is positif"
+  } else if (x < 0) {
+    "x is negatif"
+  } else {
+    "x is equal to zero"
+  }
+}
+```
+
+```{r}
+test_sign(3)
+test_sign(-2)
+test_sign(0)
+```
+
+## Loops
+
+```{r}
+for (i in 1:10) {
+  print(i)
+}
+```
+
+Notice that here we need to use the `print()` function.
