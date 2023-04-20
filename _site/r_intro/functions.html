@@ -8,7 +8,7 @@
 
 <meta name="author" content="Marie-Hélène Burle">
 
-<title>UVic Spring School 2023 - Packages</title>
+<title>UVic Spring School 2023 - Function definition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,8 +94,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../r_intro/data_structure.html" rel="next">
-<link href="../r_intro/basics.html" rel="prev">
+<link href="../r_intro/control_flow.html" rel="next">
+<link href="../r_intro/indexing.html" rel="prev">
 <link href="..//img/sfu_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -188,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Packages</h1>
+      <h1 class="quarto-secondary-nav-title">Function definition</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -226,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../r_intro/packages.html" class="sidebar-item-text sidebar-link active">Packages</a>
+  <a href="../r_intro/packages.html" class="sidebar-item-text sidebar-link">Packages</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -241,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../r_intro/functions.html" class="sidebar-item-text sidebar-link">Function definition</a>
+  <a href="../r_intro/functions.html" class="sidebar-item-text sidebar-link active">Function definition</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -280,10 +280,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title"><em>On this page:</em></h2>
    
   <ul>
-  <li><a href="#looking-for-packages" id="toc-looking-for-packages" class="nav-link active" data-scroll-target="#looking-for-packages">Looking for packages</a></li>
-  <li><a href="#package-documentation" id="toc-package-documentation" class="nav-link" data-scroll-target="#package-documentation">Package documentation</a></li>
-  <li><a href="#managing-r-packages" id="toc-managing-r-packages" class="nav-link" data-scroll-target="#managing-r-packages">Managing R packages</a></li>
-  <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
+  <li><a href="#syntax" id="toc-syntax" class="nav-link active" data-scroll-target="#syntax">Syntax</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
@@ -292,7 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Packages</h1>
+<h1 class="title d-none d-lg-block">Function definition</h1>
 </div>
 
 
@@ -314,42 +313,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <div class="def">
-<p>Packages are a set of functions, constants, and/or data developed by the community that add functionality to R.</p>
-<p>In this section, we look at where to find packages and how to install them.</p>
+<p>R comes with a number of built-in functions. Packages can provide additional ones. In many cases however, you will want to create your own functions to perform exactly the computations that you need.</p>
+<p>In this section, we will see how to define new functions.</p>
 </div>
-<section id="looking-for-packages" class="level2">
-<h2 class="anchored" data-anchor-id="looking-for-packages">Looking for packages</h2>
+<section id="syntax" class="level2">
+<h2 class="anchored" data-anchor-id="syntax">Syntax</h2>
+<p>Here is the syntax to define a new function:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name &lt;- function(arguments) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  body</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Let’s define a function that we call <code>compare</code> which will compare the value between 2 numbers:</p>
+<div class="cell" data-hash="functions_cache/html/unnamed-chunk-1_bdbc967b11391e14c418a237595eee03">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  x <span class="sc">==</span> y</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
-<li><a href="https://rdrr.io/find/?repos=cran%2Cbioc%2Crforge%2Cgithub&amp;fuzzy_slug=">Package finder</a></li>
-<li>Your peers and the literature</li>
+<li><code>compare</code> is the name of our function.</li>
+<li><code>x</code> and <code>y</code> are the placeholders for the arguments that our function will accept (our function will need 2 arguments to run successfully).</li>
+<li><code>x == y</code> is the body of the function, that is, the computation performed by our function.</li>
 </ul>
-</section>
-<section id="package-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="package-documentation">Package documentation</h2>
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">List of CRAN packages</a></li>
-<li><a href="https://rdrr.io/">Package documentation</a></li>
-</ul>
-</section>
-<section id="managing-r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="managing-r-packages">Managing R packages</h2>
-<p>R packages can be installed, updated, and removed from within R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"package-name"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">remove.packages</span>(<span class="st">"package-name"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">update_packages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="loading-packages" class="level2">
-<h2 class="anchored" data-anchor-id="loading-packages">Loading packages</h2>
-<p>To make a package available in an R session, you load it with the <code>library()</code> function.</p>
-<div class="example">
-<p>Example:</p>
+<p>We can now use our function:</p>
+<div class="cell" data-hash="functions_cache/html/unnamed-chunk-2_1135686de4badb5dc4870027cde22cd9">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">compare</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, you can access a function from a package without loading it with the syntax: <code>package::function()</code>.</p>
-<div class="example">
-<p>Example:</p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"file.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>Note that the result of the last statement is printed automatically:</p>
+<div class="cell" data-hash="functions_cache/html/unnamed-chunk-3_df30499d2a76433b36c191969abffb88">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  x</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  y</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<p>If you want to return other results, you need to explicitly use the <code>print()</code> function:</p>
+<div class="cell" data-hash="functions_cache/html/unnamed-chunk-4_e8f3933e2da38dd55aeb39607923e917">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(x)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  y</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -504,13 +525,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../r_intro/basics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">First steps in R</span>
+      <a href="../r_intro/indexing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Indexing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../r_intro/data_structure.html" class="pagination-link">
-        <span class="nav-page-text">Data types and structures</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../r_intro/control_flow.html" class="pagination-link">
+        <span class="nav-page-text">Control flow</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

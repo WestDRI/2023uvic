@@ -786,28 +786,28 @@
   {
     "objectID": "r_intro/basics.html",
     "href": "r_intro/basics.html",
-    "title": "R: the basics",
+    "title": "First steps in R",
     "section": "",
-    "text": "For some general documentation on R, you can run:\nhelp.start()\nTo get help on a function (e.g. sum), you can run:\nhelp(sum)\nDepending on your settings, this will open a documentation for sum in a pager or in your browser."
+    "text": "In this section, we take our first few steps in R: we will access the R documentation, see how to set R options, and talk about a few concepts."
   },
   {
     "objectID": "r_intro/basics.html#r-settings",
     "href": "r_intro/basics.html#r-settings",
-    "title": "R: the basics",
+    "title": "First steps in R",
     "section": "R settings",
     "text": "R settings\nSettings are saved in a .Rprofile file. You can edit the file directly in any text editor or from within R.\nList all options:\noptions()\nReturn the value of a particular option:\n\ngetOption(\"help_type\")\n\n[1] \"html\"\n\n\nSet an option:\noptions(help_type = \"html\")"
   },
   {
     "objectID": "r_intro/basics.html#assignment",
     "href": "r_intro/basics.html#assignment",
-    "title": "R: the basics",
+    "title": "First steps in R",
     "section": "Assignment",
-    "text": "Assignment\nR can accept the equal sign (=) for assignments, but it is more idiomatic to use the assignment sign (<-) whenever you bind a name to a value and to use the equal sign everywhere else.\n\na <- 3\n\nOnce you have bound a name to a value, you can recall the value with that name:\n\na  # Note that you do not need to use a print() function in R\n\n[1] 3\n\n\nYou can remove an object from the environment by deleting its name:\n\nrm(a)\na\n\nError in eval(expr, envir, enclos): object 'a' not found\n\n\nThe garbage collector will take care of deleting the object itself from memory."
+    "text": "Assignment\nR can accept the equal sign (=) for assignments, but it is more idiomatic to use the assignment sign (<-) whenever you bind a name to a value and to use the equal sign everywhere else.\n\na <- 3\n\nOnce you have bound a name to a value, you can recall the value with that name:\n\na  # Note that you do not need to use a print() function in R\n\n[1] 3\n\n\nYou can remove an object from the environment by deleting its name:\n\nrm(a)\n\nLet’s confirm that a doesn’t exist anymore in the environment:\n\na\n\nError in eval(expr, envir, enclos): object 'a' not found\n\n\nThe garbage collector will take care of deleting the object itself from memory."
   },
   {
     "objectID": "r_intro/basics.html#comments",
     "href": "r_intro/basics.html#comments",
-    "title": "R: the basics",
+    "title": "First steps in R",
     "section": "Comments",
     "text": "Comments\nAnything to the left of # is a comment and is ignored by R:\n\n# This is an inline comment\n\na <- 3  # This is also a comment"
   },
@@ -828,7 +828,7 @@
   {
     "objectID": "r_intro/basics.html#copy-on-modify",
     "href": "r_intro/basics.html#copy-on-modify",
-    "title": "R: the basics",
+    "title": "First steps in R",
     "section": "Copy-on-modify",
     "text": "Copy-on-modify\nWhile some languages (e.g. Python) do not make a copy if you modify a mutable object, R does.\nLet’s have a look at Python:\n>>> a = [1, 2, 3]\n>>> b = a\n>>> b\n[1, 2, 3]\n>>> a[0] = 4\n>>> a\n[4, 2, 3]\n>>> b\n[4, 2, 3]\nModifying a also modifies b. If you want to keep b unchanged, you need to explicitly make a copy of a.\nNow, let’s see what happens in R:\n> a <- c(1, 2, 3)\n> b <- a\n> b\n[1] 1 2 3\n> a[1] <- 4\n> a\n[1] 4 2 3\n> b\n[1] 1 2 3\nHere, the default is to create a new copy in memory when a is transformed so that b remains unchanged. This is more intuitive, but more memory intensive."
   },
@@ -851,14 +851,14 @@
     "href": "r_intro/index.html",
     "title": "Intro R",
     "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
+    "text": "R is a free and open-source programming language for statistical computing, modelling, and graphics, with an unbeatable collection of statistical packages. It is extremely popular in some academic fields such as statistics, biology, bioinformatics, data mining, data analysis, and linguistics.\nDate:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
   },
   {
     "objectID": "r_intro/packages.html",
     "href": "r_intro/packages.html",
     "title": "Packages",
     "section": "",
-    "text": "Packages are a set of functions and/or data that add functionality to R."
+    "text": "Packages are a set of functions, constants, and/or data developed by the community that add functionality to R.\nIn this section, we look at where to find packages and how to install them."
   },
   {
     "objectID": "r_intro/packages.html#looking-for-packages",
@@ -893,7 +893,7 @@
     "href": "r_intro/resources.html",
     "title": "Resources",
     "section": "",
-    "text": "The main R website\nDownload page"
+    "text": "The R community is dynamic and offers a lot of online resources, from IDEs to Q&A, to workshops, books, or publications.\nThis section provides a selection of useful sites.\n\n\nMain sites\n\nR website\nComprehensive R Archive Network (CRAN): R versions and packages\n\n\n\nPosit and RStudio IDE\n\nPosit website (Posit was formerly called RStudio Inc.)\nPosit cheatsheets\n\n\n\nForums and Q&A\n\nStack Overflow [r] tag wiki\nStack Overflow [r] tag questions\nPosit Discourse\n\n\n\nDocumentation as pdf\n\nContributed documentation\nIntro books\n\n\n\nSoftware Carpentry online workshops\n\nProgramming with R\nR for Reproducible Scientific Analysis\nData analysis using R in the digital humanities\n\n\n\nOnline books\n\nR for Data Science (heavily based on the tidyverse)\nR Packages (how to create packages)\nR Programming for Data Science\nMastering Software Development in R\n\n\n\nR research\n\nThe R Journal"
   },
   {
     "objectID": "r_intro/resources.html#alliance-wiki",
@@ -940,21 +940,21 @@
   {
     "objectID": "r_intro/tidyverse.html",
     "href": "r_intro/tidyverse.html",
-    "title": "A little glimpse at the tidyverse",
+    "title": "Introduction to the tidyverse",
     "section": "",
     "text": "The tidyverse is a set of packages which attempts to make R more consistent and more similar to programming languages which were developed by computer scientists rather than statisticians.\nYou can think of it as a more modern version of R.\nThe best introduction to the tidyverse is probably the book R for Data Science by Hadley Wickham and Garrett Grolemund."
   },
   {
     "objectID": "r_intro/tidyverse.html#base-r-or-tidyverse",
     "href": "r_intro/tidyverse.html#base-r-or-tidyverse",
-    "title": "A little glimpse at the tidyverse",
+    "title": "Introduction to the tidyverse",
     "section": "Base R or tidyverse?",
     "text": "Base R or tidyverse?\n“Base R” refers to the use of the standard R library. The expression is often used in contrast to the tidyverse.\nThere are a many things that you can do with either base R or the tidyverse. Because the syntaxes are quite different, it almost feels like using two different languages and people tend to favour one or the other.\nWhich one should you use? Well, this is really up to you.\n\n\n\n\n\n\n\nBase R\nTidyverse\n\n\n\n\nPreferred by old-schoolers\nIncreasingly becoming the norm with newer R users\n\n\nMore stable\nMore consistent syntax and behaviour\n\n\nDoesn’t require installing and loading packages\nMore and more resources and documentation available\n\n\n\nIn truth, even though the tidyverse has many detractors amongst old R users, it is increasingly becoming the norm."
   },
   {
     "objectID": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
     "href": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
-    "title": "A little glimpse at the tidyverse",
+    "title": "Introduction to the tidyverse",
     "section": "A glimpse of the tidyverse",
     "text": "A glimpse of the tidyverse\nThis series of cheatsheet developed by Posit can give you a first glimpse at some of the tidyverse packages.\n\nData transformation\n\n\n\nfrom Posit Cheatsheets\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nWorking with factors\n\n\nfrom Posit Cheatsheets\n\n\n\nVisualization\n\n\n\nfrom Posit Cheatsheets\n\n\n\nFunctional programming\n\n\n\nfrom Posit Cheatsheets"
   },
@@ -963,7 +963,7 @@
     "href": "r_intro/why.html",
     "title": "R: why and for whom?",
     "section": "",
-    "text": "There are other high level programming languages such as Python or Julia, so when might it make sense for you to turn to R?\nHere are a number of good reasons:\n\nFree and open source\nUnequalled number of statistics and modelling packages\nIntegrated package manager\nEasy connection with fast compiled languages such as C and C++\nPowerful IDEs available (RStudio, Emacs ESS)"
+    "text": "There are other high level programming languages such as Python or Julia, so when might it make sense for you to turn to R?"
   },
   {
     "objectID": "r_intro/why.html#for-whom",
@@ -1090,5 +1090,222 @@
     "title": "Scientific visualization with ParaView",
     "section": "",
     "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
+  },
+  {
+    "objectID": "r_intro/basics.html#help-and-documentation",
+    "href": "r_intro/basics.html#help-and-documentation",
+    "title": "First steps in R",
+    "section": "Help and documentation",
+    "text": "Help and documentation\nFor some general documentation on R, you can run:\nhelp.start()\nTo get help on a function (e.g. sum), you can run:\nhelp(sum)\nDepending on your settings, this will open a documentation for sum in a pager or in your browser."
+  },
+  {
+    "objectID": "r_intro/control_flow.html#conditionals",
+    "href": "r_intro/control_flow.html#conditionals",
+    "title": "Control flow",
+    "section": "Conditionals",
+    "text": "Conditionals\n\ntest_sign <- function(x) {\n  if (x > 0) {\n    \"x is positif\"\n  } else if (x < 0) {\n    \"x is negatif\"\n  } else {\n    \"x is equal to zero\"\n  }\n}\n\n\ntest_sign(3)\n\n[1] \"x is positif\"\n\ntest_sign(-2)\n\n[1] \"x is negatif\"\n\ntest_sign(0)\n\n[1] \"x is equal to zero\""
+  },
+  {
+    "objectID": "r_intro/control_flow.html#loops",
+    "href": "r_intro/control_flow.html#loops",
+    "title": "Control flow",
+    "section": "Loops",
+    "text": "Loops\n\nfor (i in 1:10) {\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7\n[1] 8\n[1] 9\n[1] 10\n\n\nNotice that here we need to use the print() function."
+  },
+  {
+    "objectID": "r_intro/data_structure.html",
+    "href": "r_intro/data_structure.html",
+    "title": "Data types and structures",
+    "section": "",
+    "text": "This section covers the various data types and structures available in R."
+  },
+  {
+    "objectID": "r_intro/data_structure.html#summary-of-structures",
+    "href": "r_intro/data_structure.html#summary-of-structures",
+    "title": "Data types and structures",
+    "section": "Summary of structures",
+    "text": "Summary of structures\n\n\n\nDimension\nHomogeneous\nHeterogeneous\n\n\n\n\n1 d\nAtomic vector\nList\n\n\n2 d\nMatrix\nData frame\n\n\n3 d\nArray"
+  },
+  {
+    "objectID": "r_intro/data_structure.html#atomic-vectors",
+    "href": "r_intro/data_structure.html#atomic-vectors",
+    "title": "Data types and structures",
+    "section": "Atomic vectors",
+    "text": "Atomic vectors\n\nWith a single element\n\na <- 2\na\n\n[1] 2\n\ntypeof(a)\n\n[1] \"double\"\n\nstr(a)\n\n num 2\n\nlength(a)\n\n[1] 1\n\ndim(a)\n\nNULL\n\n\nThe dim attribute of a vector doesn’t exist (hence the NULL). This makes vectors different from one-dimensional arrays which have a dim of 1.\nYou might have noticed that 2 is a double (double precision floating point number, equivalent of “float” in other languages). In R, this is the default, even if you don’t type 2.0. This prevents the kind of weirdness you can find in, for instance, Python.\nIn Python:\n>>> 2 == 2.0\nTrue\n>>> type(2) == type(2.0)\nFalse\n>>> type(2)\n<class 'int'>\n>>> type(2.0)\n<class 'float'>\nIn R:\n> 2 == 2.0\n[1] TRUE\n> typeof(2) == typeof(2.0)\n[1] TRUE\n> typeof(2)\n[1] \"double\"\n> typeof(2.0)\n[1] \"double\"\nIf you want to define an integer variable, you use:\n\nb <- 2L\nb\n\n[1] 2\n\ntypeof(b)\n\n[1] \"integer\"\n\nmode(b)\n\n[1] \"numeric\"\n\nstr(b)\n\n int 2\n\n\nThere are six vector types:\n\nlogical\ninteger\ndouble\ncharacter\ncomplex\nraw\n\n\n\nWith multiple elements\n\nc <- c(2, 4, 1)\nc\n\n[1] 2 4 1\n\ntypeof(c)\n\n[1] \"double\"\n\nmode(c)\n\n[1] \"numeric\"\n\nstr(c)\n\n num [1:3] 2 4 1\n\n\n\nd <- c(TRUE, TRUE, NA, FALSE)\nd\n\n[1]  TRUE  TRUE    NA FALSE\n\ntypeof(d)\n\n[1] \"logical\"\n\nstr(d)\n\n logi [1:4] TRUE TRUE NA FALSE\n\n\n\nNA (“Not Available”) is a logical constant of length one. It is an indicator for a missing value.\n\nVectors are homogeneous, so all elements need to be of the same type.\nIf you use elements of different types, R will convert some of them to ensure that they become of the same type:\n\ne <- c(\"This is a string\", 3, \"test\")\ne\n\n[1] \"This is a string\" \"3\"                \"test\"            \n\ntypeof(e)\n\n[1] \"character\"\n\nstr(e)\n\n chr [1:3] \"This is a string\" \"3\" \"test\"\n\n\n\nf <- c(TRUE, 3, FALSE)\nf\n\n[1] 1 3 0\n\ntypeof(f)\n\n[1] \"double\"\n\nstr(f)\n\n num [1:3] 1 3 0\n\n\n\ng <- c(2L, 3, 4L)\ng\n\n[1] 2 3 4\n\ntypeof(g)\n\n[1] \"double\"\n\nstr(g)\n\n num [1:3] 2 3 4\n\n\n\nh <- c(\"string\", TRUE, 2L, 3.1)\nh\n\n[1] \"string\" \"TRUE\"   \"2\"      \"3.1\"   \n\ntypeof(h)\n\n[1] \"character\"\n\nstr(h)\n\n chr [1:4] \"string\" \"TRUE\" \"2\" \"3.1\"\n\n\nThe binary operator : is equivalent to the seq() function and generates a regular sequence of integers:\n\ni <- 1:5\ni\n\n[1] 1 2 3 4 5\n\ntypeof(i)\n\n[1] \"integer\"\n\nstr(i)\n\n int [1:5] 1 2 3 4 5\n\nidentical(2:8, seq(2, 8))\n\n[1] TRUE"
+  },
+  {
+    "objectID": "r_intro/data_structure.html#matrices",
+    "href": "r_intro/data_structure.html#matrices",
+    "title": "Data types and structures",
+    "section": "Matrices",
+    "text": "Matrices\n\nj <- matrix(1:12, nrow = 3, ncol = 4)\nj\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12\n\ntypeof(j)\n\n[1] \"integer\"\n\nstr(j)\n\n int [1:3, 1:4] 1 2 3 4 5 6 7 8 9 10 ...\n\nlength(j)\n\n[1] 12\n\ndim(j)\n\n[1] 3 4\n\n\nThe default is byrow = FALSE. If you want the matrix to be filled in by row, you need to set this argument to TRUE:\n\nk <- matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE)\nk\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    2    3    4\n[2,]    5    6    7    8\n[3,]    9   10   11   12"
+  },
+  {
+    "objectID": "r_intro/data_structure.html#arrays",
+    "href": "r_intro/data_structure.html#arrays",
+    "title": "Data types and structures",
+    "section": "Arrays",
+    "text": "Arrays\n\nl <- array(as.double(1:24), c(3, 2, 4))\nl\n\n, , 1\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\n, , 2\n\n     [,1] [,2]\n[1,]    7   10\n[2,]    8   11\n[3,]    9   12\n\n, , 3\n\n     [,1] [,2]\n[1,]   13   16\n[2,]   14   17\n[3,]   15   18\n\n, , 4\n\n     [,1] [,2]\n[1,]   19   22\n[2,]   20   23\n[3,]   21   24\n\ntypeof(l)\n\n[1] \"double\"\n\nstr(l)\n\n num [1:3, 1:2, 1:4] 1 2 3 4 5 6 7 8 9 10 ...\n\nlength(l)\n\n[1] 24\n\ndim(l)\n\n[1] 3 2 4"
+  },
+  {
+    "objectID": "r_intro/data_structure.html#lists",
+    "href": "r_intro/data_structure.html#lists",
+    "title": "Data types and structures",
+    "section": "Lists",
+    "text": "Lists\n\nm <- list(2, 3)\nm\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3\n\ntypeof(m)\n\n[1] \"list\"\n\nstr(m)\n\nList of 2\n $ : num 2\n $ : num 3\n\nlength(m)\n\n[1] 2\n\ndim(m)\n\nNULL\n\n\nAs with atomic vectors, lists do not have a dim attribute. Lists are in fact a different type of vectors.\nLists can be heterogeneous:\n\nn <- list(2L, 3, c(2, 1), FALSE, \"string\")\nn\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3\n\n[[3]]\n[1] 2 1\n\n[[4]]\n[1] FALSE\n\n[[5]]\n[1] \"string\"\n\ntypeof(n)\n\n[1] \"list\"\n\nstr(n)\n\nList of 5\n $ : int 2\n $ : num 3\n $ : num [1:2] 2 1\n $ : logi FALSE\n $ : chr \"string\"\n\nlength(n)\n\n[1] 5"
+  },
+  {
+    "objectID": "r_intro/data_structure.html#data-frames",
+    "href": "r_intro/data_structure.html#data-frames",
+    "title": "Data types and structures",
+    "section": "Data frames",
+    "text": "Data frames\nData frames contain tabular data. Under the hood, a data frame is a list of vectors.\n\no <- data.frame(\n  country = c(\"Canada\", \"USA\", \"Mexico\"),\n  var = c(2.9, 3.1, 4.5)\n)\no\n\n  country var\n1  Canada 2.9\n2     USA 3.1\n3  Mexico 4.5\n\ntypeof(o)\n\n[1] \"list\"\n\nstr(o)\n\n'data.frame':   3 obs. of  2 variables:\n $ country: chr  \"Canada\" \"USA\" \"Mexico\"\n $ var    : num  2.9 3.1 4.5\n\nlength(o)\n\n[1] 2\n\ndim(o)\n\n[1] 3 2"
+  },
+  {
+    "objectID": "r_intro/functions.html",
+    "href": "r_intro/functions.html",
+    "title": "Function definition",
+    "section": "",
+    "text": "R comes with a number of built-in functions. Packages can provide additional ones. In many cases however, you will want to create your own functions to perform exactly the computations that you need.\nIn this section, we will see how to define new functions."
+  },
+  {
+    "objectID": "r_intro/functions.html#syntax",
+    "href": "r_intro/functions.html#syntax",
+    "title": "Function definition",
+    "section": "Syntax",
+    "text": "Syntax\nHere is the syntax to define a new function:\nname <- function(arguments) {\n  body\n}"
+  },
+  {
+    "objectID": "r_intro/functions.html#example",
+    "href": "r_intro/functions.html#example",
+    "title": "Function definition",
+    "section": "Example",
+    "text": "Example\nLet’s define a function that we call compare which will compare the value between 2 numbers:\n\ncompare <- function(x, y) {\n  x == y\n}\n\n\ncompare is the name of our function.\nx and y are the placeholders for the arguments that our function will accept (our function will need 2 arguments to run successfully).\nx == y is the body of the function, that is, the computation performed by our function.\n\nWe can now use our function:\n\ncompare(2, 3)\n\n[1] FALSE"
+  },
+  {
+    "objectID": "r_intro/functions.html#section",
+    "href": "r_intro/functions.html#section",
+    "title": "Function definition",
+    "section": "",
+    "text": "Note that the result of the last statement is printed automatically:\n\ntest <- function(x, y) {\n  x\n  y\n}\ntest(2, 3)\n\n[1] 3\n\n\nIf you want to return other results, you need to explicitly use the print() function:\n\ntest <- function(x, y) {\n  print(x)\n  y\n}\ntest(2, 3)\n\n[1] 2\n\n\n[1] 3"
+  },
+  {
+    "objectID": "r_intro/indexing.html",
+    "href": "r_intro/indexing.html",
+    "title": "Indexing",
+    "section": "",
+    "text": "This section covers indexing from the various data structures."
+  },
+  {
+    "objectID": "r_intro/indexing.html#indexing-atomic-vectors",
+    "href": "r_intro/indexing.html#indexing-atomic-vectors",
+    "title": "Indexing",
+    "section": "Indexing atomic vectors",
+    "text": "Indexing atomic vectors\n\nHere is an example with an atomic vector of size one:\n\nIndexing in R starts at 1 and is done with square brackets next to the element to index:\n\nx <- 2\nx\n\n[1] 2\n\nx[1]\n\n[1] 2\n\n\nWhat happens if we index out of range?\n\nx[2]\n\n[1] NA\n\n\n\nExample for an atomic vector with multiple elements:\n\n\nx <- c(2, 4, 1)\nx\n\n[1] 2 4 1\n\nx[2]\n\n[1] 4\n\nx[2:4]\n\n[1]  4  1 NA"
+  },
+  {
+    "objectID": "r_intro/indexing.html#indexing-matrices-and-arrays",
+    "href": "r_intro/indexing.html#indexing-matrices-and-arrays",
+    "title": "Indexing",
+    "section": "Indexing matrices and arrays",
+    "text": "Indexing matrices and arrays\n\nx <- matrix(1:12, nrow = 3, ncol = 4)\nx\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12\n\nx[2, 3]\n\n[1] 8\n\nx <- array(as.double(1:24), c(3, 2, 4))\nx\n\n, , 1\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\n, , 2\n\n     [,1] [,2]\n[1,]    7   10\n[2,]    8   11\n[3,]    9   12\n\n, , 3\n\n     [,1] [,2]\n[1,]   13   16\n[2,]   14   17\n[3,]   15   18\n\n, , 4\n\n     [,1] [,2]\n[1,]   19   22\n[2,]   20   23\n[3,]   21   24\n\nx[2, 1, 3]\n\n[1] 14"
+  },
+  {
+    "objectID": "r_intro/indexing.html#indexing-lists",
+    "href": "r_intro/indexing.html#indexing-lists",
+    "title": "Indexing",
+    "section": "Indexing lists",
+    "text": "Indexing lists\n\nx <- list(2L, 3:8, c(2, 1), FALSE, \"string\")\nx\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3 4 5 6 7 8\n\n[[3]]\n[1] 2 1\n\n[[4]]\n[1] FALSE\n\n[[5]]\n[1] \"string\"\n\n\nIndexing a list returns a list:\n\nx[3]\n\n[[1]]\n[1] 2 1\n\ntypeof(x[3])\n\n[1] \"list\"\n\n\nTo extract elements of a list, double square brackets are required:\n\nx[[3]]\n\n[1] 2 1\n\ntypeof(x[[3]])\n\n[1] \"double\"\n\n\n\n\nYour turn:\n\nTry to extract the number 7 from this list."
+  },
+  {
+    "objectID": "r_intro/indexing.html#indexing-data-frames",
+    "href": "r_intro/indexing.html#indexing-data-frames",
+    "title": "Indexing",
+    "section": "Indexing data frames",
+    "text": "Indexing data frames\n\nx <- data.frame(\n  country = c(\"Canada\", \"USA\", \"Mexico\"),\n  var = c(2.9, 3.1, 4.5)\n)\nx\n\n  country var\n1  Canada 2.9\n2     USA 3.1\n3  Mexico 4.5\n\n\nA data frame is a list of atomic vectors representing the various columns:\n\nx[1]\n\n  country\n1  Canada\n2     USA\n3  Mexico\n\ntypeof(x[1])\n\n[1] \"list\"\n\nx[[1]]\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\ntypeof(x[[1]])\n\n[1] \"character\"\n\n\nIndexing dataframes can also be done using the column names:\n\nx$country\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\nidentical(x[[1]], x$country)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "r_intro/plotting.html",
+    "href": "r_intro/plotting.html",
+    "title": "Plotting",
+    "section": "",
+    "text": "This section focuses on plotting in R with the package ggplot2 from the tidyverse."
+  },
+  {
+    "objectID": "r_intro/plotting.html#the-data",
+    "href": "r_intro/plotting.html#the-data",
+    "title": "Plotting",
+    "section": "The data",
+    "text": "The data\nR comes with a number of datasets. You can get a list by running data(). The ggplot2 package provides additional ones. We will use the mpg dataset from ggplot2.\nTo access the data, let’s load the package:\n\nlibrary(ggplot2)\n\nHere is what that dataset looks like:\n\nmpg\n\n# A tibble: 234 × 11\n   manufacturer model      displ  year   cyl trans      drv     cty   hwy fl   \n   <chr>        <chr>      <dbl> <int> <int> <chr>      <chr> <int> <int> <chr>\n 1 audi         a4           1.8  1999     4 auto(l5)   f        18    29 p    \n 2 audi         a4           1.8  1999     4 manual(m5) f        21    29 p    \n 3 audi         a4           2    2008     4 manual(m6) f        20    31 p    \n 4 audi         a4           2    2008     4 auto(av)   f        21    30 p    \n 5 audi         a4           2.8  1999     6 auto(l5)   f        16    26 p    \n 6 audi         a4           2.8  1999     6 manual(m5) f        18    26 p    \n 7 audi         a4           3.1  2008     6 auto(av)   f        18    27 p    \n 8 audi         a4 quattro   1.8  1999     4 manual(m5) 4        18    26 p    \n 9 audi         a4 quattro   1.8  1999     4 auto(l5)   4        16    25 p    \n10 audi         a4 quattro   2    2008     4 manual(m6) 4        20    28 p    \n   class  \n   <chr>  \n 1 compact\n 2 compact\n 3 compact\n 4 compact\n 5 compact\n 6 compact\n 7 compact\n 8 compact\n 9 compact\n10 compact\n# ℹ 224 more rows\n\n\n?mpg will give you information on the variables. In particular:\n\ndispl contains data on engine displacement (a measure of engine size and thus power) in litres (L).\nhwy contains data on fuel economy while driving on highways in miles per gallon (mpg).\ndrv represents the type of drive train (front-wheel drive, rear wheel drive, 4WD).\nclass represents the type of car.\n\nWe are interested in the relationship between engine size and fuel economy and see how the type of drive train and/or the type of car might affect this relationship."
+  },
+  {
+    "objectID": "r_intro/plotting.html#base-r-plotting",
+    "href": "r_intro/plotting.html#base-r-plotting",
+    "title": "Plotting",
+    "section": "Base R plotting",
+    "text": "Base R plotting\nR contains built-in plotting capability thanks to the plot() function.\nA basic version of our plot would be:\n\nplot(\n  mpg$displ,\n  mpg$hwy,\n  main = \"Fuel consumption per engine size on highways\",\n  xlab = \"Engine size (L)\",\n  ylab = \"Fuel economy (mpg) on highways\"\n)"
+  },
+  {
+    "objectID": "r_intro/plotting.html#grammar-of-graphics",
+    "href": "r_intro/plotting.html#grammar-of-graphics",
+    "title": "Plotting",
+    "section": "Grammar of graphics",
+    "text": "Grammar of graphics\nLeland Wilkinson developed the concept of grammar of graphics in his 2005 book The Grammar of Graphics. By breaking down statistical graphs into components following a set of rules, any plot can be described and constructed in a rigorous fashion.\nThis was further refined by Hadley Wickham in his 2010 article A Layered Grammar of Graphics and implemented in the package ggplot2 (that’s what the 2 “g” stand for in “ggplot”).\nggplot2 has become the dominant graphing package in R. Let’s see how to construct a plot with this package."
+  },
+  {
+    "objectID": "r_intro/plotting.html#plotting-with-ggplot2",
+    "href": "r_intro/plotting.html#plotting-with-ggplot2",
+    "title": "Plotting",
+    "section": "Plotting with ggplot2",
+    "text": "Plotting with ggplot2\n\nThe Canvas\nThe first component is the data:\n\nggplot(data = mpg)\n\n\n\n\n\nThis can be simplified into ggplot(mpg).\n\nThe second component sets the way variables are mapped on the axes. This is done with the aes() (aesthetics) function:\n\nggplot(data = mpg, mapping = aes(x = displ, y = hwy))\n\n\n\n\n\nThis can be simplified into ggplot(mpg, aes(x = displ, y = hwy)).\n\n\n\nGeometric representations of the data\nOnto this canvas, we can add “geoms” (geometrical objects) representing the data. The type of “geom” defines the type of representation (e.g. boxplot, histogram, bar chart).\nTo represent the data as a scatterplot, we use the geom_point() function:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n\n\n\nWe can colour-code the points in the scatterplot based on the drv variable, showing the lower fuel efficiency of 4WD vehicles:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = drv))\n\n\n\n\nOr we can colour-code them based on the class variable:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class))\n\n\n\n\nMultiple “geoms” can be added on top of each other. For instance, we can add a smoothed conditional means function that aids at seeing patterns in the data with geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nThanks to the colour-coding of the types of car, we can see that the cluster of points in the top right corner all belong to the same type: 2 seaters. Those are outliers with high power, yet high few efficiency due to their smaller size.\nThe default smoothing function uses the LOESS (locally estimated scatterplot smoothing) method, which is a nonlinear regression. But maybe a linear model would actually show the general trend better. We can change the method by passing it as an argument to geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOf course, we could apply the smoothing function to each class instead of the entire data. It creates a busy plot but shows that the downward trend remains true within each type of car:\n\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOther arguments to geom_smooth() can set the line width, color, or whether or not the standard error (se) is shown:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nColour scales\nIf we want to change the colour scale, we add another layer for this:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nscale_color_brewer(), based on color brewer 2.0, is one of many methods to change the color scale. Here is the list of available scales for this particular method:\n\n\n\nLabels\nWe can keep on adding layers. For instance, the labs() function allows to set title, subtitle, captions, tags, axes labels, etc.\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nThemes\nAnother optional layer sets one of several preset themes.\nEdward Tufte developed, amongst others, the principle of data-ink ratio which emphasizes that ink should be used primarily where it communicates meaningful messages. It is indeed common to see charts where more ink is used in labels or background than in the actual representation of the data.\nThe default ggplot2 theme could be criticized as not following this principle. Let’s change it:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nThe theme() function allows to tweak the theme in any number of ways. For instance, what if we don’t like the default position of the title and we’d rather have it centered?\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nMany things can be changed thanks to the theme() function. For instance, we can move the legend to give more space to the actual graph:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5), legend.position = \"bottom\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nAs you could see, ggplot2 works by adding a number of layers on top of each other, all following a standard set of rules, or “grammar”. This way, a vast array of graphs can be created by organizing simple components."
+  },
+  {
+    "objectID": "r_intro/plotting.html#ggplot2-extensions",
+    "href": "r_intro/plotting.html#ggplot2-extensions",
+    "title": "Plotting",
+    "section": "ggplot2 extensions",
+    "text": "ggplot2 extensions\nThanks to its vast popularity, ggplot2 has seen a proliferation of packages extending its capabilities.\n\nCombining plots\nFor instance the patchwork package allows to easily combine multiple plots on the same frame.\nLet’s add a second plot next to our plot. To add plots side by side, we simply add them to each other. We also make a few changes to the labels to improve the plots integration:\n\nlibrary(patchwork)\n\nggplot(mpg, aes(x = displ, y = hwy)) +        # First plot\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\"\n  ) +\n  theme_classic() +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    legend.position = c(0.7, 0.75),           # Better legend position\n    legend.background = element_rect(         # Add a frame to the legend\n      linewidth=0.1,\n      linetype=\"solid\",\n      colour = \"black\"\n    )\n  ) +\n  ggplot(mpg, aes(x = displ, y = hwy)) +      # Second plot\n  geom_point(aes(color = drv)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  labs(\n    x = \"Engine size (L)\",\n    y = element_blank(),                      # Remove redundant label\n    color = \"Type of drive train\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    legend.position = c(0.7, 0.87),\n    legend.background = element_rect(\n      linewidth=0.1,\n      linetype=\"solid\",\n      colour = \"black\"\n    )\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nExtensions list\nAnother popular extension is the gganimate package which allows to create data animations.\nA full list of extensions for ggplot2 is shown below (here is the website):"
+  },
+  {
+    "objectID": "r_intro/publishing.html",
+    "href": "r_intro/publishing.html",
+    "title": "Publishing",
+    "section": "",
+    "text": "You might have heard of R Markdown: a way to intertwine code and prose in a single scientific document. The company behind R Markdown has now developed its successor: Quarto.\n\nQuarto allows the creation of webpages, websites, presentations, books, pdf, etc. from code in R, Python, or Julia and markdown text.\nIf you are interested in an introduction to this tool, you can have a look at our workshop or our webinar on Quarto."
+  },
+  {
+    "objectID": "r_intro/run_r_intro.html",
+    "href": "r_intro/run_r_intro.html",
+    "title": "Running R for this course",
+    "section": "",
+    "text": "This section covers the various ways R can be run and get you started using our RStudio server for this course."
+  },
+  {
+    "objectID": "r_intro/run_r_intro.html#running-r",
+    "href": "r_intro/run_r_intro.html#running-r",
+    "title": "Running R for this course",
+    "section": "Running R",
+    "text": "Running R\nR being an interpreted language, it can be run non-interactively or interactively.\n\nRunning R non-interactively\nIf you write code in a text file (called a script), you can then execute it with:\nRscript my_script.R\n\nThe command to execute scripts is Rscript rather than R.\nBy convention, R scripts take the extension .R.\n\n\n\nRunning R interactively\nThere are several ways to run R interactively.\n\nDirectly in the console (the name for the R shell):\n\n\n\nIn Jupyter with the R kernel (IRkernel package).\nIn another IDE (e.g. in Emacs with ESS).\nIn the RStudio IDE.\n\nThe RStudio IDE is popular and this is what we will use today. RStudio can can be run locally, but for this course, we will use an RStudio server."
+  },
+  {
+    "objectID": "r_intro/run_r_intro.html#accessing-our-temporary-rstudio-server",
+    "href": "r_intro/run_r_intro.html#accessing-our-temporary-rstudio-server",
+    "title": "Running R for this course",
+    "section": "Accessing our temporary RStudio server",
+    "text": "Accessing our temporary RStudio server\nYou do not need to install anything on your machine for this course as we will provide access to a temporary RStudio server.\n\nA username, a password, and the URL of the RStudio server will be given to you during the workshop.\n\nSign in using the username and password you will be given while ignoring the OTP entry. This will take you to a JupyterHub. There, click on the “RStudio” button and the RStudio server will open in a new tab."
+  },
+  {
+    "objectID": "r_intro/run_r_intro.html#using-rstudio",
+    "href": "r_intro/run_r_intro.html#using-rstudio",
+    "title": "Running R for this course",
+    "section": "Using RStudio",
+    "text": "Using RStudio\nFor those unfamiliar with the RStudio IDE, you can download the following cheatsheet:\n\n\n\n\n\n\n\nfrom Posit Cheatsheets"
+  },
+  {
+    "objectID": "r_intro/why.html#why-r",
+    "href": "r_intro/why.html#why-r",
+    "title": "R: why and for whom?",
+    "section": "Why R?",
+    "text": "Why R?\nHere are a number of reasons why you might want to consider using R:\n\nFree and open source\nUnequalled number of statistics and modelling packages\nIntegrated package manager\nEasy connection with fast compiled languages such as C and C++\nPowerful IDEs available (RStudio, Emacs ESS)"
   }
 ]

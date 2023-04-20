@@ -79,14 +79,28 @@ website:
         # - text: <em><b>Getting started with R</b></em>
         #   href: r_intro/index.qmd
         #   contents: 
+        #     - text: Running R for this course
+        #       href: r_intro/run_r_intro.qmd
         #     - text: "R: why and for whom?"
         #       href: r_intro/why.qmd
-        #     - text: "R: the basics"
+        #     - text: First steps in R
         #       href: r_intro/basics.qmd
         #     - text: Packages
         #       href: r_intro/packages.qmd
-        #     - text: Glimpse at the tidyverse
+        #     - text: Data types and structures
+        #       href: r_intro/data_structure.qmd
+        #     - text: Indexing
+        #       href: r_intro/indexing.qmd
+        #     - text: Function definition
+        #       href: r_intro/functions.qmd
+        #     - text: Control flow
+        #       href: r_intro/control_flow.qmd
+        #     - text: Introduction to the tidyverse
         #       href: r_intro/tidyverse.qmd
+        #     - text: Plotting
+        #       href: r_intro/plotting.qmd
+        #     - text: Publishing
+        #       href: r_intro/publishing.qmd
         #     - text: Resources
         #       href: r_intro/resources.qmd
     - id: r_parallel

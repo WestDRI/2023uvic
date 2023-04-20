@@ -8,7 +8,7 @@
 
 <meta name="author" content="Marie-Hélène Burle">
 
-<title>UVic Spring School 2023 - Packages</title>
+<title>UVic Spring School 2023 - Indexing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,8 +94,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../r_intro/data_structure.html" rel="next">
-<link href="../r_intro/basics.html" rel="prev">
+<link href="../r_intro/functions.html" rel="next">
+<link href="../r_intro/data_structure.html" rel="prev">
 <link href="..//img/sfu_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -188,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Packages</h1>
+      <h1 class="quarto-secondary-nav-title">Indexing</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -226,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../r_intro/packages.html" class="sidebar-item-text sidebar-link active">Packages</a>
+  <a href="../r_intro/packages.html" class="sidebar-item-text sidebar-link">Packages</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,7 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../r_intro/indexing.html" class="sidebar-item-text sidebar-link">Indexing</a>
+  <a href="../r_intro/indexing.html" class="sidebar-item-text sidebar-link active">Indexing</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -280,10 +280,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title"><em>On this page:</em></h2>
    
   <ul>
-  <li><a href="#looking-for-packages" id="toc-looking-for-packages" class="nav-link active" data-scroll-target="#looking-for-packages">Looking for packages</a></li>
-  <li><a href="#package-documentation" id="toc-package-documentation" class="nav-link" data-scroll-target="#package-documentation">Package documentation</a></li>
-  <li><a href="#managing-r-packages" id="toc-managing-r-packages" class="nav-link" data-scroll-target="#managing-r-packages">Managing R packages</a></li>
-  <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
+  <li><a href="#indexing-atomic-vectors" id="toc-indexing-atomic-vectors" class="nav-link active" data-scroll-target="#indexing-atomic-vectors">Indexing atomic vectors</a></li>
+  <li><a href="#indexing-matrices-and-arrays" id="toc-indexing-matrices-and-arrays" class="nav-link" data-scroll-target="#indexing-matrices-and-arrays">Indexing matrices and arrays</a></li>
+  <li><a href="#indexing-lists" id="toc-indexing-lists" class="nav-link" data-scroll-target="#indexing-lists">Indexing lists</a></li>
+  <li><a href="#indexing-data-frames" id="toc-indexing-data-frames" class="nav-link" data-scroll-target="#indexing-data-frames">Indexing data frames</a></li>
   </ul>
 </nav>
     </div>
@@ -292,7 +292,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Packages</h1>
+<h1 class="title d-none d-lg-block">Indexing</h1>
 </div>
 
 
@@ -314,42 +314,206 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <div class="def">
-<p>Packages are a set of functions, constants, and/or data developed by the community that add functionality to R.</p>
-<p>In this section, we look at where to find packages and how to install them.</p>
+<p>This section covers indexing from the various data structures.</p>
 </div>
-<section id="looking-for-packages" class="level2">
-<h2 class="anchored" data-anchor-id="looking-for-packages">Looking for packages</h2>
-<ul>
-<li><a href="https://rdrr.io/find/?repos=cran%2Cbioc%2Crforge%2Cgithub&amp;fuzzy_slug=">Package finder</a></li>
-<li>Your peers and the literature</li>
-</ul>
-</section>
-<section id="package-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="package-documentation">Package documentation</h2>
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">List of CRAN packages</a></li>
-<li><a href="https://rdrr.io/">Package documentation</a></li>
-</ul>
-</section>
-<section id="managing-r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="managing-r-packages">Managing R packages</h2>
-<p>R packages can be installed, updated, and removed from within R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"package-name"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">remove.packages</span>(<span class="st">"package-name"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">update_packages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="loading-packages" class="level2">
-<h2 class="anchored" data-anchor-id="loading-packages">Loading packages</h2>
-<p>To make a package available in an R session, you load it with the <code>library()</code> function.</p>
+<section id="indexing-atomic-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-atomic-vectors">Indexing atomic vectors</h2>
 <div class="example">
-<p>Example:</p>
+<p>Here is an example with an atomic vector of size one:</p>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, you can access a function from a package without loading it with the syntax: <code>package::function()</code>.</p>
+<p>Indexing in R starts at <code>1</code> and is done with square brackets next to the element to index:</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-1_10a2d1a6fcc674a164feb5abd3910c86">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>What happens if we index out of range?</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-2_9d0e7162b7c61696f68a06408d1a1805">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
 <div class="example">
-<p>Example:</p>
+<p>Example for an atomic vector with multiple elements:</p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"file.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-3_635dac00a6db048e837c232bef669d9d">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 4 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  4  1 NA</code></pre>
+</div>
+</div>
+</section>
+<section id="indexing-matrices-and-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-matrices-and-arrays">Indexing matrices and arrays</h2>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-4_cb7a1e061d2b1cdabc2dfc164fb4381e">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="fu">as.double</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>), <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>, , 1
+
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+
+, , 2
+
+     [,1] [,2]
+[1,]    7   10
+[2,]    8   11
+[3,]    9   12
+
+, , 3
+
+     [,1] [,2]
+[1,]   13   16
+[2,]   14   17
+[3,]   15   18
+
+, , 4
+
+     [,1] [,2]
+[1,]   19   22
+[2,]   20   23
+[3,]   21   24</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14</code></pre>
+</div>
+</div>
+</section>
+<section id="indexing-lists" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-lists">Indexing lists</h2>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-5_38335421438110341dbc17c0c6ea896b">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(2L, <span class="dv">3</span><span class="sc">:</span><span class="dv">8</span>, <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>), <span class="cn">FALSE</span>, <span class="st">"string"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 2
+
+[[2]]
+[1] 3 4 5 6 7 8
+
+[[3]]
+[1] 2 1
+
+[[4]]
+[1] FALSE
+
+[[5]]
+[1] "string"</code></pre>
+</div>
+</div>
+<p>Indexing a list returns a list:</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-6_784df8788e061db8d6fb07fa6e81705f">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 2 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+</div>
+<p>To extract elements of a list, double square brackets are required:</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-7_b30e387cd1fa525c8be33379a13b4668">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>x[[<span class="dv">3</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x[[<span class="dv">3</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+</div>
+<div class="exo">
+<div class="yourturn">
+<p>Your turn:</p>
+</div>
+<p>Try to extract the number <code>7</code> from this list.</p>
+</div>
+<!-- ```{r} -->
+<!-- x[[2]][5] -->
+<!-- ``` -->
+</section>
+<section id="indexing-data-frames" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-data-frames">Indexing data frames</h2>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-8_2f403fb0b55c99230fea1a5904a4a1c2">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">"Canada"</span>, <span class="st">"USA"</span>, <span class="st">"Mexico"</span>),</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">var =</span> <span class="fu">c</span>(<span class="fl">2.9</span>, <span class="fl">3.1</span>, <span class="fl">4.5</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  country var
+1  Canada 2.9
+2     USA 3.1
+3  Mexico 4.5</code></pre>
+</div>
+</div>
+<p>A data frame is a list of atomic vectors representing the various columns:</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-9_5bb15e3a6442fafded38cc4de8f5cd6e">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  country
+1  Canada
+2     USA
+3  Mexico</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Canada" "USA"    "Mexico"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p>Indexing dataframes can also be done using the column names:</p>
+<div class="cell" data-hash="indexing_cache/html/unnamed-chunk-10_b80ff534e624f12bfaaac29dc719ee73">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>country</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Canada" "USA"    "Mexico"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(x[[<span class="dv">1</span>]], x<span class="sc">$</span>country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -504,13 +668,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../r_intro/basics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">First steps in R</span>
+      <a href="../r_intro/data_structure.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data types and structures</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../r_intro/data_structure.html" class="pagination-link">
-        <span class="nav-page-text">Data types and structures</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../r_intro/functions.html" class="pagination-link">
+        <span class="nav-page-text">Function definition</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
