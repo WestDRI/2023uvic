@@ -7,6 +7,8 @@ title-block-banner: true
 
 :::{.topdef}
 
+R is a free and open-source programming language for statistical computing, modelling, and graphics, with an unbeatable collection of statistical packages. It is extremely popular in some academic fields such as statistics, biology, bioinformatics, data mining, data analysis, and linguistics.
+
 **Date:** \
 Tuesday May 2, 2023
 
@@ -25,4 +27,4 @@ As we will provide access to an RStudio Server, no installation is required.
 :::
 
 <!-- <br> -->
-<!-- [[Start course ➤](why.qmd)]{.topinline} -->
+<!-- [[Start course ➤](run_r_intro.qmd)]{.topinline} -->
