@@ -25,4 +25,4 @@ We will provide access to one of our Linux systems. To make use of it, attendees
 :::
 
 <!-- <br> -->
-<!-- [[Start course ➤](xxx.qmd)]{.topinline} -->
+<!-- Course notes can be found [here](https://wgpages.netlify.app/bash-in-summer). -->

@@ -23,3 +23,10 @@ This is an introductory course with no prior visualization experience required.
 Please install [ParaView](https://www.paraview.org/download) on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView.
 
 :::
+
+<br>
+1. [Download today's materials](https://bit.ly/paraviewzipp) as a single ZIP file with slides (two PDFs), data
+and scripts inside. Unpack it where you can find it on your computer.
+
+2. [Install recent ParaView](http://www.paraview.org/download) on your computer. Make sure it runs, i.e. you
+   have installed the right version for your operating system and processor architecture.
