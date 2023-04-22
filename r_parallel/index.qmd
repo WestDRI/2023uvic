@@ -1,13 +1,11 @@
 ---
 title: Parallel R
 description: |
-  Introduction to high-performance research computing and parallel R
+  R is not famous for its speed. With code optimization and parallelization, it can however be used for heavy computations. This course will introduce you to working with R from the command line on the Alliance clusters with a focus on performance. We will discuss code profiling and benchmarking, various parallelization techniques, as well as using C++ from inside R to speed up calculations.
 title-block-banner: true
 ---
 
 :::{.topdef}
-
-R is not famous for its speed. With code optimization and parallelization, it can however be used for heavy computations. This course will introduce you to working with R from the command line on the Alliance clusters with a focus on performance. We will discuss code profiling and benchmarking, various parallelization techniques, as well as using C++ from inside R to speed up calculations.
 
 **Date:** \
 Tuesday May 2, 2023

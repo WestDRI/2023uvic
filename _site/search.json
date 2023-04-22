@@ -921,7 +921,7 @@
     "href": "r_intro/index.html",
     "title": "Intro R",
     "section": "",
-    "text": "R is a free and open-source programming language for statistical computing, modelling, and graphics, with an unbeatable collection of statistical packages. It is extremely popular in some academic fields such as statistics, biology, bioinformatics, data mining, data analysis, and linguistics.\nDate:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
   },
   {
     "objectID": "r_intro/indexing.html",
@@ -1194,7 +1194,7 @@
     "href": "r_parallel/index.html",
     "title": "Parallel R",
     "section": "",
-    "text": "R is not famous for its speed. With code optimization and parallelization, it can however be used for heavy computations. This course will introduce you to working with R from the command line on the Alliance clusters with a focus on performance. We will discuss code profiling and benchmarking, various parallelization techniques, as well as using C++ from inside R to speed up calculations.\nDate:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R and some basic working knowledge of HPC (how to submit Slurm jobs and view their output).\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R and some basic working knowledge of HPC (how to submit Slurm jobs and view their output).\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
   },
   {
     "objectID": "r_parallel/memory.html",
