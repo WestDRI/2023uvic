@@ -110,21 +110,27 @@ website:
             - r_parallel/index.qmd
         # - text: <b><em>Parallel R</em></b>
         #   href: r_parallel/index.qmd
-        #   contents: 
+        #   contents:
+        #     - text: Running R for this course
+        #       href: r_parallel/run_r_hpc.qmd
         #     - text: Measuring performance
         #       href: r_parallel/performance.qmd
+        #     - text: Optimizations
+        #       href: r_parallel/optimizations.qmd
+        #     - text: Memory management
+        #       href: r_parallel/memory.qmd
         #     - text: Running R on HPC clusters
         #       href: r_parallel/clusters.qmd
         #     - text: Types of parallelism
         #       href: r_parallel/parallel_types.qmd
-        #     - text: Running R code in parallel
-        #       href: r_parallel/parallel_r.qmd
         #     - text: Parallel loops
         #       href: r_parallel/parallel_loops.qmd
-        #     - text: Partitioning data
-        #       href: r_parallel/partition.qmd
+        #     - text: Data on HPC clusters
+        #       href: r_parallel/data.qmd
         #     - text: Writing C++ in R with Rcpp
         #       href: r_parallel/rcpp.qmd
+        #     - text: Resources for HPC in R
+        #       href: r_parallel/resources_hpc.qmd
     - id: julia
       contents:
         - section:

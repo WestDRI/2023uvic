@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../r_intro/plotting.html" rel="next">
-<link href="../r_intro/control_flow.html" rel="prev">
 <link href="..//img/sfu_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -67,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -92,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">HPC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../r_intro/index.html" aria-current="page">
+    <a class="nav-link" href="../r_intro/index.html">
  <span class="menu-text">Intro R</span></a>
   </li>  
   <li class="nav-item">
@@ -123,107 +121,25 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Introduction to the tidyverse</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../r_intro/index.html" class="sidebar-item-text sidebar-link"><em><b>Getting started with R</b></em></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/run_r_intro.html" class="sidebar-item-text sidebar-link">Running R for this course</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/why.html" class="sidebar-item-text sidebar-link">R: why and for whom?</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/basics.html" class="sidebar-item-text sidebar-link">First steps in R</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/packages.html" class="sidebar-item-text sidebar-link">Packages</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/data_structure.html" class="sidebar-item-text sidebar-link">Data types and structures</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/indexing.html" class="sidebar-item-text sidebar-link">Indexing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/functions.html" class="sidebar-item-text sidebar-link">Function definition</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/control_flow.html" class="sidebar-item-text sidebar-link">Control flow</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/tidyverse.html" class="sidebar-item-text sidebar-link active">Introduction to the tidyverse</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/plotting.html" class="sidebar-item-text sidebar-link">Plotting</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/publishing.html" class="sidebar-item-text sidebar-link">Publishing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r_intro/resources.html" class="sidebar-item-text sidebar-link">Resources</a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title"><em>On this page:</em></h2>
    
   <ul>
-  <li><a href="#what-is-the-tidyverse" id="toc-what-is-the-tidyverse" class="nav-link active" data-scroll-target="#what-is-the-tidyverse">What is the tidyverse?</a></li>
-  <li><a href="#base-r-or-tidyverse" id="toc-base-r-or-tidyverse" class="nav-link" data-scroll-target="#base-r-or-tidyverse">Base R or tidyverse?</a></li>
+  <li><a href="#base-r-or-tidyverse" id="toc-base-r-or-tidyverse" class="nav-link active" data-scroll-target="#base-r-or-tidyverse">Base R or tidyverse?</a></li>
   <li><a href="#a-glimpse-of-the-tidyverse" id="toc-a-glimpse-of-the-tidyverse" class="nav-link" data-scroll-target="#a-glimpse-of-the-tidyverse">A glimpse of the tidyverse</a>
   <ul>
+  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import">Data import</a></li>
   <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation">Data transformation</a></li>
-  <li><a href="#working-with-factors" id="toc-working-with-factors" class="nav-link" data-scroll-target="#working-with-factors">Working with factors</a></li>
   <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
+  <li><a href="#working-with-factors" id="toc-working-with-factors" class="nav-link" data-scroll-target="#working-with-factors">Working with factors</a></li>
+  <li><a href="#working-with-strings" id="toc-working-with-strings" class="nav-link" data-scroll-target="#working-with-strings">Working with strings</a></li>
+  <li><a href="#working-with-dates" id="toc-working-with-dates" class="nav-link" data-scroll-target="#working-with-dates">Working with dates</a></li>
   <li><a href="#functional-programming" id="toc-functional-programming" class="nav-link" data-scroll-target="#functional-programming">Functional programming</a></li>
   </ul></li>
   </ul>
@@ -234,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Introduction to the tidyverse</h1>
+<h1 class="title">Introduction to the tidyverse</h1>
 </div>
 
 
@@ -255,17 +171,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="what-is-the-tidyverse" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-tidyverse">What is the tidyverse?</h2>
+<div class="def">
 <p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a set of packages which attempts to make R more consistent and more similar to programming languages which were developed by computer scientists rather than statisticians.</p>
 <p>You can think of it as a more modern version of R.</p>
-<p>The best introduction to the tidyverse is probably the book <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> by <a href="https://hadley.nz/">Hadley Wickham</a> and Garrett Grolemund.</p>
-</section>
+</div>
 <section id="base-r-or-tidyverse" class="level2">
 <h2 class="anchored" data-anchor-id="base-r-or-tidyverse">Base R or tidyverse?</h2>
 <p>“Base R” refers to the use of the standard R library. The expression is often used in contrast to the tidyverse.</p>
 <p>There are a many things that you can do with either base R or the tidyverse. Because the syntaxes are quite different, it almost feels like using two different languages and people tend to favour one or the other.</p>
-<p>Which one should you use? Well, this is really up to you.</p>
+<p>Which one you should use is really up to you.</p>
 <table class="table">
 <colgroup>
 <col style="width: 48%">
@@ -296,38 +210,102 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="a-glimpse-of-the-tidyverse" class="level2">
 <h2 class="anchored" data-anchor-id="a-glimpse-of-the-tidyverse">A glimpse of the tidyverse</h2>
-<p>This series of cheatsheet developed by <a href="https://posit.co/">Posit</a> can give you a first glimpse at some of the tidyverse packages.</p>
-<section id="data-transformation" class="level3">
-<h3 class="anchored" data-anchor-id="data-transformation">Data transformation</h3>
-<p><img src="img/data-transformation_1.jpg" class="img-fluid"></p>
-<p><img src="img/data-transformation_2.jpg" class="img-fluid"></p>
-<div class="caption">
-<p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
+<p>The best introduction to the tidyverse is probably the book <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> by <a href="https://hadley.nz/">Hadley Wickham</a> and Garrett Grolemund.</p>
+<p><a href="https://posit.co/">Posit</a> (the company formerly known as RStudio Inc.&nbsp;behind the tidyverse) developed <a href="https://posit.co/resources/cheatsheets/">a series of useful cheatsheets</a>. Below are links to the ones you are the most likely to use as you get started with R.</p>
+<section id="data-import" class="level3">
+<h3 class="anchored" data-anchor-id="data-import">Data import</h3>
+<p>The first thing you often need to do is to import your data into R. This is done with <a href="https://cran.r-project.org/web/packages/readr/index.html"><code>readr</code></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/data-import.pdf"><img src="img/data_import_cs_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
-<p><img src="img/tidyr_1.jpg" class="img-fluid"></p>
-<p><img src="img/tidyr_2.jpg" class="img-fluid"></p>
+<p><img src="img/data_import_cs_2.jpg" class="img-fluid"></p>
 <div class="caption">
 <p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
 </div>
 </section>
-<section id="working-with-factors" class="level3">
-<h3 class="anchored" data-anchor-id="working-with-factors">Working with factors</h3>
-<p><img src="img/factors.jpg" class="img-fluid"></p>
+<section id="data-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="data-transformation">Data transformation</h3>
+<p>You then often need to transformation your data into the right format. This is done with the packages <a href="https://cran.r-project.org/web/packages/dplyr/index.html"><code>dplyr</code></a> and <a href="https://cran.r-project.org/web/packages/tidyr/index.html"><code>tidyr</code></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf"><img src="img/data-transformation_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><img src="img/data-transformation_2.jpg" class="img-fluid"></p>
+<div class="caption">
+<p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/tidyr.pdf"><img src="img/tidyr_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><img src="img/tidyr_2.jpg" class="img-fluid"></p>
 <div class="caption">
 <p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
 </div>
 </section>
 <section id="visualization" class="level3">
 <h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
-<p><img src="img/data-visualization_1.jpg" class="img-fluid"></p>
+<p>Visualization in the tidyverse is done with the <a href="https://cran.r-project.org/web/packages/ggplot2/index.html"><code>ggplot2</code></a> package which we will explore in <a href="https://mint.westdri.ca/r/plotting.html">the next section</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf"><img src="img/data-visualization_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p><img src="img/data-visualization_2.jpg" class="img-fluid"></p>
+<div class="caption">
+<p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
+</div>
+</section>
+<section id="working-with-factors" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-factors">Working with factors</h3>
+<p>The package <a href="https://cran.r-project.org/web/packages/forcats/index.html"><code>forcats</code></a> offers the tidyverse approach to working with factors.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/factors-1.pdf"><img src="img/factors.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="caption">
+<p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
+</div>
+</section>
+<section id="working-with-strings" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-strings">Working with strings</h3>
+<p><a href="https://cran.r-project.org/web/packages/stringr/index.html"><code>stringr</code></a> is for strings.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/strings-1.pdf"><img src="img/stringr_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><img src="img/stringr_2.jpg" class="img-fluid"></p>
+<div class="caption">
+<p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
+</div>
+</section>
+<section id="working-with-dates" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-dates">Working with dates</h3>
+<p><a href="https://cran.r-project.org/web/packages/lubridate/index.html"><code>lubridate</code></a> will help you deal with dates.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/lubridate-1.pdf"><img src="img/lubridate_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><img src="img/lubridate_2.jpg" class="img-fluid"></p>
 <div class="caption">
 <p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
 </div>
 </section>
 <section id="functional-programming" class="level3">
 <h3 class="anchored" data-anchor-id="functional-programming">Functional programming</h3>
-<p><img src="img/purrr_1.jpg" class="img-fluid"></p>
+<p>Finally, <a href="https://cran.r-project.org/web/packages/purrr/index.html"><code>purrr</code></a> is the tidyverse equivalent to the apply functions in base R: a way to run functions on functions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://posit.co/wp-content/uploads/2022/10/purrr.pdf"><img src="img/purrr_1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p><img src="img/purrr_2.jpg" class="img-fluid"></p>
 <div class="caption">
 <p>from <a href="https://posit.co/resources/cheatsheets/">Posit Cheatsheets</a></p>
@@ -485,18 +463,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../r_intro/control_flow.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Control flow</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../r_intro/plotting.html" class="pagination-link">
-        <span class="nav-page-text">Plotting</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

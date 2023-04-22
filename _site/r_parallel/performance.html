@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../r_parallel/optimizations.html" rel="next">
+<link href="../r_parallel/run_r_hpc.html" rel="prev">
 <link href="..//img/sfu_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -65,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -94,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Intro R</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../r_parallel/index.html">
+    <a class="nav-link active" href="../r_parallel/index.html" aria-current="page">
  <span class="menu-text">Parallel R</span></a>
   </li>  
   <li class="nav-item">
@@ -121,17 +123,92 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Measuring performance:</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../r_parallel/index.html" class="sidebar-item-text sidebar-link"><b><em>Parallel R</em></b></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/run_r_hpc.html" class="sidebar-item-text sidebar-link">Running R for this course</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/performance.html" class="sidebar-item-text sidebar-link active">Measuring performance</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/optimizations.html" class="sidebar-item-text sidebar-link">Optimizations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/memory.html" class="sidebar-item-text sidebar-link">Memory management</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/clusters.html" class="sidebar-item-text sidebar-link">Running R on HPC clusters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/parallel_types.html" class="sidebar-item-text sidebar-link">Types of parallelism</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/parallel_loops.html" class="sidebar-item-text sidebar-link">Parallel loops</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/data.html" class="sidebar-item-text sidebar-link">Data on HPC clusters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/rcpp.html" class="sidebar-item-text sidebar-link">Writing C++ in R with Rcpp</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r_parallel/resources_hpc.html" class="sidebar-item-text sidebar-link">Resources for HPC in R</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title"><em>On this page:</em></h2>
    
   <ul>
-  <li><a href="#profiling" id="toc-profiling" class="nav-link active" data-scroll-target="#profiling">Profiling</a></li>
+  <li><a href="#when-should-you-care" id="toc-when-should-you-care" class="nav-link active" data-scroll-target="#when-should-you-care">When should you care?</a></li>
+  <li><a href="#profiling" id="toc-profiling" class="nav-link" data-scroll-target="#profiling">Profiling</a></li>
   <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
   </ul>
 </nav>
@@ -141,8 +218,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Measuring performance:</h1>
-<p class="subtitle lead">profiling &amp; benchmarking</p>
+<h1 class="title d-none d-lg-block">Measuring performance:</h1>
+<p class="subtitle lead">Profiling &amp; benchmarking</p>
 </div>
 
 
@@ -163,24 +240,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="def">
+<p>Before we talk about ways to improve performance, let’s see how to measure it.</p>
+</div>
+<section id="when-should-you-care" class="level2">
+<h2 class="anchored" data-anchor-id="when-should-you-care">When should you care?</h2>
+<blockquote class="blockquote">
+<p>“There is no doubt that the grail of efficiency leads to abuse. Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.”</p>
+<p><a href="https://en.wikipedia.org/wiki/Donald_Knuth">— Donald Knuth</a></p>
+</blockquote>
+<p>Optimizing code takes time, can lead to mistakes, and may make code harder to read. Consequently, not all code is worth optimizing and before jumping into optimizations, you need a strategy.</p>
+<p>You should consider optimizations when:</p>
+<ul>
+<li>you have debugged your code (optimization comes last, don’t optimize a code that doesn’t run),</li>
+<li>you will run a section of code (e.g.&nbsp;a function) many times (your optimization efforts will really pay off),</li>
+<li>a section of code is particularly slow.</li>
+</ul>
+<p>How do you know which sections of your code are slow? Don’t rely on intuition. You need to profile your code to identify bottlenecks.</p>
+</section>
 <section id="profiling" class="level2">
 <h2 class="anchored" data-anchor-id="profiling">Profiling</h2>
-<p>The first thing to do if you want to improve your code efficiency is to identify bottlenecks in your code.</p>
-<p>Common tools include:</p>
-<ul>
-<li>the base R function <code>Rprof()</code>,</li>
-<li>the package <a href="https://cran.r-project.org/web/packages/profvis/index.html">profvis</a>.</li>
-</ul>
-<p><a href="https://cran.r-project.org/web/packages/profvis/index.html">profvis</a> is a newer tool, built by <a href="https://posit.co/">posit</a> (formerly RStudio). Under the hood, it runs <code>Rprof()</code> to collect data, then produces an interactive html widget with a flame graph that allows for an easy visual identification of slow sections of code.</p>
-<p>While this tool integrates well within the RStudio IDE or the <a href="https://rpubs.com/wch/178493">RPubs ecosystem</a>, it is not very well suited for remote work on a cluster. One option is to profile your code with small data on your own machine. Another option is to use the base profiler with <code>Rprof()</code> directly as in <a href="https://rstudio.github.io/r-manuals/r-exts/Tidying-and-profiling-R-code.html#profiling-r-code-for-speed">this example</a>.</p>
+<blockquote class="blockquote">
+<p>“It is often a mistake to make a priori judgments about what parts of a program are really critical, since the universal experience of programmers who have been using measurement tools has been that their intuitive guesses fail.”</p>
+<p><a href="https://en.wikipedia.org/wiki/Donald_Knuth">— Donald Knuth</a></p>
+</blockquote>
+<p>R comes with a profiler: <code>Rprof()</code>.</p>
+<p><a href="https://cran.r-project.org/web/packages/profvis/index.html">profvis</a> is a newer tool, built by <a href="https://posit.co/">posit</a> (formerly RStudio Inc). Under the hood, it runs <code>Rprof()</code> to collect data, then produces an interactive html widget with a flame graph that allows for an easy visual identification of slow sections of code.</p>
+<p>While this tool integrates well within the RStudio IDE, it is not very well suited for remote work on a cluster. One option is to profile your code with small data on your own machine. Another option is to use the base profiler <code>Rprof()</code> directly as in <a href="https://rstudio.github.io/r-manuals/r-exts/Tidying-and-profiling-R-code.html#profiling-r-code-for-speed">this example</a>.</p>
 </section>
 <section id="benchmarking" class="level2">
 <h2 class="anchored" data-anchor-id="benchmarking">Benchmarking</h2>
 <p>Once you have identified expressions that are particularly slow, you can use benchmarking tools to compare variations of the code.</p>
 <p>In the most basic fashion, you can use <code>system.time()</code>, but this is limited and imprecise.</p>
-<p>The <a href="https://cran.r-project.org/web/packages/microbenchmark/index.html">microbenchmark</a> package is a popular option.</p>
-<p>It gives the minimum time, lower quartile, mean, median, upper quartile, and maximum time of R expressions.</p>
-<p>The newer <a href="https://cran.r-project.org/web/packages/bench/index.html">bench</a> package has less overhead, is more accurate, and—for sequential code—gives information on memory usage and garbage collections.</p>
+<p>The <a href="https://cran.r-project.org/web/packages/microbenchmark/index.html">microbenchmark</a> package is a much better option. It gives the minimum time, lower quartile, mean, median, upper quartile, and maximum time of R expressions.</p>
+<p>The newer <a href="https://cran.r-project.org/web/packages/bench/index.html">bench</a> package is very similar, but it has less overhead, is more accurate, and—for sequential code—gives information on memory usage and garbage collections. This is the package that we will use for this course.</p>
+<p>The main function from this package is <code>mark()</code>. You can pass as argument(s) one or multiple expressions that you want to benchmark. By default, it ensures that all expressions output the same result. If you want to remove this test, add the argument <code>check = FALSE</code>.</p>
+<p>While <code>mark()</code> gives memory usage and garbage collection information for sequential code, this functionality is not yet implemented for parallel code. When benchmarking parallel expressions, we will have to use the argument <code>memory = FALSE</code>.</p>
+<p>You will see many examples throughout this course.</p>
 
 
 </section>
@@ -333,6 +429,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../r_parallel/run_r_hpc.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Running R for this course</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../r_parallel/optimizations.html" class="pagination-link">
+        <span class="nav-page-text">Optimizations</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

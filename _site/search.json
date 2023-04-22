@@ -791,6 +791,13 @@
     "text": "In this section, we take our first few steps in R: we will access the R documentation, see how to set R options, and talk about a few concepts."
   },
   {
+    "objectID": "r_intro/basics.html#help-and-documentation",
+    "href": "r_intro/basics.html#help-and-documentation",
+    "title": "First steps in R",
+    "section": "Help and documentation",
+    "text": "Help and documentation\nFor some general documentation on R, you can run:\nhelp.start()\nTo get help on a function (e.g. sum), you can run:\nhelp(sum)\nDepending on your settings, this will open a documentation for sum in a pager or in your browser."
+  },
+  {
     "objectID": "r_intro/basics.html#r-settings",
     "href": "r_intro/basics.html#r-settings",
     "title": "First steps in R",
@@ -805,27 +812,6 @@
     "text": "Assignment\nR can accept the equal sign (=) for assignments, but it is more idiomatic to use the assignment sign (<-) whenever you bind a name to a value and to use the equal sign everywhere else.\n\na <- 3\n\nOnce you have bound a name to a value, you can recall the value with that name:\n\na  # Note that you do not need to use a print() function in R\n\n[1] 3\n\n\nYou can remove an object from the environment by deleting its name:\n\nrm(a)\n\nLet’s confirm that a doesn’t exist anymore in the environment:\n\na\n\nError in eval(expr, envir, enclos): object 'a' not found\n\n\nThe garbage collector will take care of deleting the object itself from memory."
   },
   {
-    "objectID": "r_intro/basics.html#comments",
-    "href": "r_intro/basics.html#comments",
-    "title": "First steps in R",
-    "section": "Comments",
-    "text": "Comments\nAnything to the left of # is a comment and is ignored by R:\n\n# This is an inline comment\n\na <- 3  # This is also a comment"
-  },
-  {
-    "objectID": "r_intro/basics.html#data-types-and-structures",
-    "href": "r_intro/basics.html#data-types-and-structures",
-    "title": "R: the basics",
-    "section": "Data types and structures",
-    "text": "Data types and structures\n\n\n\nDimension\nHomogeneous\nHeterogeneous\n\n\n\n\n1 d\nAtomic vector\nList\n\n\n2 d\nMatrix\nData frame\n\n\n3 d\nArray\n\n\n\n\n\nAtomic vectors\n\nWith a single element\n\na <- 2\na\n\n[1] 2\n\ntypeof(a)\n\n[1] \"double\"\n\nstr(a)\n\n num 2\n\nlength(a)\n\n[1] 1\n\ndim(a)\n\nNULL\n\n\nThe dim attribute of a vector doesn’t exist (hence the NULL). This makes vectors different from one-dimensional arrays which have a dim of 1.\nYou might have noticed that 2 is a double (double precision floating point number, equivalent of “float” in other languages). In R, this is the default, even if you don’t type 2.0. This prevents the kind of weirdness you can find in, for instance, Python.\nIn Python:\n>>> 2 == 2.0\nTrue\n>>> type(2) == type(2.0)\nFalse\n>>> type(2)\n<class 'int'>\n>>> type(2.0)\n<class 'float'>\nIn R:\n> 2 == 2.0\n[1] TRUE\n> typeof(2) == typeof(2.0)\n[1] TRUE\n> typeof(2)\n[1] \"double\"\n> typeof(2.0)\n[1] \"double\"\nIf you want to define an integer variable, you use:\n\nb <- 2L\nb\n\n[1] 2\n\ntypeof(b)\n\n[1] \"integer\"\n\nmode(b)\n\n[1] \"numeric\"\n\nstr(b)\n\n int 2\n\n\nThere are six vector types:\n\nlogical\ninteger\ndouble\ncharacter\ncomplex\nraw\n\n\n\nWith multiple elements\n\nc <- c(2, 4, 1)\nc\n\n[1] 2 4 1\n\ntypeof(c)\n\n[1] \"double\"\n\nmode(c)\n\n[1] \"numeric\"\n\nstr(c)\n\n num [1:3] 2 4 1\n\n\n\nd <- c(TRUE, TRUE, NA, FALSE)\nd\n\n[1]  TRUE  TRUE    NA FALSE\n\ntypeof(d)\n\n[1] \"logical\"\n\nstr(d)\n\n logi [1:4] TRUE TRUE NA FALSE\n\n\n\nNA (“Not Available”) is a logical constant of length one. It is an indicator for a missing value.\n\nVectors are homogeneous, so all elements need to be of the same type.\nIf you use elements of different types, R will convert some of them to ensure that they become of the same type:\n\ne <- c(\"This is a string\", 3, \"test\")\ne\n\n[1] \"This is a string\" \"3\"                \"test\"            \n\ntypeof(e)\n\n[1] \"character\"\n\nstr(e)\n\n chr [1:3] \"This is a string\" \"3\" \"test\"\n\n\n\nf <- c(TRUE, 3, FALSE)\nf\n\n[1] 1 3 0\n\ntypeof(f)\n\n[1] \"double\"\n\nstr(f)\n\n num [1:3] 1 3 0\n\n\n\ng <- c(2L, 3, 4L)\ng\n\n[1] 2 3 4\n\ntypeof(g)\n\n[1] \"double\"\n\nstr(g)\n\n num [1:3] 2 3 4\n\n\n\nh <- c(\"string\", TRUE, 2L, 3.1)\nh\n\n[1] \"string\" \"TRUE\"   \"2\"      \"3.1\"   \n\ntypeof(h)\n\n[1] \"character\"\n\nstr(h)\n\n chr [1:4] \"string\" \"TRUE\" \"2\" \"3.1\"\n\n\nThe binary operator : is equivalent to the seq() function and generates a regular sequence of integers:\n\ni <- 1:5\ni\n\n[1] 1 2 3 4 5\n\ntypeof(i)\n\n[1] \"integer\"\n\nstr(i)\n\n int [1:5] 1 2 3 4 5\n\nidentical(2:8, seq(2, 8))\n\n[1] TRUE\n\n\n\n\n\nMatrices\n\nj <- matrix(1:12, nrow = 3, ncol = 4)\nj\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12\n\ntypeof(j)\n\n[1] \"integer\"\n\nstr(j)\n\n int [1:3, 1:4] 1 2 3 4 5 6 7 8 9 10 ...\n\nlength(j)\n\n[1] 12\n\ndim(j)\n\n[1] 3 4\n\n\nThe default is byrow = FALSE. If you want the matrix to be filled in by row, you need to set this argument to TRUE:\n\nk <- matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE)\nk\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    2    3    4\n[2,]    5    6    7    8\n[3,]    9   10   11   12\n\n\n\n\nArrays\n\nl <- array(as.double(1:24), c(3, 2, 4))\nl\n\n, , 1\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\n, , 2\n\n     [,1] [,2]\n[1,]    7   10\n[2,]    8   11\n[3,]    9   12\n\n, , 3\n\n     [,1] [,2]\n[1,]   13   16\n[2,]   14   17\n[3,]   15   18\n\n, , 4\n\n     [,1] [,2]\n[1,]   19   22\n[2,]   20   23\n[3,]   21   24\n\ntypeof(l)\n\n[1] \"double\"\n\nstr(l)\n\n num [1:3, 1:2, 1:4] 1 2 3 4 5 6 7 8 9 10 ...\n\nlength(l)\n\n[1] 24\n\ndim(l)\n\n[1] 3 2 4\n\n\n\n\nLists\n\nm <- list(2, 3)\nm\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3\n\ntypeof(m)\n\n[1] \"list\"\n\nstr(m)\n\nList of 2\n $ : num 2\n $ : num 3\n\nlength(m)\n\n[1] 2\n\ndim(m)\n\nNULL\n\n\nAs with atomic vectors, lists do not have a dim attribute. Lists are in fact a different type of vectors.\nLists can be heterogeneous:\n\nn <- list(2L, 3, c(2, 1), FALSE, \"string\")\nn\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3\n\n[[3]]\n[1] 2 1\n\n[[4]]\n[1] FALSE\n\n[[5]]\n[1] \"string\"\n\ntypeof(n)\n\n[1] \"list\"\n\nstr(n)\n\nList of 5\n $ : int 2\n $ : num 3\n $ : num [1:2] 2 1\n $ : logi FALSE\n $ : chr \"string\"\n\nlength(n)\n\n[1] 5\n\n\n\n\nData frames\nData frames contain tabular data. Under the hood, a data frame is a list of vectors.\n\no <- data.frame(\n  country = c(\"Canada\", \"USA\", \"Mexico\"),\n  var = c(2.9, 3.1, 4.5)\n)\no\n\n  country var\n1  Canada 2.9\n2     USA 3.1\n3  Mexico 4.5\n\ntypeof(o)\n\n[1] \"list\"\n\nstr(o)\n\n'data.frame':   3 obs. of  2 variables:\n $ country: chr  \"Canada\" \"USA\" \"Mexico\"\n $ var    : num  2.9 3.1 4.5\n\nlength(o)\n\n[1] 2\n\ndim(o)\n\n[1] 3 2"
-  },
-  {
-    "objectID": "r_intro/basics.html#indexing",
-    "href": "r_intro/basics.html#indexing",
-    "title": "R: the basics",
-    "section": "Indexing",
-    "text": "Indexing\nIndexing in R starts at 1.\n\na\n\n[1] 2\n\na[1]\n\n[1] 2\n\na[2]\n\n[1] NA\n\nc\n\n[1] 2 4 1\n\nc[2]\n\n[1] 4\n\nc[2:4]\n\n[1]  4  1 NA\n\nj\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12\n\nj[2, 3]\n\n[1] 8\n\nl\n\n, , 1\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\n, , 2\n\n     [,1] [,2]\n[1,]    7   10\n[2,]    8   11\n[3,]    9   12\n\n, , 3\n\n     [,1] [,2]\n[1,]   13   16\n[2,]   14   17\n[3,]   15   18\n\n, , 4\n\n     [,1] [,2]\n[1,]   19   22\n[2,]   20   23\n[3,]   21   24\n\nl[2, 1, 3]\n\n[1] 14\n\nn\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 3\n\n[[3]]\n[1] 2 1\n\n[[4]]\n[1] FALSE\n\n[[5]]\n[1] \"string\"\n\nn[3]\n\n[[1]]\n[1] 2 1\n\ntypeof(n[3])\n\n[1] \"list\"\n\nn[3][1]\n\n[[1]]\n[1] 2 1\n\nn[[3]]\n\n[1] 2 1\n\ntypeof(n[[3]])\n\n[1] \"double\"\n\nn[[3]][1]\n\n[1] 2\n\no\n\n  country var\n1  Canada 2.9\n2     USA 3.1\n3  Mexico 4.5\n\no[1]\n\n  country\n1  Canada\n2     USA\n3  Mexico\n\ntypeof(o[1])\n\n[1] \"list\"\n\nstr(o[1])\n\n'data.frame':   3 obs. of  1 variable:\n $ country: chr  \"Canada\" \"USA\" \"Mexico\"\n\no[[1]]\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\ntypeof(o[[1]])\n\n[1] \"character\"\n\no$country\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\ntypeof(o$country)\n\n[1] \"character\""
-  },
-  {
     "objectID": "r_intro/basics.html#copy-on-modify",
     "href": "r_intro/basics.html#copy-on-modify",
     "title": "First steps in R",
@@ -833,270 +819,11 @@
     "text": "Copy-on-modify\nWhile some languages (e.g. Python) do not make a copy if you modify a mutable object, R does.\nLet’s have a look at Python:\n>>> a = [1, 2, 3]\n>>> b = a\n>>> b\n[1, 2, 3]\n>>> a[0] = 4\n>>> a\n[4, 2, 3]\n>>> b\n[4, 2, 3]\nModifying a also modifies b. If you want to keep b unchanged, you need to explicitly make a copy of a.\nNow, let’s see what happens in R:\n> a <- c(1, 2, 3)\n> b <- a\n> b\n[1] 1 2 3\n> a[1] <- 4\n> a\n[1] 4 2 3\n> b\n[1] 1 2 3\nHere, the default is to create a new copy in memory when a is transformed so that b remains unchanged. This is more intuitive, but more memory intensive."
   },
   {
-    "objectID": "r_intro/basics.html#function-definition",
-    "href": "r_intro/basics.html#function-definition",
-    "title": "R: the basics",
-    "section": "Function definition",
-    "text": "Function definition\n\ncompare <- function(x, y) {\n  x == y\n}\n\nWe can now use our function:\n\ncompare(2, 3)\n\n[1] FALSE\n\n\nNote that the result of the last statement is printed automatically:\n\ntest <- function(x, y) {\n  x\n  y\n}\ntest(2, 3)\n\n[1] 3\n\n\nIf you want to return other results, you need to explicitly use the print() function:\n\ntest <- function(x, y) {\n  print(x)\n  y\n}\ntest(2, 3)\n\n[1] 2\n\n\n[1] 3"
-  },
-  {
-    "objectID": "r_intro/basics.html#control-flow",
-    "href": "r_intro/basics.html#control-flow",
-    "title": "R: the basics",
-    "section": "Control flow",
-    "text": "Control flow\n\nConditionals\n\ntest_sign <- function(x) {\n  if (x > 0) {\n    \"x is positif\"\n  } else if (x < 0) {\n    \"x is negatif\"\n  } else {\n    \"x is equal to zero\"\n  }\n}\n\n\ntest_sign(3)\n\n[1] \"x is positif\"\n\ntest_sign(-2)\n\n[1] \"x is negatif\"\n\ntest_sign(0)\n\n[1] \"x is equal to zero\"\n\n\n\n\nLoops\n\nfor (i in 1:10) {\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7\n[1] 8\n[1] 9\n[1] 10\n\n\nNotice that here we need to use the print() function."
-  },
-  {
-    "objectID": "r_intro/index.html",
-    "href": "r_intro/index.html",
-    "title": "Intro R",
-    "section": "",
-    "text": "R is a free and open-source programming language for statistical computing, modelling, and graphics, with an unbeatable collection of statistical packages. It is extremely popular in some academic fields such as statistics, biology, bioinformatics, data mining, data analysis, and linguistics.\nDate:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
-  },
-  {
-    "objectID": "r_intro/packages.html",
-    "href": "r_intro/packages.html",
-    "title": "Packages",
-    "section": "",
-    "text": "Packages are a set of functions, constants, and/or data developed by the community that add functionality to R.\nIn this section, we look at where to find packages and how to install them."
-  },
-  {
-    "objectID": "r_intro/packages.html#looking-for-packages",
-    "href": "r_intro/packages.html#looking-for-packages",
-    "title": "Packages",
-    "section": "Looking for packages",
-    "text": "Looking for packages\n\nPackage finder\nYour peers and the literature"
-  },
-  {
-    "objectID": "r_intro/packages.html#package-documentation",
-    "href": "r_intro/packages.html#package-documentation",
-    "title": "Packages",
-    "section": "Package documentation",
-    "text": "Package documentation\n\nList of CRAN packages\nPackage documentation"
-  },
-  {
-    "objectID": "r_intro/packages.html#managing-r-packages",
-    "href": "r_intro/packages.html#managing-r-packages",
-    "title": "Packages",
-    "section": "Managing R packages",
-    "text": "Managing R packages\nR packages can be installed, updated, and removed from within R:\ninstall.packages(\"package-name\")\nremove.packages(\"package-name\")\nupdate_packages()"
-  },
-  {
-    "objectID": "r_intro/packages.html#loading-packages",
-    "href": "r_intro/packages.html#loading-packages",
-    "title": "Packages",
-    "section": "Loading packages",
-    "text": "Loading packages\nTo make a package available in an R session, you load it with the library() function.\n\nExample:\n\nlibrary(readxl)\nAlternatively, you can access a function from a package without loading it with the syntax: package::function().\n\nExample:\n\nreadxl::read_excel(\"file.xlsx\")"
-  },
-  {
-    "objectID": "r_intro/resources.html",
-    "href": "r_intro/resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "The R community is dynamic and offers a lot of online resources, from IDEs to Q&A, to workshops, books, or publications.\nThis section provides a selection of useful sites.\n\n\nMain sites\n\nR website\nComprehensive R Archive Network (CRAN): R versions and packages\n\n\n\nPosit and RStudio IDE\n\nPosit website (Posit was formerly called RStudio Inc.)\nPosit cheatsheets\n\n\n\nForums and Q&A\n\nStack Overflow [r] tag wiki\nStack Overflow [r] tag questions\nPosit Discourse\n\n\n\nDocumentation as pdf\n\nContributed documentation\nIntro books\n\n\n\nSoftware Carpentry online workshops\n\nProgramming with R\nR for Reproducible Scientific Analysis\nData analysis using R in the digital humanities\n\n\n\nOnline books\n\nR for Data Science (heavily based on the tidyverse)\nR Packages (how to create packages)\nR Programming for Data Science\nMastering Software Development in R\n\n\n\nR research\n\nThe R Journal"
-  },
-  {
-    "objectID": "r_intro/resources.html#alliance-wiki",
-    "href": "r_intro/resources.html#alliance-wiki",
-    "title": "Resources",
-    "section": "Alliance wiki",
-    "text": "Alliance wiki\n\nR page"
-  },
-  {
-    "objectID": "r_intro/resources.html#rstudio",
-    "href": "r_intro/resources.html#rstudio",
-    "title": "Resources",
-    "section": "RStudio",
-    "text": "RStudio\n\nPosit site (Posit is the brand new name of the RStudio company)\nPosit cheatsheets"
-  },
-  {
-    "objectID": "r_intro/resources.html#documentation-as-pdf",
-    "href": "r_intro/resources.html#documentation-as-pdf",
-    "title": "Resources",
-    "section": "Documentation as pdf",
-    "text": "Documentation as pdf\n\nContributed documentation\nIntro books"
-  },
-  {
-    "objectID": "r_intro/resources.html#software-carpentry-online-workshops",
-    "href": "r_intro/resources.html#software-carpentry-online-workshops",
-    "title": "Resources",
-    "section": "Software Carpentry online workshops",
-    "text": "Software Carpentry online workshops\n\nProgramming with R\nR for Reproducible Scientific Analysis\nData analysis using R in the digital humanities"
-  },
-  {
-    "objectID": "r_intro/resources.html#online-books",
-    "href": "r_intro/resources.html#online-books",
-    "title": "Resources",
-    "section": "Online books",
-    "text": "Online books\n\nR for Data Science (heavily based on the tidyverse)\nAdvanced R (functioning of the language)\nR Packages (how to create packages)\nEfficient R programming (code optimization)"
-  },
-  {
-    "objectID": "r_intro/resources.html#r-research",
-    "href": "r_intro/resources.html#r-research",
-    "title": "Resources",
-    "section": "R research",
-    "text": "R research\n\nThe R Journal"
-  },
-  {
-    "objectID": "r_intro/tidyverse.html",
-    "href": "r_intro/tidyverse.html",
-    "title": "Introduction to the tidyverse",
-    "section": "",
-    "text": "The tidyverse is a set of packages which attempts to make R more consistent and more similar to programming languages which were developed by computer scientists rather than statisticians.\nYou can think of it as a more modern version of R.\nThe best introduction to the tidyverse is probably the book R for Data Science by Hadley Wickham and Garrett Grolemund."
-  },
-  {
-    "objectID": "r_intro/tidyverse.html#base-r-or-tidyverse",
-    "href": "r_intro/tidyverse.html#base-r-or-tidyverse",
-    "title": "Introduction to the tidyverse",
-    "section": "Base R or tidyverse?",
-    "text": "Base R or tidyverse?\n“Base R” refers to the use of the standard R library. The expression is often used in contrast to the tidyverse.\nThere are a many things that you can do with either base R or the tidyverse. Because the syntaxes are quite different, it almost feels like using two different languages and people tend to favour one or the other.\nWhich one should you use? Well, this is really up to you.\n\n\n\n\n\n\n\nBase R\nTidyverse\n\n\n\n\nPreferred by old-schoolers\nIncreasingly becoming the norm with newer R users\n\n\nMore stable\nMore consistent syntax and behaviour\n\n\nDoesn’t require installing and loading packages\nMore and more resources and documentation available\n\n\n\nIn truth, even though the tidyverse has many detractors amongst old R users, it is increasingly becoming the norm."
-  },
-  {
-    "objectID": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
-    "href": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
-    "title": "Introduction to the tidyverse",
-    "section": "A glimpse of the tidyverse",
-    "text": "A glimpse of the tidyverse\nThis series of cheatsheet developed by Posit can give you a first glimpse at some of the tidyverse packages.\n\nData transformation\n\n\n\nfrom Posit Cheatsheets\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nWorking with factors\n\n\nfrom Posit Cheatsheets\n\n\n\nVisualization\n\n\n\nfrom Posit Cheatsheets\n\n\n\nFunctional programming\n\n\n\nfrom Posit Cheatsheets"
-  },
-  {
-    "objectID": "r_intro/why.html",
-    "href": "r_intro/why.html",
-    "title": "R: why and for whom?",
-    "section": "",
-    "text": "There are other high level programming languages such as Python or Julia, so when might it make sense for you to turn to R?"
-  },
-  {
-    "objectID": "r_intro/why.html#for-whom",
-    "href": "r_intro/why.html#for-whom",
-    "title": "R: why and for whom?",
-    "section": "For whom?",
-    "text": "For whom?\nFor whom is R particularly well suited?\n\nFields with heavy statistics, modelling, or Bayesian analysis such as biology, linguistics, economics, or statistics\nData science using a lot of tabular data"
-  },
-  {
-    "objectID": "r_intro/why.html#downsides-of-r",
-    "href": "r_intro/why.html#downsides-of-r",
-    "title": "R: why and for whom?",
-    "section": "Downsides of R",
-    "text": "Downsides of R\nOf course, R also has its downsides:\n\nInconsistent syntax full of quirks\nSlow\nLarge memory usage"
-  },
-  {
-    "objectID": "r_parallel/clusters.html",
-    "href": "r_parallel/clusters.html",
-    "title": "Running R on HPC clusters",
-    "section": "",
-    "text": "To compile R packages, you need a C compiler.\nIn theory, you could use the proprietary Intel compiler which is loaded by default on the Alliance clusters, but it is recommended to replace it with the GCC compiler (R packages can even be compiled with Clang and LLVM, but the default GCC compiler is the best way to avoid headaches).\nIt is thus much simpler to always load a gcc module before loading an r module.\n\n\n\nTo see what versions of R are available on a cluster, run:\nmodule spider r\nTo see the dependencies of a particular version (e.g. r/4.2.1), run:\nmodule spider r/4.2.1\n\nStdEnv/2020 is a required module for this version.\nOn most Alliance clusters, it is automatically loaded, so you don’t need to include it. You can double-check with module list or you can include it (before r/4.2.1) just to be sure.\n\nFinally, load your modules.\n\nExample:\n\nmodule load StdEnv/2020 gcc/11.3.0 r/4.2.1"
-  },
-  {
-    "objectID": "r_parallel/clusters.html#installing-r-packages",
-    "href": "r_parallel/clusters.html#installing-r-packages",
-    "title": "Running R on HPC clusters",
-    "section": "Installing R packages",
-    "text": "Installing R packages\n\nTo install a package, launch the interactive R console with:\nR\nIn the R console, run:\ninstall.packages(\"<package_name>\", repos=\"<url-cran-mirror>\")\n\nrepos argument: chose a CRAN mirror close to the location of your cluster or use https://cloud.r-project.org/.\n\n\nThe first time you install a package, R will ask you whether you want to create a personal library in your home directory. Answer yes to both questions. Your packages will now install under ~/.\n\n\nSome packages require additional modules to be loaded before they can be installed. Other packages need additional R packages as dependencies. In either case, you will get explicit error messages. Adding the argument dependencies = T helps in the second case, but you will still have to add packages manually from time to time.\n\nTo leave the R console, press <Ctrl+D>."
-  },
-  {
-    "objectID": "r_parallel/clusters.html#running-r-jobs",
-    "href": "r_parallel/clusters.html#running-r-jobs",
-    "title": "Running R on HPC clusters",
-    "section": "Running R jobs",
-    "text": "Running R jobs\n\nScripts\nTo run an R script called <your_script>.R, you first need to write a job script:\n\nExample:\n\n\n<your_job>.sh\n\n#!/bin/bash\n#SBATCH --account=def-<your_account>\n#SBATCH --time=15\n#SBATCH --mem-per-cpu=3000M\n#SBATCH --cpus-per-task=4\n#SBATCH --job-name=\"<your_job>\"\nmodule load StdEnv/2020 gcc/11.3.0 r/4.2.1\nRscript <your_script>.R   # Note that R scripts are run with the command `Rscript`\n\n\nThen launch your job with:\nsbatch <your_job>.sh\nYou can monitor your job with sq (an alias for squeue -u $USER $@).\n\n\nInteractive jobs\n\nWhile it is fine to run R on the login node when you install packages, you must start a SLURM job before any heavy computation.\n\nTo run R interactively, you should launch an salloc session.\n\nExample:\n\nsalloc --time=1:10:00 --mem-per-cpu=7000M --ntasks=8\nThis takes you to a compute node where you can now launch R to run computations:\nR"
-  },
-  {
-    "objectID": "r_parallel/index.html",
-    "href": "r_parallel/index.html",
-    "title": "Parallel R",
-    "section": "",
-    "text": "Date:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R and some basic working knowledge of HPC (how to submit Slurm jobs and view their output).\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
-  },
-  {
-    "objectID": "r_parallel/parallel_loops.html",
-    "href": "r_parallel/parallel_loops.html",
-    "title": "Parallel loops with foreach & doFuture",
-    "section": "",
-    "text": "The foreach package implements a looping construct without an explicit counter. It doesn’t require the preallocation of an output container, it brings to R an equivalent of the Python or Julia list comprehensions, and mostly, it allows for an easy execution of loops in parallel.\nUnlike loops, it creates variables (loops are used for their side-effect).\nLet’s look at an example to calculate the sum of 1e4 random vectors of length 3. We will use foreach and iterators (which creates convenient iterators for foreach):\n\nlibrary(foreach)\nlibrary(iterators)\n\n\nClassic while loop:\n\n\nset.seed(2)\nresult1 <- numeric(3)            # Preallocate output container\ni <- 0                           # Initialise counter variable\n\nwhile(i < 1e4) {\n  result1 <- result1 + runif(3)  # Calculate the sum\n  i <- i + 1                     # Update the counter\n}\n\n\nWith foreach:\n\n\nset.seed(2)\nresult2 <- foreach(icount(1e4), .combine = '+') %do% runif(3)\n\nWe can verify that both expressions returned the same result:\n\nall.equal(result1, result2)\n\n[1] TRUE\n\n\nThe best part of foreach is that you can turn sequential loops into parallel ones by registering a parallel backend and replacing %do% with %dopar%.\nThere are many parallelization backends available: doFuture, doMC, doMPI, doFuture, doParallel, doRedis, doRNG, doSNOW, and doAzureParallel.\nIn this lesson, I will use doFuture which allows to evaluate foreach expressions following any of the strategies of the future package.\nSo first, what is the future package?"
-  },
-  {
-    "objectID": "r_parallel/parallel_loops.html#future-package",
-    "href": "r_parallel/parallel_loops.html#future-package",
-    "title": "Parallel loops with foreach & doFuture",
-    "section": "future package",
-    "text": "future package\nA future is an object that acts as an abstract representation for a value in the future. A future can be resolved (if the value has been computed) or unresolved. If the value is queried while the future is unresolved, the process is blocked until the future is resolved. Futures thus allow for asynchronous and parallel evaluations.\nThe future package allows to evaluate futures sequentially or in various forms of parallelism while keeping code simple and consistent. The evaluation strategy is set thanks to the plan function:\n\nplan(sequential):\nFutures are evaluated sequentially in the current R session.\nplan(multisession):\nFutures are evaluated by new R sessions spawned in the background (multi-processing in shared memory).\nplan(multicore):\nFutures are evaluated in processes forked from the existing process (multi-processing in shared memory).\nplan(cluster):\nFutures are evaluated on an ad-hoc cluster (distributed parallelism across multiple nodes).\n\n\nConsistency\nTo ensure a consistent behaviour across plans, all evaluations are done in a local environment:\n\nlibrary(future)\n\na <- 1\n\nb %<-% {\n  a <- 2\n}\n\na\n\n[1] 1"
-  },
-  {
-    "objectID": "r_parallel/parallel_loops.html#dofuture-package",
-    "href": "r_parallel/parallel_loops.html#dofuture-package",
-    "title": "Parallel loops with foreach & doFuture",
-    "section": "doFuture package",
-    "text": "doFuture package\nThe doFuture package allows to evaluate foreach expressions across the evaluation strategies of the future package.\nLet’s go back to our foreach example. We had:\nlibrary(foreach)\n\nset.seed(2)\nresult2 <- foreach(icount(1e4), .combine = '+') %do% runif(3)\nWe can replace %do% with %dopar%:\nlibrary(foreach)\n\nset.seed(2)\nresult3 <- foreach(icount(1e4), .combine = '+') %dopar% runif(3)\nSince we haven’t registered any parallel backend, the expression will still be evaluated sequentially. To run this in parallel, we need to load doFuture, register it as a backend (with registerDoFuture()), and choose a parallel strategy (e.g. plan(multicore)):\nlibrary(foreach)\nlibrary(doFuture)\n\nregisterDoFuture()\nplan(multicore)\n\nset.seed(2)\nresult3 <- foreach(icount(1e4), .combine = '+') %dopar% runif(3)\nWith the overhead of parallelization, it actually doesn’t make sense to parallelize such a short code, so let’s go over a toy example and do some benchmarking."
-  },
-  {
-    "objectID": "r_parallel/parallel_loops.html#toy-example",
-    "href": "r_parallel/parallel_loops.html#toy-example",
-    "title": "Parallel loops with foreach & doFuture",
-    "section": "Toy example",
-    "text": "Toy example\n\nLoad packages\nFor this toy example, I will use a modified version of one of the examples in the foreach vignette: I will build a classification model made of a forest of decision trees thanks to the randomForest package.\nBecause the code includes randomly generated numbers, I will use the doRNG package which replaces foreach::%dopar% with doRNG::%dorng%. This follows the recommendations of Pierre L’Ecuyer (1999)1 and ensures reproducibility.1 L’Ecuyer, P. (1999). Good parameters and implementations for combined multiple recursive random number generators. Operations Research, 47, 159–164.\nlibrary(doFuture)       # This will also load the `future` package\nlibrary(doRNG)          # This will also load the `foreach` package\nlibrary(randomForest)\nlibrary(bench)          # To do some benchmarking\nLoading required package: foreach\nLoading required package: future\nLoading required package: rngtools\n\n\nThe code to parallelize\nThe goal is to create a classifier based on some data (here a matrix of random numbers for simplicity) and a response variable (as factor). This model could then be passed in the predict() function with novel data to generate predictions of classification. But here we are only interested in the creation of the model as this is the part that is computationally intensive. We aren’t interested in actually using it.\nset.seed(11)\ntraindata <- matrix(runif(1e5), 100)\nfac <- gl(2, 50)\n\nrf <- foreach(ntree = rep(250, 8), .combine = combine) %do%\n  randomForest(x = traindata, y = fac, ntree = ntree)\n\nrf\nCall:\n randomForest(x = traindata, y = fac, ntree = ntree)\n               Type of random forest: classification\n                     Number of trees: 2000\nNo. of variables tried at each split: 31\n\n\nReference timing\nThis is the non parallelizable code with %do%:\ntref <- mark(\n  rf1 <- foreach(ntree = rep(250, 8), .combine = combine) %do%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory=F\n)\n\ntref$median\n[1] 5.66s\n\n\nPlan sequential\nThis is the parallelizable foreach code, but run sequentially:\nregisterDoFuture()   # Set the parallel backend\nplan(sequential)     # Set the evaluation strategy\n\n# Using bench::mark()\ntseq <- mark(\n  rf2 <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory=F\n)\n\ntseq$median\n[1] 5.78s\n\nNo surprise: those are similar.\n\n\n\nMulti-processing in shared memory\nfuture provides availableCores() to detect the number of available cores:\navailableCores()\nsystem\n     4\n\nSimilar to parallel::detectCores().\n\nThis detects the number of CPU cores available to me on the current compute node, that is, what I can use for shared memory multi-processing.\n\n\nPlan multisession\nShared memory multi-processing can be run with plan(multisession) that will spawn new R sessions in the background to evaluate futures:\nplan(multisession)\n\ntms <- mark(\n  rf2 <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory=F\n)\n\ntms$median\n[1] 2s\n\nWe got a speedup of 5.78 / 2 = 2.9. Not bad considering that we have 4 CPU cores (the ideal speedup would be 4, but there is always some overhead to parallelization).\n\n\n\nPlan multicore\nShared memory multi-processing can also be run with plan(multicore) (except on Windows) that will fork the current R process to evaluate futures:\nplan(multicore)\n\ntmc <- mark(\n  rf2 <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory=F\n)\n\ntmc$median\n[1] 1.9s\n\nWe got a very similar speedup of 5.78 / 1.9 = 3.0.\n\n\n\nMulti-processing in distributed memory\nFor this lesson, I requested 8 tasks from Slurm on a training cluster made of nodes with 4 CPU cores each.\nLet’s verify that I did get 8 tasks by accessing the SLURM_NTASKS environment variable from within R:\nas.numeric(Sys.getenv(\"SLURM_NTASKS\"))\n[1] 8\nI can create a character vector with the name of the node each task is running on:\n(hosts <- system(\"srun hostname | cut -f 1 -d '.'\", intern = T))\nchr [1:8] \"node1\" \"node1\" \"node1\" \"node1\" \"node2\" \"node2\" \"node2\" \"node2\"\nThis allows me to create a cluster of workers:\n(cl <- parallel::makeCluster(hosts))      # Defaults to type=\"PSOCK\"\nsocket cluster with 8 nodes on hosts ‘node1’, ‘node2’\n\nThe notation used in the last two expressions (running an assignment inside a set of parentheses) allows to print to standard output the assigned value. It is equivalent to running:\ncl <- parallel::makeCluster(hosts)\ncl\n\n\n\nPlan cluster\nI can now try the code with distributed parallelism using all 8 CPU cores across both nodes:\nplan(cluster, workers = cl)\n\ntdis <- mark(\n  rf2 <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory=F\n)\n\ntdis$median\n[1] 1.14s\n\nSpeedup: 5.78 / 1.14 = 5.1. Here again, this is not bad with 8 CPU cores, considering the added overhead of message passing between both nodes.\n\nThe cluster of workers can be stopped with:\nparallel::stopCluster(cl)"
-  },
-  {
-    "objectID": "r_parallel/parallel_r.html",
-    "href": "r_parallel/parallel_r.html",
-    "title": "Running R code in parallel",
-    "section": "",
-    "text": "The parallel package has been part of the base package group since R version 2.14.0.\nThis means that it is comes with R, however it needs to be loaded in a session before its content can be accessed:\nlibrary(parallel)\nMost parallel approaches in R build on this package.\nAll other packages mentioned in this lesson are external packages and need to be installed with install.packages()."
-  },
-  {
-    "objectID": "r_parallel/parallel_r.html#parallelly-package",
-    "href": "r_parallel/parallel_r.html#parallelly-package",
-    "title": "Running R code in parallel",
-    "section": "parallelly package",
-    "text": "parallelly package\nThe parallelly package—part of the futureverse suite of packages developed by Henrik Bengtsson—adds functionality to the parallel package."
-  },
-  {
-    "objectID": "r_parallel/parallel_types.html",
-    "href": "r_parallel/parallel_types.html",
-    "title": "Types of parallelism",
-    "section": "",
-    "text": "We talk about multi-threading when a single process (with its own memory) runs multiple threads.\nThe execution can happen in parallel—if each thread has access to a CPU core—or by alternating some of the threads on some CPU cores.\nBecause all threads in a process write to the same memory addresses, multi-threading can lead to race conditions.\nMulti-threading does not seem to be a common approach to parallelizing R code."
-  },
-  {
-    "objectID": "r_parallel/parallel_types.html#multi-processing-in-shared-memory",
-    "href": "r_parallel/parallel_types.html#multi-processing-in-shared-memory",
-    "title": "Types of parallelism",
-    "section": "Multi-processing in shared memory",
-    "text": "Multi-processing in shared memory\nMulti-processing in shared memory happens when multiple processes execute code on multiple CPU cores of a single node (or a single machine).\nThe different processes need to communicate with each other, but because they are all running on the CPU cores of a single node, messages can pass via shared memory."
-  },
-  {
-    "objectID": "r_parallel/parallel_types.html#multi-processing-in-distributed-memory",
-    "href": "r_parallel/parallel_types.html#multi-processing-in-distributed-memory",
-    "title": "Types of parallelism",
-    "section": "Multi-processing in distributed memory",
-    "text": "Multi-processing in distributed memory\nWhen processes involved in the execution of some code run on multiple nodes of a cluster, messages between them need to travel over the cluster interconnect. In that case, we talk about distributed memory."
-  },
-  {
-    "objectID": "r_parallel/performance.html",
-    "href": "r_parallel/performance.html",
-    "title": "Measuring performance:",
-    "section": "",
-    "text": "The first thing to do if you want to improve your code efficiency is to identify bottlenecks in your code.\nCommon tools include:\n\nthe base R function Rprof(),\nthe package profvis.\n\nprofvis is a newer tool, built by posit (formerly RStudio). Under the hood, it runs Rprof() to collect data, then produces an interactive html widget with a flame graph that allows for an easy visual identification of slow sections of code.\nWhile this tool integrates well within the RStudio IDE or the RPubs ecosystem, it is not very well suited for remote work on a cluster. One option is to profile your code with small data on your own machine. Another option is to use the base profiler with Rprof() directly as in this example."
-  },
-  {
-    "objectID": "r_parallel/performance.html#benchmarking",
-    "href": "r_parallel/performance.html#benchmarking",
-    "title": "Measuring performance:",
-    "section": "Benchmarking",
-    "text": "Benchmarking\nOnce you have identified expressions that are particularly slow, you can use benchmarking tools to compare variations of the code.\nIn the most basic fashion, you can use system.time(), but this is limited and imprecise.\nThe microbenchmark package is a popular option.\nIt gives the minimum time, lower quartile, mean, median, upper quartile, and maximum time of R expressions.\nThe newer bench package has less overhead, is more accurate, and—for sequential code—gives information on memory usage and garbage collections."
-  },
-  {
-    "objectID": "scivis/index.html",
-    "href": "scivis/index.html",
-    "title": "Scientific visualization with ParaView",
-    "section": "",
-    "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
-  },
-  {
-    "objectID": "r_intro/basics.html#help-and-documentation",
-    "href": "r_intro/basics.html#help-and-documentation",
+    "objectID": "r_intro/basics.html#comments",
+    "href": "r_intro/basics.html#comments",
     "title": "First steps in R",
-    "section": "Help and documentation",
-    "text": "Help and documentation\nFor some general documentation on R, you can run:\nhelp.start()\nTo get help on a function (e.g. sum), you can run:\nhelp(sum)\nDepending on your settings, this will open a documentation for sum in a pager or in your browser."
+    "section": "Comments",
+    "text": "Comments\nAnything to the left of # is a comment and is ignored by R:\n\n# This is an inline comment\n\na <- 3  # This is also a comment"
   },
   {
     "objectID": "r_intro/control_flow.html#conditionals",
@@ -1190,6 +917,13 @@
     "text": "Note that the result of the last statement is printed automatically:\n\ntest <- function(x, y) {\n  x\n  y\n}\ntest(2, 3)\n\n[1] 3\n\n\nIf you want to return other results, you need to explicitly use the print() function:\n\ntest <- function(x, y) {\n  print(x)\n  y\n}\ntest(2, 3)\n\n[1] 2\n\n\n[1] 3"
   },
   {
+    "objectID": "r_intro/index.html",
+    "href": "r_intro/index.html",
+    "title": "Intro R",
+    "section": "",
+    "text": "R is a free and open-source programming language for statistical computing, modelling, and graphics, with an unbeatable collection of statistical packages. It is extremely popular in some academic fields such as statistics, biology, bioinformatics, data mining, data analysis, and linguistics.\nDate:\nTuesday May 2, 2023\nTime:\n9am–noon\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nAs we will provide access to an RStudio Server, no installation is required."
+  },
+  {
     "objectID": "r_intro/indexing.html",
     "href": "r_intro/indexing.html",
     "title": "Indexing",
@@ -1225,6 +959,41 @@
     "text": "Indexing data frames\n\nx <- data.frame(\n  country = c(\"Canada\", \"USA\", \"Mexico\"),\n  var = c(2.9, 3.1, 4.5)\n)\nx\n\n  country var\n1  Canada 2.9\n2     USA 3.1\n3  Mexico 4.5\n\n\nA data frame is a list of atomic vectors representing the various columns:\n\nx[1]\n\n  country\n1  Canada\n2     USA\n3  Mexico\n\ntypeof(x[1])\n\n[1] \"list\"\n\nx[[1]]\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\ntypeof(x[[1]])\n\n[1] \"character\"\n\n\nIndexing dataframes can also be done using the column names:\n\nx$country\n\n[1] \"Canada\" \"USA\"    \"Mexico\"\n\nidentical(x[[1]], x$country)\n\n[1] TRUE"
   },
   {
+    "objectID": "r_intro/packages.html",
+    "href": "r_intro/packages.html",
+    "title": "Packages",
+    "section": "",
+    "text": "Packages are a set of functions, constants, and/or data developed by the community that add functionality to R.\nIn this section, we look at where to find packages and how to install them."
+  },
+  {
+    "objectID": "r_intro/packages.html#looking-for-packages",
+    "href": "r_intro/packages.html#looking-for-packages",
+    "title": "Packages",
+    "section": "Looking for packages",
+    "text": "Looking for packages\n\nPackage finder\nYour peers and the literature"
+  },
+  {
+    "objectID": "r_intro/packages.html#package-documentation",
+    "href": "r_intro/packages.html#package-documentation",
+    "title": "Packages",
+    "section": "Package documentation",
+    "text": "Package documentation\n\nList of CRAN packages\nPackage documentation"
+  },
+  {
+    "objectID": "r_intro/packages.html#managing-r-packages",
+    "href": "r_intro/packages.html#managing-r-packages",
+    "title": "Packages",
+    "section": "Managing R packages",
+    "text": "Managing R packages\nR packages can be installed, updated, and removed from within R:\ninstall.packages(\"package-name\")\nremove.packages(\"package-name\")\nupdate_packages()"
+  },
+  {
+    "objectID": "r_intro/packages.html#loading-packages",
+    "href": "r_intro/packages.html#loading-packages",
+    "title": "Packages",
+    "section": "Loading packages",
+    "text": "Loading packages\nTo make a package available in an R session, you load it with the library() function.\n\nExample:\n\nlibrary(readxl)\nAlternatively, you can access a function from a package without loading it with the syntax: package::function().\n\nExample:\n\nreadxl::read_excel(\"file.xlsx\")"
+  },
+  {
     "objectID": "r_intro/plotting.html",
     "href": "r_intro/plotting.html",
     "title": "Plotting",
@@ -1257,7 +1026,7 @@
     "href": "r_intro/plotting.html#plotting-with-ggplot2",
     "title": "Plotting",
     "section": "Plotting with ggplot2",
-    "text": "Plotting with ggplot2\n\nThe Canvas\nThe first component is the data:\n\nggplot(data = mpg)\n\n\n\n\n\nThis can be simplified into ggplot(mpg).\n\nThe second component sets the way variables are mapped on the axes. This is done with the aes() (aesthetics) function:\n\nggplot(data = mpg, mapping = aes(x = displ, y = hwy))\n\n\n\n\n\nThis can be simplified into ggplot(mpg, aes(x = displ, y = hwy)).\n\n\n\nGeometric representations of the data\nOnto this canvas, we can add “geoms” (geometrical objects) representing the data. The type of “geom” defines the type of representation (e.g. boxplot, histogram, bar chart).\nTo represent the data as a scatterplot, we use the geom_point() function:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n\n\n\nWe can colour-code the points in the scatterplot based on the drv variable, showing the lower fuel efficiency of 4WD vehicles:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = drv))\n\n\n\n\nOr we can colour-code them based on the class variable:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class))\n\n\n\n\nMultiple “geoms” can be added on top of each other. For instance, we can add a smoothed conditional means function that aids at seeing patterns in the data with geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nThanks to the colour-coding of the types of car, we can see that the cluster of points in the top right corner all belong to the same type: 2 seaters. Those are outliers with high power, yet high few efficiency due to their smaller size.\nThe default smoothing function uses the LOESS (locally estimated scatterplot smoothing) method, which is a nonlinear regression. But maybe a linear model would actually show the general trend better. We can change the method by passing it as an argument to geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOf course, we could apply the smoothing function to each class instead of the entire data. It creates a busy plot but shows that the downward trend remains true within each type of car:\n\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOther arguments to geom_smooth() can set the line width, color, or whether or not the standard error (se) is shown:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nColour scales\nIf we want to change the colour scale, we add another layer for this:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nscale_color_brewer(), based on color brewer 2.0, is one of many methods to change the color scale. Here is the list of available scales for this particular method:\n\n\n\nLabels\nWe can keep on adding layers. For instance, the labs() function allows to set title, subtitle, captions, tags, axes labels, etc.\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nThemes\nAnother optional layer sets one of several preset themes.\nEdward Tufte developed, amongst others, the principle of data-ink ratio which emphasizes that ink should be used primarily where it communicates meaningful messages. It is indeed common to see charts where more ink is used in labels or background than in the actual representation of the data.\nThe default ggplot2 theme could be criticized as not following this principle. Let’s change it:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nThe theme() function allows to tweak the theme in any number of ways. For instance, what if we don’t like the default position of the title and we’d rather have it centered?\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nMany things can be changed thanks to the theme() function. For instance, we can move the legend to give more space to the actual graph:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5), legend.position = \"bottom\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nAs you could see, ggplot2 works by adding a number of layers on top of each other, all following a standard set of rules, or “grammar”. This way, a vast array of graphs can be created by organizing simple components."
+    "text": "Plotting with ggplot2\n\nYou can find the ggplot2 cheatsheet here.\n\n\nThe Canvas\nThe first component is the data:\n\nggplot(data = mpg)\n\n\n\n\n\nThis can be simplified into ggplot(mpg).\n\nThe second component sets the way variables are mapped on the axes. This is done with the aes() (aesthetics) function:\n\nggplot(data = mpg, mapping = aes(x = displ, y = hwy))\n\n\n\n\n\nThis can be simplified into ggplot(mpg, aes(x = displ, y = hwy)).\n\n\n\nGeometric representations of the data\nOnto this canvas, we can add “geoms” (geometrical objects) representing the data. The type of “geom” defines the type of representation (e.g. boxplot, histogram, bar chart).\nTo represent the data as a scatterplot, we use the geom_point() function:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n\n\n\nWe can colour-code the points in the scatterplot based on the drv variable, showing the lower fuel efficiency of 4WD vehicles:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = drv))\n\n\n\n\nOr we can colour-code them based on the class variable:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class))\n\n\n\n\nMultiple “geoms” can be added on top of each other. For instance, we can add a smoothed conditional means function that aids at seeing patterns in the data with geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nThanks to the colour-coding of the types of car, we can see that the cluster of points in the top right corner all belong to the same type: 2 seaters. Those are outliers with high power, yet high few efficiency due to their smaller size.\nThe default smoothing function uses the LOESS (locally estimated scatterplot smoothing) method, which is a nonlinear regression. But maybe a linear model would actually show the general trend better. We can change the method by passing it as an argument to geom_smooth():\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOf course, we could apply the smoothing function to each class instead of the entire data. It creates a busy plot but shows that the downward trend remains true within each type of car:\n\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nOther arguments to geom_smooth() can set the line width, color, or whether or not the standard error (se) is shown:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nColour scales\nIf we want to change the colour scale, we add another layer for this:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nscale_color_brewer(), based on color brewer 2.0, is one of many methods to change the color scale. Here is the list of available scales for this particular method:\n\n\n\nLabels\nWe can keep on adding layers. For instance, the labs() function allows to set title, subtitle, captions, tags, axes labels, etc.\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\nThemes\nAnother optional layer sets one of several preset themes.\nEdward Tufte developed, amongst others, the principle of data-ink ratio which emphasizes that ink should be used primarily where it communicates meaningful messages. It is indeed common to see charts where more ink is used in labels or background than in the actual representation of the data.\nThe default ggplot2 theme could be criticized as not following this principle. Let’s change it:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nThe theme() function allows to tweak the theme in any number of ways. For instance, what if we don’t like the default position of the title and we’d rather have it centered?\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nMany things can be changed thanks to the theme() function. For instance, we can move the legend to give more space to the actual graph:\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point(aes(color = class)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  geom_smooth(\n    method = lm,\n    se = FALSE,\n    color = \"#999999\",\n    linewidth = 0.5\n  ) +\n  labs(\n    title = \"Fuel consumption per engine size on highways\",\n    x = \"Engine size (L)\",\n    y = \"Fuel economy (mpg) on highways\",\n    color = \"Type of car\",\n    caption = \"EPA data from https://fueleconomy.gov/\"\n  ) +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5), legend.position = \"bottom\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nAs you could see, ggplot2 works by adding a number of layers on top of each other, all following a standard set of rules, or “grammar”. This way, a vast array of graphs can be created by organizing simple components."
   },
   {
     "objectID": "r_intro/plotting.html#ggplot2-extensions",
@@ -1272,6 +1041,13 @@
     "title": "Publishing",
     "section": "",
     "text": "You might have heard of R Markdown: a way to intertwine code and prose in a single scientific document. The company behind R Markdown has now developed its successor: Quarto.\n\nQuarto allows the creation of webpages, websites, presentations, books, pdf, etc. from code in R, Python, or Julia and markdown text.\nIf you are interested in an introduction to this tool, you can have a look at our workshop or our webinar on Quarto."
+  },
+  {
+    "objectID": "r_intro/resources.html",
+    "href": "r_intro/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "The R community is dynamic and offers a lot of online resources, from IDEs to Q&A, to workshops, books, or publications.\nThis section provides a selection of useful sites.\n\n\nMain sites\n\nR website\nComprehensive R Archive Network (CRAN): R versions and packages\n\n\n\nPosit and RStudio IDE\n\nPosit website (Posit was formerly called RStudio Inc.)\nPosit cheatsheets\n\n\n\nForums and Q&A\n\nStack Overflow [r] tag wiki\nStack Overflow [r] tag questions\nPosit Discourse\n\n\n\nDocumentation as pdf\n\nContributed documentation\nIntro books\n\n\n\nSoftware Carpentry online workshops\n\nProgramming with R\nR for Reproducible Scientific Analysis\nData analysis using R in the digital humanities\n\n\n\nOnline books\n\nR for Data Science (heavily based on the tidyverse)\nR Packages (how to create packages)\nR Programming for Data Science\nMastering Software Development in R\n\n\n\nR research\n\nThe R Journal"
   },
   {
     "objectID": "r_intro/run_r_intro.html",
@@ -1302,10 +1078,332 @@
     "text": "Using RStudio\nFor those unfamiliar with the RStudio IDE, you can download the following cheatsheet:\n\n\n\n\n\n\n\nfrom Posit Cheatsheets"
   },
   {
+    "objectID": "r_intro/tidyverse.html",
+    "href": "r_intro/tidyverse.html",
+    "title": "Introduction to the tidyverse",
+    "section": "",
+    "text": "The tidyverse is a set of packages which attempts to make R more consistent and more similar to programming languages which were developed by computer scientists rather than statisticians.\nYou can think of it as a more modern version of R."
+  },
+  {
+    "objectID": "r_intro/tidyverse.html#base-r-or-tidyverse",
+    "href": "r_intro/tidyverse.html#base-r-or-tidyverse",
+    "title": "Introduction to the tidyverse",
+    "section": "Base R or tidyverse?",
+    "text": "Base R or tidyverse?\n“Base R” refers to the use of the standard R library. The expression is often used in contrast to the tidyverse.\nThere are a many things that you can do with either base R or the tidyverse. Because the syntaxes are quite different, it almost feels like using two different languages and people tend to favour one or the other.\nWhich one you should use is really up to you.\n\n\n\n\n\n\n\nBase R\nTidyverse\n\n\n\n\nPreferred by old-schoolers\nIncreasingly becoming the norm with newer R users\n\n\nMore stable\nMore consistent syntax and behaviour\n\n\nDoesn’t require installing and loading packages\nMore and more resources and documentation available\n\n\n\nIn truth, even though the tidyverse has many detractors amongst old R users, it is increasingly becoming the norm."
+  },
+  {
+    "objectID": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
+    "href": "r_intro/tidyverse.html#a-glimpse-of-the-tidyverse",
+    "title": "Introduction to the tidyverse",
+    "section": "A glimpse of the tidyverse",
+    "text": "A glimpse of the tidyverse\nThe best introduction to the tidyverse is probably the book R for Data Science by Hadley Wickham and Garrett Grolemund.\nPosit (the company formerly known as RStudio Inc. behind the tidyverse) developed a series of useful cheatsheets. Below are links to the ones you are the most likely to use as you get started with R.\n\nData import\nThe first thing you often need to do is to import your data into R. This is done with readr.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nData transformation\nYou then often need to transformation your data into the right format. This is done with the packages dplyr and tidyr.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nVisualization\nVisualization in the tidyverse is done with the ggplot2 package which we will explore in the next section.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nWorking with factors\nThe package forcats offers the tidyverse approach to working with factors.\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nWorking with strings\nstringr is for strings.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nWorking with dates\nlubridate will help you deal with dates.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets\n\n\n\nFunctional programming\nFinally, purrr is the tidyverse equivalent to the apply functions in base R: a way to run functions on functions.\n\n\n\n\n\n\n\nfrom Posit Cheatsheets"
+  },
+  {
+    "objectID": "r_intro/why.html",
+    "href": "r_intro/why.html",
+    "title": "R: why and for whom?",
+    "section": "",
+    "text": "There are other high level programming languages such as Python or Julia, so when might it make sense for you to turn to R?"
+  },
+  {
     "objectID": "r_intro/why.html#why-r",
     "href": "r_intro/why.html#why-r",
     "title": "R: why and for whom?",
     "section": "Why R?",
     "text": "Why R?\nHere are a number of reasons why you might want to consider using R:\n\nFree and open source\nUnequalled number of statistics and modelling packages\nIntegrated package manager\nEasy connection with fast compiled languages such as C and C++\nPowerful IDEs available (RStudio, Emacs ESS)"
+  },
+  {
+    "objectID": "r_intro/why.html#for-whom",
+    "href": "r_intro/why.html#for-whom",
+    "title": "R: why and for whom?",
+    "section": "For whom?",
+    "text": "For whom?\nFor whom is R particularly well suited?\n\nFields with heavy statistics, modelling, or Bayesian analysis such as biology, linguistics, economics, or statistics\nData science using a lot of tabular data"
+  },
+  {
+    "objectID": "r_intro/why.html#downsides-of-r",
+    "href": "r_intro/why.html#downsides-of-r",
+    "title": "R: why and for whom?",
+    "section": "Downsides of R",
+    "text": "Downsides of R\nOf course, R also has its downsides:\n\nInconsistent syntax full of quirks\nSlow\nLarge memory usage"
+  },
+  {
+    "objectID": "r_parallel/clusters.html",
+    "href": "r_parallel/clusters.html",
+    "title": "Running R on HPC clusters",
+    "section": "",
+    "text": "This section will show you how to use R once you have logged in to a remote cluster via SSH."
+  },
+  {
+    "objectID": "r_parallel/clusters.html#log-in-to-our-temporary-training-cluster",
+    "href": "r_parallel/clusters.html#log-in-to-our-temporary-training-cluster",
+    "title": "Running R on HPC clusters",
+    "section": "Log in to our temporary training cluster",
+    "text": "Log in to our temporary training cluster\nAs mentioned previously, once you have developed your code in an interactive fashion, running scripts allows you to request large hardware resources only when you need them (i.e. when your code is executed).\nThis prevents these heavy resources from sitting idle when not in use (for instance when you think or type code), saving you money on commercial clusters or waiting time on Alliance clusters.\nSo let’s log in to the temporary training cluster."
+  },
+  {
+    "objectID": "r_parallel/clusters.html#loading-modules",
+    "href": "r_parallel/clusters.html#loading-modules",
+    "title": "Running R on HPC clusters",
+    "section": "Loading modules",
+    "text": "Loading modules\nOnce in the cluster, we need to make the modules (software) we need available.\n\nC compiler\nTo compile R packages, we need a C compiler.\nIn theory, one could use the proprietary Intel compiler which is loaded by default on the Alliance clusters, but it is recommended to replace it with the GCC compiler (R packages can be compiled by any C compiler—also including Clang and LLVM—but the default GCC compiler is the best way to avoid headaches).\nIt is thus much simpler to always load a gcc module before loading an r module.\n\n\nR module\nTo see what versions of R are available on a cluster, run:\nmodule spider r\nTo see the dependencies of a particular version (e.g. r/4.2.1), run:\nmodule spider r/4.2.1\n\nStdEnv/2020 is a required module for this version.\nOn most Alliance clusters, it is automatically loaded, so you don’t need to include it. You can double-check with module list or you can include it (before r/4.2.1) just to be sure.\n\n\n\nLoad the modules\nmodule load StdEnv/2020 gcc/11.3.0 r/4.2.1"
+  },
+  {
+    "objectID": "r_parallel/clusters.html#installing-r-packages",
+    "href": "r_parallel/clusters.html#installing-r-packages",
+    "title": "Running R on HPC clusters",
+    "section": "Installing R packages",
+    "text": "Installing R packages\n\nFor this course, all packages have already been installed in a communal library. You thus don’t have to install anything.\n\nTo install a package, launch the interactive R console with:\nR\nIn the R console, run:\ninstall.packages(\"<package_name>\", repos=\"<url-cran-mirror>\")\n\nrepos argument: chose a CRAN mirror close to the location of your cluster or use https://cloud.r-project.org/.\n\n\nThe first time you install a package, R will ask you whether you want to create a personal library in your home directory. Answer yes to both questions. Your packages will now install under ~/.\n\n\nSome packages require additional modules to be loaded before they can be installed. Other packages need additional R packages as dependencies. In either case, you will get explicit error messages. Adding the argument dependencies = T helps in the second case, but you will still have to add packages manually from time to time.\n\nTo leave the R console, press <Ctrl+D>."
+  },
+  {
+    "objectID": "r_parallel/clusters.html#running-r-jobs",
+    "href": "r_parallel/clusters.html#running-r-jobs",
+    "title": "Running R on HPC clusters",
+    "section": "Running R jobs",
+    "text": "Running R jobs\nThere are two types of jobs that can be launched on an Alliance cluster: interactive jobs and batch jobs. We will practice both and discuss their respective merits and when to use which.\nFor this course, I purposefully built a rather small cluster (10 nodes with 4 CPUs and 30GB each) to give a tangible illustration of the constraints of resource sharing.\n\nInteractive jobs\n\nWhile it is fine to run R on the login node when you install packages, you must start a SLURM job before any heavy computation.\n\nTo run R interactively, you should launch an salloc session.\n\nExample:\n\nsalloc --time=1:10:00 --mem-per-cpu=7000M --ntasks=8\nThis takes you to a compute node where you can now launch R to run computations:\nR\n\nThis however leads to the same inefficient use of resources as happens when running an RStudio server: all the resources that you requested are blocked for you while your job is running, whether you are making use of them (running heavy computations) or not (thinking, typing code, running computations that use only a fraction of the requested resources).\nInteractive jobs are thus best kept to develop code.\n\n\n\nScripts\nTo run an R script called <your_script>.R, you first need to write a job script:\n\nExample:\n\n\n<your_job>.sh\n\n#!/bin/bash\n#SBATCH --account=def-<your_account>\n#SBATCH --time=15\n#SBATCH --mem-per-cpu=3000M\n#SBATCH --cpus-per-task=4\n#SBATCH --job-name=\"<your_job>\"\nmodule load StdEnv/2020 gcc/11.3.0 r/4.2.1\nRscript <your_script>.R   # Note that R scripts are run with the command `Rscript`\n\n\nThen launch your job with:\nsbatch <your_job>.sh\nYou can monitor your job with sq (an alias for squeue -u $USER $@).\n\nBatch jobs are the best approach to run parallel computations, particularly when they require a lot of hardware.\nIt will save you lots of waiting time (Alliance clusters) or money (commercial clusters)."
+  },
+  {
+    "objectID": "r_parallel/data.html",
+    "href": "r_parallel/data.html",
+    "title": "Data on HPC clusters",
+    "section": "",
+    "text": "So far, we have played with randomly created data. In your work, you will often need to work with real world data.\nHow do you move it to the cluster? Where should you store it?\nIt’s time to talk about data on HPC clusters."
+  },
+  {
+    "objectID": "r_parallel/data.html#transferring-data-tofrom-the-cluster",
+    "href": "r_parallel/data.html#transferring-data-tofrom-the-cluster",
+    "title": "Data on HPC clusters",
+    "section": "Transferring data to/from the cluster",
+    "text": "Transferring data to/from the cluster\n\nSecure Copy Protocol\nSecure Copy Protocol (SCP) allows to copy files over the Secure Shell Protocol (SSH) with the scp utility. scp follows a syntax similar to that of the cp command.\nNote that you need to run it from your local machines (not from the cluster).\n\nCopy from your machine to the cluster\n# Copy a local file to your home directory on the cluster\nscp /local/path/file username@hostname:\n# Copy a local file to some path on the cluster\nscp /local/path/file username@hostname:/remote/path\n\n\nCopy from the cluster to your machine\n# Copy a file from the cluster to some path on your machine\nscp username@hostname:/remote/path/file /local/path\n# Copy a file from the cluster to your current location on your machine\nscp username@hostname:/remote/path/file .\nYou can also use wildcards to transfer multiple files:\n# Copy all the Bash scripts from your cluster home dir to some local path\nscp username@hostname:*.sh /local/path\n\n\nCopying directories\nTo copy a directory, you need to add the -r (recursive) flag:\nscp -r /local/path/folder username@hostname:/remote/path\n\n\nCopying for Windows users\nMobaXterm users (on Windows) can copy files by dragging them between the local and remote machines in the GUI. Alternatively, they can use the download and upload buttons.\n\n\n\nSecure File Transfer Protocol\nThe Secure File Transfer Protocol (SFTP) is more sophisticated and allows additional operations in an interactive shell. The sftp command provided by OpenSSH and other packages launches an SFTP client:\nsftp username@hostname\n\nLook at your prompt: your usual Bash/Zsh prompt has been replaced with sftp>.\n\nFrom this prompt, you can access a number of SFTP commands. Type help for a list:\nsftp> help\nAvailable commands:\nbye                                Quit sftp\ncd path                            Change remote directory to 'path'\nchgrp [-h] grp path                Change group of file 'path' to 'grp'\nchmod [-h] mode path               Change permissions of file 'path' to 'mode'\nchown [-h] own path                Change owner of file 'path' to 'own'\ncopy oldpath newpath               Copy remote file\ncp oldpath newpath                 Copy remote file\ndf [-hi] [path]                    Display statistics for current directory or\n                                   filesystem containing 'path'\nexit                               Quit sftp\nget [-afpR] remote [local]         Download file\nhelp                               Display this help text\nlcd path                           Change local directory to 'path'\nlls [ls-options [path]]            Display local directory listing\nlmkdir path                        Create local directory\nln [-s] oldpath newpath            Link remote file (-s for symlink)\nlpwd                               Print local working directory\nls [-1afhlnrSt] [path]             Display remote directory listing\nlumask umask                       Set local umask to 'umask'\nmkdir path                         Create remote directory\nprogress                           Toggle display of progress meter\nput [-afpR] local [remote]         Upload file\npwd                                Display remote working directory\nquit                               Quit sftp\nreget [-fpR] remote [local]        Resume download file\nrename oldpath newpath             Rename remote file\nreput [-fpR] local [remote]        Resume upload file\nrm path                            Delete remote file\nrmdir path                         Remove remote directory\nsymlink oldpath newpath            Symlink remote file\nversion                            Show SFTP version\n!command                           Execute 'command' in local shell\n!                                  Escape to local shell\n?                                  Synonym for help\nAs this list shows, you have access to a number of classic Unix command such as cd, pwd, ls, etc. These commands will be executed on the remote machine.\nIn addition, there are a number of commands of the form l<command>. “l” stands for “local”.\nThese commands will be executed on your local machine.\nFor instance, ls will list the files in your current directory in the remote machine while lls (“local ls”) will list the files in your current directory on your computer.\nThis means that you are now able to navigate two file systems at once: your local machine and the remote machine.\n\nHere are a few examples:\n\nsftp> pwd              # print remote working directory\nsftp> lpwd             # print local working directory\nsftp> ls               # list files in remote working directory\nsftp> lls              # list files in local working directory\nsftp> cd               # change the remote directory\nsftp> lcd              # change the local directory\nsftp> put local_file   # upload a file\nsftp> get remote_file  # download a file\n\nCopying directories\nTo upload/download directories, you first need to create them in the destination, then copy the content with the -r (recursive) flag.\n\nIf you have a local directory called dir and you want to copy it to the cluster you need to run:\n\nsftp> mkdir dir    # First create the directory\nsftp> put -r dir   # Then copy the content\nTo terminate the session, press <Ctrl+D>.\n\n\n\nSyncing\nIf, instead of an occasional copying of files between your machine and the cluster, you want to keep a directory in sync between both machines, you might want to use rsync instead. You can look at the Alliance wiki page on rsync for complete instructions.\n\n\nHeavy transfers\nWhile the methods covered above work very well for limited amounts of data, if you need to make large transfers, you should use globus instead, following the instructions in the Alliance wiki page on this service.\n\n\nWindows line endings\nOn modern Mac operating systems and on Linux, lines in files are terminated with a newline (\\n). On Windows, they are terminated with a carriage return + newline (\\r\\n).\nWhen you transfer files between Windows and Linux (the cluster uses Linux), this creates a mismatch. Most modern software handle this correctly, but you may occasionally run into problems.\nThe solution is to convert a file from Windows encoding to Unix encoding with:\ndos2unix file\nTo convert a file back to Windows encoding, run:\nunix2dos file"
+  },
+  {
+    "objectID": "r_parallel/data.html#files-management",
+    "href": "r_parallel/data.html#files-management",
+    "title": "Data on HPC clusters",
+    "section": "Files management",
+    "text": "Files management\nThe Alliance clusters are designed to handle large files very well. They are however slowed by the presence of many small files. It is thus important to know how to handle large collections of files by archiving them with tools such as tar and dar."
+  },
+  {
+    "objectID": "r_parallel/data.html#where-to-store-data",
+    "href": "r_parallel/data.html#where-to-store-data",
+    "title": "Data on HPC clusters",
+    "section": "Where to store data",
+    "text": "Where to store data\nSupercomputers have several filesystems and you should familiarize yourself with the quotas and policies of the clusters you use.\nAll filesystems are mounted on all nodes so that you can access the data on any network storage from any node (e.g. something in /home, /project, or /scratch will be accessible from any login node or compute node).\nA temporary folder gets created directly on the compute nodes while a job is running. In situations with heavy I/O or involving many files, it is worth considering copying data to it as part of the job. In that case, make sure to copy the results back to network storage before the end of the job."
+  },
+  {
+    "objectID": "r_parallel/index.html",
+    "href": "r_parallel/index.html",
+    "title": "Parallel R",
+    "section": "",
+    "text": "R is not famous for its speed. With code optimization and parallelization, it can however be used for heavy computations. This course will introduce you to working with R from the command line on the Alliance clusters with a focus on performance. We will discuss code profiling and benchmarking, various parallelization techniques, as well as using C++ from inside R to speed up calculations.\nDate:\nTuesday May 2, 2023\nTime:\n2pm–5pm\nInstructor:\nMarie-Hélène Burle (Simon Fraser University)\nPrerequisites:\nBasic knowledge of R and some basic working knowledge of HPC (how to submit Slurm jobs and view their output).\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+  },
+  {
+    "objectID": "r_parallel/memory.html",
+    "href": "r_parallel/memory.html",
+    "title": "Memory management",
+    "section": "",
+    "text": "Memory can be a limiting factor and releasing it when not needed can be critical to avoid out of memory states. On the other hand, memoisation is an optimization technique which stores the results of heavy computations for re-use at the cost of increasing memory usage.\nMemory and speed are thus linked in a trade-off."
+  },
+  {
+    "objectID": "r_parallel/memory.html#releasing-memory",
+    "href": "r_parallel/memory.html#releasing-memory",
+    "title": "Memory management",
+    "section": "Releasing memory",
+    "text": "Releasing memory\nIt is best to avoid creating very large intermediate objects (e.g. with nested functions or functions chained with the magrittr pipe), but if you must, remove them from the global environment with rm() when you don’t need them anymore. Once all the pointers to an object in memory are deleted, the garbage collector will clear its value and release the memory it used.\nAnother way to release the memory used by heavy intermediate objects is with functions: if you create those objects in the local environment of a function (instead of directly in the global environment), they will be cleared from memory as soon as the function has finished running.\nNote that in the case of a very large function, it might still be beneficial to run rm() inside the function to clear the memory for other processes coming next within that function. But this is a pretty rare case."
+  },
+  {
+    "objectID": "r_parallel/memory.html#caching-in-memory",
+    "href": "r_parallel/memory.html#caching-in-memory",
+    "title": "Memory management",
+    "section": "Caching in memory",
+    "text": "Caching in memory\nMemoisation is a technique by which the results of heavy computations are stored in memory to avoid have to re-calculate them. This can be convenient in a variety of settings (e.g. to reduce calls to an API), but mostly, it can greatly improve the efficiency of some code such as recursive function calls.\nLet’s consider the calculation of the Fibonacci numbers as an example. Those numbers form a sequence starting with 0 and 11, after which each number is the sum of the previous two.1 Alternative versions have the sequence start with 1, 1 or with 1, 2.\nHere is a function that would return the nth Fibonacci number2:2 There are more efficient ways to calculate the Fibonacci numbers, but this inefficient function is a great example to show the advantage of memoisation.\nfib <- function(n) {\n  if(n == 0) {\n    return(0)\n  } else if(n == 1) {\n    return(1)\n  } else {\n    Recall(n - 1) + Recall(n - 2)\n  }\n}\nIt can be written more tersely as:\n\nfib <- function(n) {\n  if(n == 0) return(0)\n  if(n == 1) return(1)\n  Recall(n - 1) + Recall(n - 2)\n}\n\n\nRecall() is a placeholder for the name of the recursive function. We could have used fib() instead, but Recall() is more robust as it allows for function renaming.\n\nMemoisation is very useful here because, for each Fibonacci number, we need to calculate the two preceding Fibonacci numbers and to calculate each of those we need to calculate the two Fibonacci numbers preceding that one and to calculate… etc. That is a large number of calculations, but, thanks to caching, we don’t have to calculate any one of them more than once.\nThe packages R.cache and memoise both allow for memoisation with an incredibly simple syntax.\nApplying the latter to our function gives us:\n\nlibrary(memoise)\n\nfibmem <- memoise(function(n) {\n  if(n == 0) return(0)\n  if(n == 1) return(1)\n  fibmem(n - 1) + fib(n - 2)\n})\n\nWe can do some benchmarking to see the speedup for the 30th Fibonacci number:\n\nlibrary(bench)\n\nn <- 30\nmark(fib(n), fibmem(n))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 fib(n)         1.6s     1.6s     0.623    34.1KB     21.8\n2 fibmem(n)    36.7µs   38.2µs 24465.        429KB     17.1\n\n\nThe speedup is over 35,000!"
+  },
+  {
+    "objectID": "r_parallel/optimizations.html",
+    "href": "r_parallel/optimizations.html",
+    "title": "Optimizations",
+    "section": "",
+    "text": "A lot of hardware is not the answer to poorly written code. Before considering parallelization, you should think about ways to optimize your code sequentially.\nWhy?\n\nNot all code can be parallelized.\nParallelization is costly (waiting time to access a cluster or money).\nThe optimization of the sequential code will also benefit the parallel code.\n\nIn many cases, writing better code will save you more computing time than parallelization.\nIn this section, we will cover several principles by playing with the programmatic implementation of the fizz buzz game."
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#toy-example",
+    "href": "r_parallel/optimizations.html#toy-example",
+    "title": "Optimizations",
+    "section": "Toy example",
+    "text": "Toy example\nFizz buzz is a children game to practice divisions. Players take turn counting out loud while replacing:\n\nany number divisible by 3 with the word “Fizz”,\nany number divisible by 5 with the word “Buzz”,\nany number divisible by both 3 and 5 with the word “FizzBuzz”.\n\nLet’s write functions to solve the game and time them to draw some general principles about more efficient code.\nWe will use bench::mark() to benchmark our solutions. Let’s load it:\n\nlibrary(bench)"
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#pre-allocate-memory",
+    "href": "r_parallel/optimizations.html#pre-allocate-memory",
+    "title": "Optimizations",
+    "section": "Pre-allocate memory",
+    "text": "Pre-allocate memory\nIn this first function, we create an empty object z of class integer and of length 0 that will hold the result of a loop, then we run the loop and at each iteration, we add a new value to z:\n\nf1 <- function(n) {\n  z <- integer()\n  for(i in 1:n) {\n    if(i %% 3 == 0 && i %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(i %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(i %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- i\n    }\n  }\n  z\n}\n\nThe second function is very similar, but this time, we create an empty object z of class integer and of length matching the final length z will have after running the loop. This means that we are pre-allocating memory for the full vector before we run the loop instead of growing the vector at each iteration:\n\nf2 <- function(n) {\n  z <- integer(n)\n  for(i in 1:n) {\n    if(i %% 3 == 0 && i %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(i %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(i %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- i\n    }\n  }\n  z\n}\n\nLet’s make sure that our functions work by testing it on a small number:\n\nf1(20)\n\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"    \n\nf2(20)\n\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"    \n\n\nNow, let’s benchmark them for a large number:\n\nn <- 1e5\nmark(f1(n), f2(n))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f1(n)         135ms    139ms      7.17   16.55MB     23.3\n2 f2(n)         121ms    127ms      7.77    1.15MB     27.2\n\n\nf2() is consistently faster. While in this example the difference is very slight, pre-allocating the object that will hold the result of a loop before running the loop can make a huge difference."
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#arent-loops-a-big-no-no-in-r",
+    "href": "r_parallel/optimizations.html#arent-loops-a-big-no-no-in-r",
+    "title": "Optimizations",
+    "section": "Aren’t loops a big ‘no no’ in R?",
+    "text": "Aren’t loops a big ‘no no’ in R?\nBy now, you might be thinking: “Wait… aren’t loops a big ‘no no’ in R? I’ve always been told that they are slow and that one should always use functional programming! We are talking about optimization in this course and we are using loops?!?”\nThere are a lot of misconceptions around R loops. They can be very slow if you don’t pre-allocate memory. Otherwise they are almost always faster than functions (the apply() family or the tidyverse equivalent of the purrr::map() family). You can choose to use a functional programming approach for style and readability, but not for speed.\nLet’s test it.\nFirst we create a function:\n\nfb <- function(n) {\n  if(n %% 3 == 0 && n %% 5 == 0) {\n    \"FizzBuzz\"\n  } else if(n %% 3 == 0) {\n    \"Fizz\"\n  } else if(n %% 5 == 0) {\n    \"Buzz\"\n  } else {\n    n\n  }\n}\n\nThen we pass it through sapply(). We can test that it works on a small number:\n\nsapply(1:20, fb)\n\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"    \n\n\nFinally, we compare the timing with that of f2():\n\nmark(f2(n), sapply(1:n, fb))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression           min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr>      <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f2(n)              132ms    146ms      6.94    1.15MB     27.8\n2 sapply(1:n, fb)    177ms    177ms      5.40    3.29MB     25.2\n\n\nAs you can see, the loop is faster."
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#avoid-unnecessary-operations",
+    "href": "r_parallel/optimizations.html#avoid-unnecessary-operations",
+    "title": "Optimizations",
+    "section": "Avoid unnecessary operations",
+    "text": "Avoid unnecessary operations\n\nExample 1\nCalling z as the last command in our function is the same as calling return(z).\nFrom the R documentation:\n\nIf the end of a function is reached without calling return, the value of the last evaluated expression is returned.\n\nNow, what about using print() instead?\n\nf3 <- function(n) {\n  z <- integer(n)\n  for(i in 1:n) {\n    if(i %% 3 == 0 && i %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(i %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(i %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- i\n    }\n  }\n  print(z)\n}\n\nLet’s benchmark it against f2():\nmark(f2(n), f3(n))\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"     \"Fizz\"     \"22\"       \"23\"       \"Fizz\"    \n[25] \"Buzz\"     \"26\"       \"Fizz\"     \"28\"       \"29\"       \"FizzBuzz\"\n[31] \"31\"       \"32\"       \"Fizz\"     \"34\"       \"Buzz\"     \"Fizz\"    \n[37] \"37\"       \"38\"       \"Fizz\"     \"Buzz\"     \"41\"       \"Fizz\"\n...\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n# A tibble: 2 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f2(1e+05)  151.88ms 157.65ms     6.30     1.25MB     29.9\n2 f3(1e+05)     3.25s    3.25s     0.308    1.04GB     26.8\nWhat happened?\nprint() returns its argument, but it additionally prints it to the standard output. This is why the mark() function printed the output of f3() before printing the timings.\nAs you can see, printing takes a long time.\n\nThe code in this website is run by Quarto. Since, by default, RStudio will only print the first 1,000 results, the timing you will get for f3() in RStudio will be much less bad as it won’t include the time it takes to print the remaining 99,000 results.\n\nIf you are evaluating f2() on its own (e.g. f2(20)), the returned result will also be printed to standard output and both functions will be equivalent. However, if you are using the function in another context, printing becomes an unnecessary and timely operation and f3() would be a very bad option. f3() is thus not a good function.\nHere is an example in which f3() would perform a totally unnecessary operation that f2() avoids:\n\na <- f2(20)\n\n\nNo unnecessary printing.\n\n\na <- f3(20)\n\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"    \n\n\n\nUnnecessary printing.\n\nFor 1e5, the difference in timing between running an unnecessary printing vs not is a factor of 21!\nEven worse would be to use:\n\nf4 <- function(n) {\n  for(i in 1:n) {\n    if(i %% 3 == 0 && i %% 5 == 0) {\n      print(\"FizzBuzz\")\n    } else if(i %% 3 == 0) {\n      print(\"Fizz\")\n    } else if(i %% 5 == 0) {\n      print(\"Buzz\")\n    } else {\n      print(i)\n    }\n  }\n}\n\nHere the difference in timing is a factor of 50…\n\n\nExample 2\nOne modulo operation and equality test can be removed by replacing i %% 3 == 0 && i %% 5 == 0 by i %% 15 == 0. The difference isn’t huge, but there is a slight speedup:\n\nf2bis <- function(n) {\n  z <- integer(n)\n  for(i in 1:n) {\n    if(i %% 15 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(i %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(i %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- i\n    }\n  }\n  z\n}\n\nmark(f2(n), f2bis(n))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f2(n)         112ms    142ms      6.75    1.15MB     28.7\n2 f2bis(n)      105ms    106ms      9.44    1.22MB     34.0\n\n\n\n\nExample 3\nBut is f2() really the fastest function?\nLouis Arsenault-Mahjoubi—who attended this workshop—found ways to get rid of several operations and get a speedup of 1.7 over f2().\nFirst, we can assign 1:n to z instead of pre-allocating memory with an empty vector, thus rendering the assignment of i to z[i] unnecessary in the last else statement:\n\nf_louis1 <- function(n) {\n  z <- 1:n\n  for(i in z) {\n    if(i %% 3 == 0 && i %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(i %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(i %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } \n  }\n  z\n}\n\nThis function works:\n\nf_louis1(20)\n\n [1] \"1\"        \"2\"        \"Fizz\"     \"4\"        \"Buzz\"     \"Fizz\"    \n [7] \"7\"        \"8\"        \"Fizz\"     \"Buzz\"     \"11\"       \"Fizz\"    \n[13] \"13\"       \"14\"       \"FizzBuzz\" \"16\"       \"17\"       \"Fizz\"    \n[19] \"19\"       \"Buzz\"    \n\n\n… and is faster (speedup of 1.3):\n\nmark(f2bis(n), f_louis1(n))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr>  <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f2bis(n)     108.8ms  109.7ms      9.04    1.15MB     34.4\n2 f_louis1(n)   80.7ms   82.8ms     12.1     1.15MB     39.7\n\n\nThen, we can prevent the repetitions of the modulo operations and equality tests by saving them to variables:\n\nf_louis2 <- function(n) {\n  z <- 1:n\n  for(i in z) {\n    div3 <- (i %% 3 == 0)\n    div5 <- (i %% 5 == 0)\n    if(div3 && div5) {\n      z[i] <- \"FizzBuzz\"\n    } else if(div3) {\n      z[i] <- \"Fizz\"\n    } else if(div5) {\n      z[i] <- \"Buzz\"\n    } \n  }\n  z\n}\n\nThis gets us an even greater speedup of 1.7:\n\nmark(f2bis(n), f_louis2(n))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr>  <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f2bis(n)     109.3ms  112.4ms      8.69    1.15MB     34.8\n2 f_louis2(n)   66.6ms   68.9ms     14.3     1.21MB     33.9"
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#replace-costly-operations-where-possible",
+    "href": "r_parallel/optimizations.html#replace-costly-operations-where-possible",
+    "title": "Optimizations",
+    "section": "Replace costly operations where possible",
+    "text": "Replace costly operations where possible\nNow imagine that we have a dataframe called dat with a first column called datvar filled with integers.\nWe want to write a function that will accept our dataframe as argument and play the fizz buzz game on the column datvar.\nOne could imagine the following function:\n\nf5 <- function(dat) {\n  z <- integer(length(dat[[1]]))\n  for(i in seq_along(dat[[1]])) {\n    if(dat[[1]][i] %% 3 == 0 && dat[[1]][i] %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(dat[[1]][i] %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(dat[[1]][i] %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- dat[[1]][i]\n    }\n  }\n  z\n}\n\nIndexing a column from a dataframe in this fashion is a very costly operation. It is much more efficient to index with the name of the column:\n\nf6 <- function(dat) {\n  z <- integer(length(dat$datvar))\n  for(i in seq_along(dat$datvar)) {\n    if(dat$datvar[i] %% 3 == 0 && dat$datvar[i] %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(dat$datvar[i] %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(dat$datvar[i] %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- dat$datvar[i]\n    }\n  }\n  z\n}\n\nNow, let’s create a random dataframe to benchmark f5() and f6():\n\nset.seed(123)\ndat <- data.frame(datvar = round(runif(n, 1, n)))\nmark(f5(dat), f6(dat))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 2 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f5(dat)       1.83s    1.83s     0.547    1.26MB     27.3\n2 f6(dat)    378.11ms 403.17ms     2.48     1.26MB     22.3"
+  },
+  {
+    "objectID": "r_parallel/optimizations.html#avoid-repetitions-of-costly-operations",
+    "href": "r_parallel/optimizations.html#avoid-repetitions-of-costly-operations",
+    "title": "Optimizations",
+    "section": "Avoid repetitions of costly operations",
+    "text": "Avoid repetitions of costly operations\nThis made a big difference (speedup of 5), but notice that we are indexing the column 6 times in our function. Let’s remove the repetition of this operation:\n\nf7 <- function(dat) {\n  var <- dat$datvar\n  z <- integer(length(var))\n  for(i in seq_along(var)) {\n    if(var[i] %% 3 == 0 && var[i] %% 5 == 0) {\n      z[i] <- \"FizzBuzz\"\n    } else if(var[i] %% 3 == 0) {\n      z[i] <- \"Fizz\"\n    } else if(var[i] %% 5 == 0) {\n      z[i] <- \"Buzz\"\n    } else {\n      z[i] <- var[i]\n    }\n  }\n  z\n}\n\nLet’s benchmark all 3 versions:\n\nmark(f5(dat), f6(dat), f7(dat))\n\nWarning: Some expressions had a GC in every iteration; so filtering is\ndisabled.\n\n\n# A tibble: 3 × 6\n  expression      min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 f5(dat)       1.81s    1.81s     0.553    1.15MB     27.7\n2 f6(dat)    354.24ms 387.45ms     2.58     1.15MB     24.5\n3 f7(dat)    143.27ms 145.31ms     6.86     1.25MB     18.9\n\n\nf7() gave us another speedup of almost 3 over f6(). f7() runs 14 times faster than our initial function!\n\nIndexing from a vector isn’t costly. There is thus no advantage at removing the repetition of that operation.\n\n\n\nYour turn:\n\nShow that this last statement is true."
+  },
+  {
+    "objectID": "r_parallel/parallel_loops.html",
+    "href": "r_parallel/parallel_loops.html",
+    "title": "Parallel loops with foreach & doFuture",
+    "section": "",
+    "text": "The foreach package implements a looping construct without an explicit counter. It doesn’t require the preallocation of an output container, it brings to R an equivalent of the Python or Julia list comprehensions, and mostly, it allows for an easy execution of loops in parallel.\nUnlike loops, it creates variables (loops are used for their side-effect).\nLet’s look at an example to calculate the sum of 1e4 random vectors of length 3.\nBut first, what type of job shall we run here? This example is tiny and sequential. As the cluster for this course contains 10 nodes with 4 CPUs each, each of us can monopolize a CPU. We can thus use an interactive job:\nsalloc --time=30 --mem-per-cpu=7000M --ntasks=1\n\nMake sure to type this in the Bash terminal. We haven’t launched R yet!\n\n\nYou can see the full list of salloc options here.\n\nThen we can launch R interactively:\nR\n\nWe are now in the R terminal and can start typing R commands.\n\nWe will use foreach and iterators (which creates convenient iterators for foreach):\n\nlibrary(foreach)\nlibrary(iterators)\n\n\nClassic while loop:\n\n\nset.seed(2)\nresult1 <- numeric(3)            # Preallocate output container\ni <- 0                           # Initialise counter variable\n\nwhile(i < 1e4) {\n  result1 <- result1 + runif(3)  # Calculate the sum\n  i <- i + 1                     # Update the counter\n}\n\n\nWith foreach:\n\n\nset.seed(2)\nresult2 <- foreach(icount(1e4), .combine = '+') %do% runif(3)\n\nWe can verify that both expressions returned the same result:\n\nall.equal(result1, result2)\n\n[1] TRUE\n\n\nThe best part of foreach is that you can turn sequential loops into parallel ones by registering a parallel backend and replacing %do% with %dopar%.\nThere are many parallelization backends available: doFuture, doMC, doMPI, doParallel, doRedis, doRNG, doSNOW, and doAzureParallel.\nIn this lesson, we will use doFuture which allows to evaluate foreach expressions following any of the strategies of the future package.\nSo first, what is the future package?"
+  },
+  {
+    "objectID": "r_parallel/parallel_loops.html#future-package",
+    "href": "r_parallel/parallel_loops.html#future-package",
+    "title": "Parallel loops with foreach & doFuture",
+    "section": "future package",
+    "text": "future package\nA future is an object that acts as an abstract representation for a value in the future. A future can be resolved (if the value has been computed) or unresolved. If the value is queried while the future is unresolved, the process is blocked until the future is resolved. Futures thus allow for asynchronous and parallel evaluations.\nThe future package allows to evaluate futures sequentially or in various forms of parallelism while keeping code simple and consistent. The evaluation strategy is set thanks to the plan function:\n\nplan(sequential):\nFutures are evaluated sequentially in the current R session.\nplan(multisession):\nFutures are evaluated by new R sessions spawned in the background (multi-processing in shared memory).\nplan(multicore):\nFutures are evaluated in processes forked from the existing process (multi-processing in shared memory).\nplan(cluster):\nFutures are evaluated on an ad-hoc cluster (distributed parallelism across multiple nodes).\n\n\nConsistency\nTo ensure a consistent behaviour across plans, all evaluations are done in a local environment:\n\nlibrary(future)\n\na <- 1\n\nb %<-% {      # %<-% is used instead of <- to use futures\n  a <- 2\n}\n\na\n\n[1] 1"
+  },
+  {
+    "objectID": "r_parallel/parallel_loops.html#dofuture-package",
+    "href": "r_parallel/parallel_loops.html#dofuture-package",
+    "title": "Parallel loops with foreach & doFuture",
+    "section": "doFuture package",
+    "text": "doFuture package\nThe doFuture package allows to evaluate foreach expressions across the evaluation strategies of the future package.\nLet’s go back to our foreach example. We had:\nlibrary(foreach)\n\nset.seed(2)\nresult2 <- foreach(icount(1e4), .combine = '+') %do% runif(3)\nWe could replace %do% with %dopar%:\nlibrary(foreach)\n\nset.seed(2)\nresult3 <- foreach(icount(1e4), .combine = '+') %dopar% runif(3)\nSince we haven’t registered any parallel backend, the expression would still be evaluated sequentially. To run this in parallel, we would need to load doFuture, register it as a backend (with registerDoFuture()), and choose a parallel strategy (e.g. plan(multicore)):\nlibrary(foreach)\nlibrary(doFuture)\n\nregisterDoFuture()\nplan(multicore)\n\nset.seed(2)\nresult3 <- foreach(icount(1e4), .combine = '+') %dopar% runif(3)\nOf course, we would also need to run this in a Slurm job with multiple CPUs.\nWith the overhead of parallelization however, it doesn’t make sense to parallelize such a short code, so let’s go over a proper toy example and do some benchmarking."
+  },
+  {
+    "objectID": "r_parallel/parallel_loops.html#toy-example",
+    "href": "r_parallel/parallel_loops.html#toy-example",
+    "title": "Parallel loops with foreach & doFuture",
+    "section": "Toy example",
+    "text": "Toy example\n\nBefore getting started with this toy example, remember that you need to run the following:\n# Load necessary modules\nmodule load StdEnv/2020 gcc/11.3.0 r/4.2.1\n\n# Start interactive job with 1CPU\nsalloc --time=30 --mem-per-cpu=7000M --ntasks=1\n\n\nLoad packages\nFor this toy example, we will use a modified version of one of the examples in the foreach vignette: we will build a classification model made of a forest of decision trees thanks to the randomForest package.\nBecause the code includes randomly generated numbers, we will use the doRNG package which replaces foreach::%dopar% with doRNG::%dorng%. This follows the recommendations of Pierre L’Ecuyer (1999)1 and ensures reproducibility.1 L’Ecuyer, P. (1999). Good parameters and implementations for combined multiple recursive random number generators. Operations Research, 47, 159–164.\nlibrary(doFuture)       # This will also load the `future` package\nlibrary(doRNG)          # This will also load the `foreach` package\nlibrary(randomForest)\nlibrary(bench)          # To do some benchmarking\nLoading required package: foreach\nLoading required package: future\nLoading required package: rngtools\n\n\nThe code to parallelize\nThe goal is to create a classifier based on some data (here a matrix of random numbers for simplicity) and a response variable (as factor). This model could then be passed in the predict() function with novel data to generate predictions of classification. But here we are only interested in the creation of the model as this is the part that is computationally intensive. We aren’t interested in actually using it.\nset.seed(11)\ntraindata <- matrix(runif(1e5), 100)\nfac <- gl(2, 50)\n\nrf <- foreach(ntree = rep(250, 8), .combine = combine) %do%\n  randomForest(x = traindata, y = fac, ntree = ntree)\n\nrf\nCall:\n randomForest(x = traindata, y = fac, ntree = ntree)\n               Type of random forest: classification\n                     Number of trees: 2000\nNo. of variables tried at each split: 31\n\n\nReference timing\nThis is the non parallelizable code with %do%:\nbm <- mark(\n  rf <- foreach(ntree = rep(250, 8), .combine = combine) %do%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory = FALSE\n)\n\nbm$median\n[1] 5.66s\n\nbench::mark() is currently unable to provide memory information for parallel code. While it could output memory usage for this sequential run, we won’t be able to compare it with parallel runs, so we might as well not ask for that information.\n\n\n\nPlan sequential\nThis is the parallelizable foreach code, but run sequentially:\nregisterDoFuture()   # Set the parallel backend\nplan(sequential)     # Set the evaluation strategy\n\n# Using bench::mark()\nbm <- mark(\n  rf <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory = FALSE\n)\n\nbm$median\n[1] 5.78s\n\nNo surprise: those are similar.\n\n\n\nMulti-processing in shared memory\n\nNumber of cores\nfuture provides availableCores() to detect the number of available cores:\navailableCores()\ncgroups.cpuset\n             1\n\nSimilar to parallel::detectCores().\n\nThis detects the number of CPU cores available to us on the current compute node, that is, what we can use for shared memory multi-processing. Since we asked for a single task (--ntasks=1) and since by default Slurm grants one CPU per task, we have a single CPU available.\nTo be able to run our code in parallel, we need to have access to at least 2 CPUs each. So let’s quit the R session (with Ctrl+D or quit()—when asked whether to save a workspace image, answer n), terminate our interactive job (also with Ctrl+D) and ask for a different job.\n\nDon’t forget to relinquish your interactive job with Ctrl+D otherwise it will be running for the full 30 min, making the hardware it uses unavailable to all of us until the job expires.\n\nNow what job should we run?\nRemember that the cluster for this course is made of 10 nodes of 4 CPUs each. We want to test shared memory parallelism, so our job needs to stay within one node. We can thus ask for a maximum of 4 CPUs and we want to ensure that we aren’t getting them on different nodes. If we all ask for 4 CPUs in an interactive session, the first 10 of us will get them and the job requests for the rest of us will remain pending, waiting for resources to become available, for as long as the lucky 10 are running their session. That’s the big downside of interactive sessions.\nA much better approach here is to write the code in a script and run it with sbatch. That way, everybody will get to run their code with minimal delay.\nOpen a text file (let’s call it rf.R since it creates a random forest object) with the text editor of your choice, for instance nano:\nnano rf.R\nWe will first play with it to see how many cores are available to us, so write in your script:\n\n\nrf.R\n\nlibrary(future)   # Don't forget to load the packages in your script\navailableCores()\n\nSave and close the text editor.\nNow, we want to create a shell script for Slurm. Let’s call it rf.sh:\nnano rf.sh\nIn it lives the hardware request and the code that needs to run:\n\n\nrf.sh\n\n#!/bin/bash\n#SBATCH --time=10             # 10 min\n#SBATCH --mem-per-cpu=7000M\n#SBATCH --nodes=1\n#SBATCH --cpus-per-task=4\n\nRscript rf.R                  # This is the code that we are running\n\n\nYou can see the full list of sbatch options here.\n\nSave and close the text editor.\nWe can now run the batch script:\nsbatch rf.sh\nYou can monitor it with sq, but this should be quasi instant. The result will be written to a file called slurm-xx.out with xx being the number of the job that just ran.\n\nYou can specify the output file name in the options of your sbatch script.\n\nTo see the result, we can simply print the content of that file to screen (you can run ls to see the list of files in the current directory):\ncat slurm-xx.out    # Replace xx by the job number\nsystem\n     4\nWe now have 4 CPUs available on one node, so we can test shared memory parallelism.\n\n\nPlan multisession\nShared memory multi-processing can be run with plan(multisession) that will spawn new R sessions in the background to evaluate futures.\nEdit the R script (with nano rf.R):\n\n\nrf.R\n\nlibrary(doFuture)\nlibrary(doRNG)\nlibrary(randomForest)\nlibrary(bench)\n\nregisterDoFuture()   # Set the parallel backend\nplan(multisession)\n\nset.seed(11)\ntraindata <- matrix(runif(1e5), 100)\nfac <- gl(2, 50)\n\nbm <- mark(\n  rf <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory = FALSE\n)\n\nbm$median\n\nRun the job with the new R script:\nsbatch rf.sh\nWe now get in the output file:\nLoading required package: foreach\nLoading required package: future\nLoading required package: rngtools\nrandomForest 4.7-1.1\nType rfNews() to see new features/changes/bug fixes.\nWarning message:\nSome expressions had a GC in every iteration; so filtering is disabled.\n[1] 2.08s\n\nWe got a speedup of 5.78 / 2.08 = 2.8. Not bad considering that we have 4 CPU cores (the ideal speedup would be 4, but there is always some overhead to parallelization).\n\n\n\nPlan multicore\nShared memory multi-processing can also be run with plan(multicore) (except on Windows) that will fork the current R process to evaluate futures.\nLet’s modify our R script again:\n\n\nrf.R\n\nlibrary(doFuture)\nlibrary(doRNG)\nlibrary(randomForest)\nlibrary(bench)\n\nregisterDoFuture()   # Set the parallel backend\nplan(multicore)\n\nset.seed(11)\ntraindata <- matrix(runif(1e5), 100)\nfac <- gl(2, 50)\n\nbm <- mark(\n  rf <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory = FALSE\n)\n\nbm$median\n\nRun the job:\nsbatch rf.sh\nWe get:\nLoading required package: foreach\nLoading required package: future\nLoading required package: rngtools\nrandomForest 4.7-1.1\nType rfNews() to see new features/changes/bug fixes.\nWarning message:\nSome expressions had a GC in every iteration; so filtering is disabled.\n[1] 1.89s\n\nWe got a similar speedup of 5.78 / 1.89 = 3.1.\n\n\n\n\nMulti-processing in distributed memory\n\nCreate a cluster of workers\nTo test parallel execution in distributed memory, let’s ask Slurm for 8 tasks by editing our rf.sh script:\n\n\nrf.sh\n\n#!/bin/bash\n#SBATCH --time=10\n#SBATCH --mem-per-cpu=7000M\n#SBATCH --ntasks=8\n\nRscript rf.R      # This is the code that we are running\n\nLet’s verify that we do get 8 tasks by accessing the SLURM_NTASKS environment variable from within R.\nEdit rf.R to contain the following:\n\n\nrf.R\n\nas.numeric(Sys.getenv(\"SLURM_NTASKS\"))\n\nRun the job:\nsbatch rf.sh\nWe get:\n[1] 8\nLet’s see which nodes we are using:\n\n\nrf.R\n\nsystem(\"srun hostname | cut -f 1 -d '.'\", intern = T)\n\nWe get:\n[1] \"node1\" \"node1\" \"node1\" \"node1\" \"node2\" \"node2\" \"node2\" \"node2\"\nTo run the RandomForest code with distributed parallelism using 8 CPU cores across both nodes, we will need to create a cluster of workers. We do this with the makeCluster() function from the base R parallel package: we create a character vector with the names of the nodes our tasks are running on and pass this vector to the makeCluster() function:\n## Create a character vector with the nodes names\nhosts <- system(\"srun hostname | cut -f 1 -d '.'\", intern = T)\n\n## Create the cluster of workers\ncl <- parallel::makeCluster(hosts)\nLet’s test it:\n\n\nrf.R\n\nlibrary(doFuture)\n\nhosts <- system(\"srun hostname | cut -f 1 -d '.'\", intern = T)\ncl <- parallel::makeCluster(hosts)\n\ncl\n\nIf we run this code, we get:\nLoading required package: foreach\nLoading required package: future\nsocket cluster with 8 nodes on hosts ‘node1’, ‘node2’\n\nMake sure that your code has finished running before printing the output file. Remember that you can monitor the job with sq.\n\n\n\nPlan cluster\nWe can now run the code in distributed memory parallelism:\n\n\nrf.R\n\nlibrary(doFuture)\nlibrary(doRNG)\nlibrary(randomForest)\nlibrary(bench)\n\nregisterDoFuture()   # Set the parallel backend\n\nhosts <- system(\"srun hostname | cut -f 1 -d '.'\", intern = T)\ncl <- parallel::makeCluster(hosts)\nplan(cluster, workers = cl)\n\nset.seed(11)\ntraindata <- matrix(runif(1e5), 100)\nfac <- gl(2, 50)\n\nbm <- mark(\n  rf <- foreach(ntree = rep(250, 8), .combine = combine) %dorng%\n    randomForest(x = traindata, y = fac, ntree = ntree),\n  memory = FALSE\n)\n\nbm$median\n\nWe get:\nLoading required package: foreach\nLoading required package: future\nLoading required package: rngtools\nrandomForest 4.7-1.1\nType rfNews() to see new features/changes/bug fixes.\nWarning message:\nSome expressions had a GC in every iteration; so filtering is disabled.\n[1] 1.16s\n\nSpeedup: 5.78 / 1.16 = 5.0. Here again, this is not bad with 8 CPU cores, considering the added overhead of message passing between both nodes.\n\nThe cluster of workers can be stopped with:\nparallel::stopCluster(cl)\nHere, this is not necessary since our job stops running as soon as the execution is complete."
+  },
+  {
+    "objectID": "r_parallel/parallel_types.html",
+    "href": "r_parallel/parallel_types.html",
+    "title": "Types of parallelism",
+    "section": "",
+    "text": "There are various ways to run code in parallel and it is important to have a clear understanding of what each method entails."
+  },
+  {
+    "objectID": "r_parallel/parallel_types.html#multi-threading",
+    "href": "r_parallel/parallel_types.html#multi-threading",
+    "title": "Types of parallelism",
+    "section": "Multi-threading",
+    "text": "Multi-threading\nWe talk about multi-threading when a single process (with its own memory) runs multiple threads.\nThe execution can happen in parallel—if each thread has access to a CPU core—or by alternating some of the threads on some CPU cores.\nBecause all threads in a process write to the same memory addresses, multi-threading can lead to race conditions.\nMulti-threading does not seem to be a common approach to parallelizing R code."
+  },
+  {
+    "objectID": "r_parallel/parallel_types.html#multi-processing-in-shared-memory",
+    "href": "r_parallel/parallel_types.html#multi-processing-in-shared-memory",
+    "title": "Types of parallelism",
+    "section": "Multi-processing in shared memory",
+    "text": "Multi-processing in shared memory\nMulti-processing in shared memory happens when multiple processes execute code on multiple CPU cores of a single node (or a single machine).\nThe different processes need to communicate with each other, but because they are all running on the CPU cores of a single node, messages can pass via shared memory."
+  },
+  {
+    "objectID": "r_parallel/parallel_types.html#multi-processing-in-distributed-memory",
+    "href": "r_parallel/parallel_types.html#multi-processing-in-distributed-memory",
+    "title": "Types of parallelism",
+    "section": "Multi-processing in distributed memory",
+    "text": "Multi-processing in distributed memory\nWhen processes involved in the execution of some code run on multiple nodes of a cluster, messages between them need to travel over the cluster interconnect. In that case, we talk about distributed memory."
+  },
+  {
+    "objectID": "r_parallel/performance.html",
+    "href": "r_parallel/performance.html",
+    "title": "Measuring performance:",
+    "section": "",
+    "text": "Before we talk about ways to improve performance, let’s see how to measure it."
+  },
+  {
+    "objectID": "r_parallel/performance.html#when-should-you-care",
+    "href": "r_parallel/performance.html#when-should-you-care",
+    "title": "Measuring performance:",
+    "section": "When should you care?",
+    "text": "When should you care?\n\n“There is no doubt that the grail of efficiency leads to abuse. Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.”\n— Donald Knuth\n\nOptimizing code takes time, can lead to mistakes, and may make code harder to read. Consequently, not all code is worth optimizing and before jumping into optimizations, you need a strategy.\nYou should consider optimizations when:\n\nyou have debugged your code (optimization comes last, don’t optimize a code that doesn’t run),\nyou will run a section of code (e.g. a function) many times (your optimization efforts will really pay off),\na section of code is particularly slow.\n\nHow do you know which sections of your code are slow? Don’t rely on intuition. You need to profile your code to identify bottlenecks."
+  },
+  {
+    "objectID": "r_parallel/performance.html#profiling",
+    "href": "r_parallel/performance.html#profiling",
+    "title": "Measuring performance:",
+    "section": "Profiling",
+    "text": "Profiling\n\n“It is often a mistake to make a priori judgments about what parts of a program are really critical, since the universal experience of programmers who have been using measurement tools has been that their intuitive guesses fail.”\n— Donald Knuth\n\nR comes with a profiler: Rprof().\nprofvis is a newer tool, built by posit (formerly RStudio Inc). Under the hood, it runs Rprof() to collect data, then produces an interactive html widget with a flame graph that allows for an easy visual identification of slow sections of code.\nWhile this tool integrates well within the RStudio IDE, it is not very well suited for remote work on a cluster. One option is to profile your code with small data on your own machine. Another option is to use the base profiler Rprof() directly as in this example."
+  },
+  {
+    "objectID": "r_parallel/performance.html#benchmarking",
+    "href": "r_parallel/performance.html#benchmarking",
+    "title": "Measuring performance:",
+    "section": "Benchmarking",
+    "text": "Benchmarking\nOnce you have identified expressions that are particularly slow, you can use benchmarking tools to compare variations of the code.\nIn the most basic fashion, you can use system.time(), but this is limited and imprecise.\nThe microbenchmark package is a much better option. It gives the minimum time, lower quartile, mean, median, upper quartile, and maximum time of R expressions.\nThe newer bench package is very similar, but it has less overhead, is more accurate, and—for sequential code—gives information on memory usage and garbage collections. This is the package that we will use for this course.\nThe main function from this package is mark(). You can pass as argument(s) one or multiple expressions that you want to benchmark. By default, it ensures that all expressions output the same result. If you want to remove this test, add the argument check = FALSE.\nWhile mark() gives memory usage and garbage collection information for sequential code, this functionality is not yet implemented for parallel code. When benchmarking parallel expressions, we will have to use the argument memory = FALSE.\nYou will see many examples throughout this course."
+  },
+  {
+    "objectID": "r_parallel/rcpp.html",
+    "href": "r_parallel/rcpp.html",
+    "title": "Writing C++ in R with Rcpp",
+    "section": "",
+    "text": "Sometimes, parallelization is not an option, either because the code is hard to parallelize or because of lack of hardware. In such cases, one way to increase speed is to replace slow R code with C++. The package Rcpp makes this particularly easy by creating mappings between both languages."
+  },
+  {
+    "objectID": "r_parallel/rcpp.html#back-to-fibonacci",
+    "href": "r_parallel/rcpp.html#back-to-fibonacci",
+    "title": "Writing C++ in R with Rcpp",
+    "section": "Back to Fibonacci",
+    "text": "Back to Fibonacci\nDo you remember the Fibonacci numbers? Here was a naive implementation in R:\n\nfib <- function(n) {\n  if(n == 0) return(0)\n  if(n == 1) return(1)\n  Recall(n - 1) + Recall(n - 2)\n}\n\nThis function gives the nth number in the sequence.\n\nExample:\n\n\nfib(30)\n\n[1] 832040"
+  },
+  {
+    "objectID": "r_parallel/rcpp.html#rcpp",
+    "href": "r_parallel/rcpp.html#rcpp",
+    "title": "Writing C++ in R with Rcpp",
+    "section": "Rcpp",
+    "text": "Rcpp\nLet’s translate this function in C++ within R!\nFirst we need to load the Rcpp package:\n\nlibrary(Rcpp)\n\nWe then use the function cppFunction() to assign to an R function a function written in C++:\n\nfibRcpp <- cppFunction( '\nint fibonacci(const int x) {\n   if (x == 0) return(0);\n   if (x == 1) return(1);\n   return (fibonacci(x - 1)) + fibonacci(x - 2);\n}\n' )\n\nWe can call our function as any R function:\nfibRcpp(30)\n[1] 832040\nWe can compare both functions:\nlibrary(bench)\n\nn <- 30\nmark(fib(n), fibRcpp(n))\n# A tibble: 2 × 13\n  expression      min   median `itr/sec` mem_alloc `gc/sec` n_itr  n_gc\n  <bch:expr> <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl> <int> <dbl>\n1 fib(n)        1.66s    1.66s     0.601    44.7KB     22.8     1    38\n2 fibRcpp(n)   1.08ms   1.08ms   901.       2.49KB      0     451     0\n  total_time result    memory                 time            \n    <bch:tm> <list>    <list>                 <list>          \n1      1.66s <dbl [1]> <Rprofmem [6,778 × 3]> <bench_tm [1]>  \n2   500.37ms <int [1]> <Rprofmem [1 × 3]>     <bench_tm [451]>\n  gc                \n  <list>            \n1 <tibble [1 × 3]>  \n2 <tibble [451 × 3]>\nWarning message:\nSome expressions had a GC in every iteration; so filtering is disabled.\nThe speedup is 1,537, which is amazing.\nIn this particular example, we saw that memoisation gives an even more incredible speedup (35,000!), but while memoisation will only work in very specific situations (e.g. recursive function calls), using C++ code is a general method to provide speedup. It is particularly useful when:\n\nthere are large numbers of function calls (R is particularly slow with function calls),\nyou need data structures that are missing in R,\nyou want to create efficient packages (fast R packages are written in C++ and many use Rcpp).\n\n\nIn this example, we declared the C++ function directly in R. It is possible to use source files instead."
+  },
+  {
+    "objectID": "r_parallel/resources_hpc.html",
+    "href": "r_parallel/resources_hpc.html",
+    "title": "Resources for HPC in R",
+    "section": "",
+    "text": "For introductory/general R resources, see this page instead.\n\n\nCRAN Task Views\n\nCRAN Task Views give information on packages relevant to certain topics.\n\n\nHigh-Performance and Parallel Computing with R\n\n\n\nRunning R on the Alliance clusters\n\nThree relevant pages from the Alliance wiki:\n\n\nGetting started\nRunning jobs\nRunning R\n\n\n\nOnline books\n\nAdvanced R\nEfficient R programming\n\n\n\nRcpp\n\nDocumentation and examples"
+  },
+  {
+    "objectID": "r_parallel/run_r_hpc.html",
+    "href": "r_parallel/run_r_hpc.html",
+    "title": "Running R for this course",
+    "section": "",
+    "text": "You do not need to install anything on your machine for this course as we will provide access to a temporary remote cluster.\nFor the first part of this course, we will run R on a RStudio server running on the temporary cluster.\n\nRStudio is an IDE that provides a friendly interface to run R interactively. It is a great way to develop code and it makes profiling easy.\n\nFor the second part, we will log in to the same temporary cluster using Secure Shell, then run R scripts from the command line.\n\nOnce you have developed your code in an interactive fashion, running scripts allows you to request large hardware resources only when you need them (i.e. when your code is executed).\nThis prevents these heavy resources from sitting idle when not in use, as would happen in an interactive session.\nThis will save you a lot of money if you use a commercial cluster. If you use the Alliance clusters, it will save you lots of waiting time until you can run your code (the more resources you ask, the more time you have to wait to have access to them).\n\nNote that this cluster is only available during the course."
+  },
+  {
+    "objectID": "r_parallel/run_r_hpc.html#accessing-the-temporary-rstudio-server",
+    "href": "r_parallel/run_r_hpc.html#accessing-the-temporary-rstudio-server",
+    "title": "Running R for this course",
+    "section": "Accessing the temporary RStudio server",
+    "text": "Accessing the temporary RStudio server\n\nA username, a password, and the URL of the RStudio server will be given to you during the workshop.\n\nSign in using the username and password you will be given while ignoring the OTP entry.\n\nUsing RStudio\nFor those unfamiliar with the RStudio IDE, you can download the following cheatsheet:\n\n\n\n\n\n\n\nfrom Posit Cheatsheets"
+  },
+  {
+    "objectID": "r_parallel/run_r_hpc.html#log-in-to-the-temporary-cluster-through-ssh",
+    "href": "r_parallel/run_r_hpc.html#log-in-to-the-temporary-cluster-through-ssh",
+    "title": "Running R for this course",
+    "section": "Log in to the temporary cluster through SSH",
+    "text": "Log in to the temporary cluster through SSH\n\nWe will give you the hostname during the workshop. Your username and password are the same as the ones you used for the RStudio server.\n\n\nOpen a terminal emulator\nWindows users:  install the free version of MobaXTerm and launch it.\nMacOS users:   launch Terminal.\nLinux users:     open the terminal emulator of your choice.\n\n\nAccess the cluster through secure shell\n\nWindows users\nFollow the first 18% of this demo.\nFor “Remote host”, use the hostname we gave you.\nSelect the box “Specify username” and provide your username.\n\nNote that the password is entered through blind typing, meaning that you will not see anything happening as you type it. This is a Linux feature. While it is a little disturbing at first, do know that it is working. Make sure to type it slowly to avoid typos, then press the “enter” key on your keyboard.\n\n\n\nMacOS and Linux users\nIn the terminal, run:\nssh <username>@<hostname>\n\nReplace the username and hostname by their values. For instance:\nssh user021@somecluster.c3.ca\n\nYou will be asked a question, answer “Yes”.\nWhen prompted, type the password.\n\nNote that the password is entered through blind typing, meaning that you will not see anything happening as you type it. This is a Linux feature. While it is a little disturbing at first, do know that it is working. Make sure to type it slowly to avoid typos, then press the “enter” key on your keyboard.\n\n\n\n\nTroubleshooting\nProblems logging in are almost always due to typos. If you cannot log in, retry slowly, entering your password carefully."
+  },
+  {
+    "objectID": "scivis/index.html",
+    "href": "scivis/index.html",
+    "title": "Scientific visualization with ParaView",
+    "section": "",
+    "text": "Date:\nFriday May 5, 2023\nTime:\n9am–5pm (with a two-hour break from noon to 2pm)\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis is an introductory course with no prior visualization experience required.\nSoftware:\nPlease install ParaView on your computer, and make sure you can start it before the course. As of this writing, the latest ParaView version is 5.11 – it should work nicely for our workshop. We will provide all sample data and codes for the exercises. Let us know before or during the course if you want to load your own dataset into ParaView."
   }
 ]
