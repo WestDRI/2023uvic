@@ -25,7 +25,7 @@
     "href": "bash/index.html",
     "title": "Bash",
     "section": "",
-    "text": "Date:\nMonday May 1, 2023\nTime:\n9am–noon\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nMonday May 1, 2023\nTime:\n9am–noon\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nThis introductory course does not require any previous experience.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there).\n\n Course notes can be found here."
   },
   {
     "objectID": "contact.html",
@@ -39,7 +39,7 @@
     "href": "hpc/index.html",
     "title": "HPC",
     "section": "",
-    "text": "Date:\nMonday May 1, 2023\nTime:\n2pm–5pm\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nWorking knowledge of the Bash shell.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there)."
+    "text": "Date:\nMonday May 1, 2023\nTime:\n2pm–5pm\nInstructor:\nAlex Razoumov (Simon Fraser University)\nPrerequisites:\nWorking knowledge of the Bash shell.\nSoftware:\nWe will provide access to one of our Linux systems. To make use of it, attendees will need a remote secure shell (SSH) client installed on their computer. On Windows we recommend the free Home Edition of MobaXterm. On Mac and Linux computers, SSH is usually pre-installed (try typing ssh in a terminal to make sure it is there).\n\n Course notes can be found here."
   },
   {
     "objectID": "index.html",
