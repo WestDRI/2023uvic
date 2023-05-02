@@ -76,61 +76,63 @@ website:
         - section:
           contents:
             - r_intro/index.qmd
-        # - text: <em><b>Getting started with R</b></em>
-        #   href: r_intro/index.qmd
-        #   contents: 
-        #     - text: Running R for this course
-        #       href: r_intro/run_r_intro.qmd
-        #     - text: "R: why and for whom?"
-        #       href: r_intro/why.qmd
-        #     - text: First steps in R
-        #       href: r_intro/basics.qmd
-        #     - text: Packages
-        #       href: r_intro/packages.qmd
-        #     - text: Data types and structures
-        #       href: r_intro/data_structure.qmd
-        #     - text: Indexing
-        #       href: r_intro/indexing.qmd
-        #     - text: Function definition
-        #       href: r_intro/functions.qmd
-        #     - text: Control flow
-        #       href: r_intro/control_flow.qmd
-        #     - text: Introduction to the tidyverse
-        #       href: r_intro/tidyverse.qmd
-        #     - text: Plotting
-        #       href: r_intro/plotting.qmd
-        #     - text: Publishing
-        #       href: r_intro/publishing.qmd
-        #     - text: Resources
-        #       href: r_intro/resources.qmd
+        - text: <em><b>Getting started with R</b></em>
+          href: r_intro/index.qmd
+          contents: 
+            - text: Running R for this course
+              href: r_intro/run_r_intro.qmd
+            - text: "R: why and for whom?"
+              href: r_intro/why.qmd
+            - text: First steps in R
+              href: r_intro/basics.qmd
+            - text: Packages
+              href: r_intro/packages.qmd
+            - text: Data types and structures
+              href: r_intro/data_structure.qmd
+            - text: Indexing
+              href: r_intro/indexing.qmd
+            - text: Function definition
+              href: r_intro/functions.qmd
+            - text: Control flow
+              href: r_intro/control_flow.qmd
+            - text: Introduction to the tidyverse
+              href: r_intro/tidyverse.qmd
+            - text: Plotting
+              href: r_intro/plotting.qmd
+            - text: Publishing
+              href: r_intro/publishing.qmd
+            - text: Resources
+              href: r_intro/resources.qmd
     - id: r_parallel
       contents:
         - section:
           contents:
             - r_parallel/index.qmd
-        # - text: <b><em>Parallel R</em></b>
-        #   href: r_parallel/index.qmd
-        #   contents:
-        #     - text: Running R for this course
-        #       href: r_parallel/run_r_hpc.qmd
-        #     - text: Measuring performance
-        #       href: r_parallel/performance.qmd
-        #     - text: Optimizations
-        #       href: r_parallel/optimizations.qmd
-        #     - text: Memory management
-        #       href: r_parallel/memory.qmd
-        #     - text: Running R on HPC clusters
-        #       href: r_parallel/clusters.qmd
-        #     - text: Types of parallelism
-        #       href: r_parallel/parallel_types.qmd
-        #     - text: Parallel loops
-        #       href: r_parallel/parallel_loops.qmd
-        #     - text: Data on HPC clusters
-        #       href: r_parallel/data.qmd
-        #     - text: Writing C++ in R with Rcpp
-        #       href: r_parallel/rcpp.qmd
-        #     - text: Resources for HPC in R
-        #       href: r_parallel/resources_hpc.qmd
+        - text: <b><em>Parallel R</em></b>
+          href: r_parallel/index.qmd
+          contents:
+            - text: Running R for this course
+              href: r_parallel/run_r_hpc.qmd
+            - text: Measuring performance
+              href: r_parallel/performance.qmd
+            - text: Optimizations
+              href: r_parallel/optimizations.qmd
+            - text: Memory management
+              href: r_parallel/memory.qmd
+            - text: Running R on HPC clusters
+              href: r_parallel/clusters.qmd
+            - text: Types of parallelism
+              href: r_parallel/parallel_types.qmd
+            - text: Parallel loops
+              href: r_parallel/parallel_loops.qmd
+            - text: Data on HPC clusters
+              href: r_parallel/data.qmd
+            - text: Partitioning data
+              href: r_parallel/partition.qmd
+            - text: Writing C++ in R with Rcpp
+              href: r_parallel/rcpp.qmd
+            - text: Resources for HPC in R
+              href: r_parallel/resources_hpc.qmd
     - id: julia
       contents:
         - section:
@@ -149,32 +151,14 @@ website:
         # - text: <b><em>Introduction to PyTorch</em></b>
         #   href: ml/index.qmd
         #   contents: 
-        #     - text: Overarching concept of DL
-        #       href: ml/concept.qmd
-        #     - text: "Concepts: AI, ML, DL, NN"
-        #       href: ml/nn.qmd
+        # - "---"
+        # - section: <b><em>ML readings</em></b>
+        #   href: ml/choosing_frameworks.qmd
+        #   contents: 
         #     - text: Which framework to choose?
         #       href: ml/choosing_frameworks.qmd
         #     - text: High-level frameworks
         #       href: ml/high_level_frameworks.qmd
-        #     - text: Automatic differentiation
-        #       href: ml/autograd.qmd
-        #     - text: Classifying the MNIST
-        #       href: ml/mnist.qmd
-        #     - text: Building a model
-        #       href: ml/nn_building.qmd
-        #     - text: Training a model
-        #       href: ml/nn_training.qmd
-        #     - text: Audio DataLoader
-        #       href: ml/audio_dataloader.qmd
-        #     - text: ML on production clusters
-        #       href: ml/hpc.qmd
-        #     - text: Finding pre-trained models
-        #       href: ml/pretrained_models.qmd
-        #     - text: Creating checkpoints
-        #       href: ml/checkpoints.qmd
-        #     - text: Resources
-        #       href: ml/resources.qmd
     - id: scivis
       contents:
         - section:
