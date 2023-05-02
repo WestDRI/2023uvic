@@ -24,5 +24,5 @@ As we will provide access to an RStudio Server, no installation is required.
 
 :::
 
-<!-- <br> -->
-<!-- [[Start course ➤](run_r_intro.qmd)]{.topinline} -->
+<br>
+[[Start course ➤](run_r_intro.qmd)]{.topinline}

@@ -41,11 +41,9 @@ We can now use our function:
 compare(2, 3)
 ```
 
+## What is returned by a function?
 
-
-## 
-
-Note that the result of the last statement is printed automatically:
+In R, the result of the last statement is printed automatically:
 
 ```{r}
 test <- function(x, y) {
@@ -55,12 +53,30 @@ test <- function(x, y) {
 test(2, 3)
 ```
 
-If you want to return other results, you need to explicitly use the `print()` function:
+If you want to also print other results, you need to explicitly use the `print()` function:
 
 ```{r}
 test <- function(x, y) {
   print(x)
   y
+}
+test(2, 3)
+```
+
+Note that, unlike `print()`, the function `return()` exits the function:
+
+```{r}
+test <- function(x, y) {
+  return(x)
+  y
+}
+test(2, 3)
+```
+
+```{r}
+test <- function(x, y) {
+  return(x)
+  return(y)
 }
 test(2, 3)
 ```
