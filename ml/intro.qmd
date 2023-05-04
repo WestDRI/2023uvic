@@ -1,0 +1,14 @@
+---
+title: Introduction to machine learning
+author: Marie-Hélène Burle
+---
+
+:::{.def}
+
+This presentation gives a high-level overview of machine learning.
+
+I will define concepts, present the different types of learning, and explain the basic functioning of neural networks.
+
+:::
+
+[Slides](intro_slides.html){.btn .btn-outline-primary} [(Click and wait: the presentation might take a few instants to load)]{.inlinenote}

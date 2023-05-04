@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/index.html</loc>
-    <lastmod>2023-05-04T01:04:07.907Z</lastmod>
+    <lastmod>2023-05-04T11:31:42.633Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/julia/asm.html</loc>
@@ -86,15 +86,15 @@
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/autograd.html</loc>
-    <lastmod>2023-04-22T22:02:16.727Z</lastmod>
+    <lastmod>2023-05-04T11:29:55.876Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/checkpoints.html</loc>
-    <lastmod>2023-04-22T22:02:17.627Z</lastmod>
+    <lastmod>2023-05-04T11:30:07.356Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/choosing_frameworks.html</loc>
-    <lastmod>2023-04-22T22:02:17.934Z</lastmod>
+    <lastmod>2023-05-04T11:29:44.490Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/concept.html</loc>
@@ -102,19 +102,19 @@
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/high_level_frameworks.html</loc>
-    <lastmod>2023-04-22T22:02:19.097Z</lastmod>
+    <lastmod>2023-05-04T11:29:49.993Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/hpc.html</loc>
-    <lastmod>2023-04-22T22:02:19.464Z</lastmod>
+    <lastmod>2023-05-04T11:30:15.220Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/index.html</loc>
-    <lastmod>2023-05-02T15:58:18.340Z</lastmod>
+    <lastmod>2023-05-04T11:31:53.340Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/mnist.html</loc>
-    <lastmod>2023-04-22T22:02:24.444Z</lastmod>
+    <lastmod>2023-05-04T11:30:12.406Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/nn.html</loc>
@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/ml/resources.html</loc>
-    <lastmod>2023-04-22T22:02:30.524Z</lastmod>
+    <lastmod>2023-05-04T11:30:18.006Z</lastmod>
   </url>
   <url>
     <loc>https://2023uvic.netlify.app/newsletter.html</loc>
@@ -199,5 +199,25 @@
   <url>
     <loc>https://2023uvic.netlify.app/r_parallel/optimizations.html</loc>
     <lastmod>2023-05-02T15:58:22.795Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2023uvic.netlify.app/ml/intro.html</loc>
+    <lastmod>2023-05-04T11:29:29.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2023uvic.netlify.app/ml/intro_slides.html</loc>
+    <lastmod>2023-05-04T11:29:33.910Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2023uvic.netlify.app/ml/pytorch.html</loc>
+    <lastmod>2023-05-04T11:29:47.550Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2023uvic.netlify.app/ml/tensors.html</loc>
+    <lastmod>2023-05-04T11:29:52.760Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2023uvic.netlify.app/ml/workflow.html</loc>
+    <lastmod>2023-05-04T11:29:58.723Z</lastmod>
   </url>
 </urlset>

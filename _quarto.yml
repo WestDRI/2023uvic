@@ -148,17 +148,32 @@ website:
         - section:
           contents:
             - ml/index.qmd
-        # - text: <b><em>Introduction to PyTorch</em></b>
-        #   href: ml/index.qmd
-        #   contents: 
-        # - "---"
-        # - section: <b><em>ML readings</em></b>
-        #   href: ml/choosing_frameworks.qmd
-        #   contents: 
-        #     - text: Which framework to choose?
-        #       href: ml/choosing_frameworks.qmd
-        #     - text: High-level frameworks
-        #       href: ml/high_level_frameworks.qmd
+        - text: <b><em>Introduction to PyTorch</em></b>
+          href: ml/index.qmd
+          contents: 
+            - text: Introduction
+              href: ml/intro.qmd
+            - text: Which framework to choose?
+              href: ml/choosing_frameworks.qmd
+            - text: The PyTorch API
+              href: ml/pytorch.qmd
+            - text: High-level frameworks
+              href: ml/high_level_frameworks.qmd
+            - text: PyTorch tensors
+              href: ml/tensors.qmd
+            - text: Automatic differentiation
+              href: ml/autograd.qmd
+            - text: Workflow
+              href: ml/workflow.qmd
+            - text: Creating checkpoints
+              href: ml/checkpoints.qmd
+            - text: "Example: the MNIST"
+              href: ml/mnist.qmd
+            - text: ML on production clusters
+              href: ml/hpc.qmd
+            - text: Resources
+              href: ml/resources.qmd
+ 
     - id: scivis
       contents:
         - section:

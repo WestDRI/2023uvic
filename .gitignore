@@ -3,3 +3,4 @@
 *_cache/
 bash/molecules
 serve.sh
+**/data/
