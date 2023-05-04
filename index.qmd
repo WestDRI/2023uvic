@@ -10,8 +10,8 @@ anchor-sections: false
 ---
 
 Each day we will have morning (9am–noon) and afternoon (2pm–5pm) sessions. There will be short coffee breaks
-at 10:30am and 3:30pm (coffee and snacks on us!), and we will provide lunch on Friday. The first four days
-participants will have to find lunch on their own.
+at 10:30am and 3:30pm (coffee and snacks on us!), and we will provide lunch on Thursday. The other four days
+(Monday to Wednesday, and Friday) participants will have to find lunch on their own.
 
 You can attend as many or as few of the courses as you want. All sessions will be in the
 [Clearihue building](https://www.uvic.ca/search/maps-buildings/buildings/clearihue.php), room C112.
