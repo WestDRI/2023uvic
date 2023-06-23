@@ -3,7 +3,6 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
-    - "!/tools/quarto/"
 
 website:
   title: UVic Spring School 2023
@@ -11,7 +10,6 @@ website:
   favicon: /img/sfu_favicon.png
   site-url: https://2023uvic.netlify.app/
   repo-url: https://github.com/WestDRI/2023uvic
-  reader-mode: true
   page-navigation: true
   page-footer:
     center:
