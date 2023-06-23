@@ -58,17 +58,11 @@ website:
         - section:
           contents:
             - bash/index.qmd
-        # - text: <b><em>Bash & the Unix shell</em></b>
-        #   href: bash/index.qmd
-        #   contents:
     - id: hpc
       contents:
         - section:
           contents:
             - hpc/index.qmd
-        # - text: <b><em>Introduction to HPC</em></b>
-        #   href: hpc/index.qmd
-        #   contents:
     - id: r_intro
       contents:
         - section:
@@ -136,11 +130,6 @@ website:
         - section:
           contents:
             - julia/index.qmd
-        # - text: <b><em>Parallel Julia</em></b>
-        #   href: julia/index.qmd
-        #   contents: 
-        #     - text: Introduction to Julia
-        #       href: julia/intro-language.qmd
     - id: ml
       contents:
         - section:
@@ -179,9 +168,6 @@ website:
         - section:
           contents:
             - scivis/index.qmd
-        # - text: <b><em>SciVis with ParaView</em></b>
-        #   href: scivis/index.qmd
-        # - contents:
 
 format:
   html:
